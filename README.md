@@ -11,6 +11,8 @@ RGPU = read.csv("C:/.../All_GPUs.csv",
 
 header = TRUE: dòng đầu tiên là tên cột.
 na.strings: chỉ rõ tất cả ký tự sẽ được coi là N/A, vì file gốc có thể chứa nhiều ký tự lạ.
+mình lấy tất cả các biến rồi loại bỏ dần qua các bước
+biến mục tiêu Pixel_Rate (dễ làm, bài toán có ý nghĩa)
 
 ## 2.2. Chọn biến quan trọng (7-12 biến)
 Mã code:
@@ -112,13 +114,60 @@ Sử dụng hệ số tương quan Pearson (r) để đo lường mức độ li
 Loại bỏ các biến có tương quan quá thấp (p-value > 0.05) vì chúng không có ý nghĩa thống kê trong việc giải thích biến phụ thuộc.
 
 ## 6.2. ANOVA + kiểm định giả định + Tukey + η² cho từng categorical.
+### 6.2.1. Kiểm tra các giả định của ANOVA
 Các điều kiện cần kiểm tra trước khi thực hiện ANOVA:
  - Độc lập của các quan sát
  - Biến phụ thuộc là biến liên tục
- - Phân phối chuẩn trong mỗi nhóm (dùng Shapiro–Wilk)
- - Đồng nhất phương sai giữa các nhóm (Dùng Levene’s test)
+ - Phân phối chuẩn trong mỗi nhóm Normality (dùng Shapiro–Wilk)
+ - Đồng nhất phương sai giữa các nhóm Homogeneity of Variance (Dùng Levene’s test)
 Nếu tất cả điều kiện thõa -> Dùng tiếp ANOVA, không thì sẽ dùng Kruskal–Wallis và Dunn’s test để thay thế.
-Tránh xử dụng ANOVA tiếp vì không còn ý nghĩa khoa học.
+Tránh xử dụng ANOVA tiếp vì không còn ý nghĩac.
+Ví dụ như trong bài do vi phạm giả định về tính chuẩn và đồng nhất phương sai, chúng ta không dùng ANOVA truyền thống mà chuyển sang Kiểm định Kruskal-Wallis 
+(phương pháp phi tham số thay thế).
+
+### 6.2.2. Kiểm định Kruskal-Wallis & Hậu nghiệm Dunn
+Nếu Chi-squre cao và p-value < 0.05, cho thấy có sự khác biệt có ý nghĩa thống kê về trung vị 'biến mục tiêu' giữa các nhóm của từng biến.
+Hậu nghiệm Dunn’s test sau Kruskal-Wallis nhằm xác định cụ thể các cặp nhóm nào khác biệt đáng kể. p.adj < 0.05 cho thấy sự khác biệt đáng kể
+
+## 6.3. Kiểm định một mẫu (One-sample test) – Bài toán hợp lý
+Mục tiêu: Kiểm tra xem một tham số của GPU có đạt ngưỡng công nghệ/mục tiêu kinh doanh hay không.
+Bài toán cụ thể cho nhóm:
+Trung bình Pixel_Rate của toàn bộ các dòng GPU có bằng 40 GPixel/s hay không?
+
+Mã code mẫu:
+// One-sample t-test (giả sử dữ liệu gần chuẩn sau log)
+t.test(train$Pixel_Rate, mu = log(40))        # trên thang log
+t.test(train$Core_Speed, mu = log(1200))
+
+// Nếu không chuẩn → Wilcoxon signed-rank test
+wilcox.test(train$Pixel_Rate, mu = log(40))
+
+Yêu cầu đầu ra:
+Viết rõ H₀ / H₁
+Kiểm tra normality (Shapiro-Wilk) + homogeneity of variance (Dùng Levene’s test)
+p-value, kết luận, effect size (Cohen’s d)
+
+### 6.4. Kiểm định hai mẫu (Two-sample test) – Bài toán hợp lý
+Mục tiêu: So sánh sự khác biệt giữa hai nhóm GPU.
+Bài toán mẫu:
+Pixel_Rate của Nvidia có cao hơn AMD hay không?
+
+Mã code mẫu:
+// Two-sample t-test (independent)
+t.test(Pixel_Rate ~ Manufacturer, data = train, 
+       subset = Manufacturer %in% c("Nvidia", "AMD"))
+
+// Kiểm tra variance trước
+var.test(Pixel_Rate ~ Manufacturer, data = train)
+
+// Nếu không chuẩn → Mann-Whitney U (Wilcoxon rank-sum)
+wilcox.test(Pixel_Rate ~ Manufacturer, data = train, 
+            subset = Manufacturer %in% c("Nvidia", "AMD"))
+
+Yêu cầu đầu ra:
+H₀ / H₁
+Kiểm tra normality (Shapiro-Wilk) + homogeneity of variance (Dùng Levene’s test)
+p-value, khoảng tin cậy, kết luận, effect size (Cohen’s d hoặc r)
 
 # 7. Xây dựng mô hình và đánh giá
 ## 7.1. Chia train/test (70/30 hoặc 80/20) bằng createDataPartition.
@@ -146,8 +195,21 @@ Trước khi tin tưởng mô hình, ta phải kiểm tra:
 Chia dữ liệu thành 5 phần (folds). Lần lượt huấn luyện trên 4 phần và kiểm tra trên 1 phần còn lại.
 Để đảm bảo mô hình không bị "học vẹt" (overfitting).
 
-# 8. Dự báo VÀ Kịch bản
+# 8. Dự báo Và Kịch bản
 ## 8.1. Dự báo trên test set + tính MAE, MSE, RMSE, R².
 ## 8.2. Density plot & Scatter thực tế vs dự đoán.
 ## 8.3. Prediction interval cho quan sát mới.
 ## 8.4. Kịch bản what-if (Core_Speed tăng 10%).
+
+# 9. Chia việc
+STT,  Thành viên, Nhiệm vụ chính,                                                                                           Ghi chú
+1,    1,          Phần 1 + 2 + 3 + 4.1 (Đọc dữ liệu + Kiểm tra dữ liệu ban đầu + Xử lý NA + Định nghĩa hàm helper),         Exploratory
+2,    2,          Phần 4.1 & 4.2 (Xử lý từng biến),                                                                         Preprocessing
+3,    3,          Phần 4.3, 4.4, 4.5, 4.6 (Loại bỏ Outlier bằng IQR, Loại duplicate, định nghĩa biến, tạo log-transform),   Preprocessing
+4,    4,          Phần 5 (Thống kê mô tả: bảng + tất cả biểu đồ),                                                           Visualization
+5,    5,          Phần 6.1, 6.2 (Tương quan Pearson, ANOVA),                                                                Inferential Statistics
+6,    6,          Phần 6.3 (Kiểm định 1 mẫu),                                                                               Inferential Statistics
+7,    7,          Phần 6.4 (Kiểm định 2 mẫu),                                                                               Inferential Statistics
+8,    8,          Phần 7.1, 7.2, 7.3 (Chia train/test + VIF + Stepwise Selection),                                          Modeling
+9,    9,          Phần 7.4 & 7.5 (Xây dựng mô hình cuối + Diagnostic plots + Cross-validation),                             Modeling
+10,   10,         Phần 8 (Dự báo, metric, visualization thực vs dự đoán, kịch bản what-if)",                                Evaluation & Prediction
