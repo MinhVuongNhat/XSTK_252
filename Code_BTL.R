@@ -18,6 +18,7 @@
 # install.packages("PMwR")  
 # install.packages("FSA")  
 # install.packages("jsonlite")
+# install.packages("mice")
 
 # Thư viện
 library(stringr)
@@ -40,6 +41,7 @@ library(rstatix)    # kruskal_test, dunn_test
 library(PMwR)       # welch_anova, nếu dùng oneway.test
 library(FSA)        # dunnTest cho Kruskal post-hoc
 library(glue)
+library(mice)
 
 #--------------------------------------------------
 # 1. Khám phá dữ liệu
@@ -146,6 +148,15 @@ for (var in numerical_cols) {
 
 # 2.4. Loại bỏ Duplicate
 df_proc <- distinct(df_proc)
+
+# 2.5. Xử lý na
+## Phân loại giá trị rỗng của biến phân loại là "Missing"
+df_proc <- df_proc %>%
+  mutate(across(where(is.character), ~replace_na(., "Missing")))
+
+## Xử lý na của biến liên tục với MICE
+mice_processor <- mice(df_proc , m = 5, maxit = 5, method = 'pmm', seed = 123)
+df_proc <- complete(mice_processor, 1)
 
 # 2.5. Định nghĩa danh sách biến
 # Danh sách các biến số
