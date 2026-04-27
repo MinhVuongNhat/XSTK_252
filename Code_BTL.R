@@ -186,11 +186,181 @@ df_proc_log[, numerical_vars] <- log(df_proc_log[, numerical_vars] + 1)
 #--------------------------------------------------
 # 6. Kiểm định một mẫu
 #--------------------------------------------------
+cat("\n==========================================================\n")
+cat("PHẦN 6: PHÂN TÍCH KIỂM ĐỊNH MỘT MẪU CHO PIXEL_RATE\n")
+cat("Mục tiêu: Đánh giá hiệu năng thực tế so với ngưỡng 40 GPixel/s\n")
+cat("==========================================================\n")
 
+# Bước 1: Thiết lập tham số giả thuyết
+# Vì dữ liệu dùng log(x + 1) nên mu_0 = log(40 + 1)
+mu_0 <- log(40 + 1)
+alpha <- 0.05
+
+# Bước 2: Kiểm tra giả định phân phối chuẩn (Normality)
+shapiro_p <- shapiro.test(df_proc_log$Pixel_Rate)$p.value
+cat(glue("\n[1] KIỂM TRA TÍNH CHUẨN (Shapiro-Wilk test):\n"))
+cat(glue("    - p-value = {format(shapiro_p, scientific = TRUE)}\n"))
+
+if (shapiro_p > alpha) {
+  # TRƯỜNG HỢP DỮ LIỆU CHUẨN
+  cat("    => NHẬN ĐỊNH: p > 0.05, dữ liệu tuân theo phân phối chuẩn.\n")
+  cat("    => PHƯƠNG PHÁP: Sử dụng kiểm định tham số One-sample T-test.\n\n")
+  
+  res <- t.test(df_proc_log$Pixel_Rate, mu = mu_0)
+  p_val <- res$p.value
+  method_name <- "One-sample T-test"
+} else {
+  # TRƯỜNG HỢP DỮ LIỆU KHÔNG CHUẨN
+  cat("    => NHẬN ĐỊNH: p <= 0.05, dữ liệu vi phạm giả định phân phối chuẩn.\n")
+  cat("    => PHƯƠNG PHÁP: Sử dụng kiểm định phi tham số Wilcoxon Signed-Rank Test.\n\n")
+  
+  res <- wilcox.test(df_proc_log$Pixel_Rate, mu = mu_0, conf.int = TRUE)
+  p_val <- res$p.value
+  method_name <- "Wilcoxon Signed-Rank Test"
+}
+
+# Bước 3: In kết quả kiểm định chính
+cat(glue("[2] KẾT QUẢ KIỂM ĐỊNH ({method_name}):\n"))
+cat(glue("    - p-value thu được: {format(p_val, scientific = TRUE)}\n"))
+
+if (p_val < alpha) {
+  cat("    => KẾT LUẬN THỐNG KÊ: Bác bỏ giả thuyết H0 ở mức ý nghĩa 5%.\n")
+  cat(glue("    => Ý NGHĨA: Có sự khác biệt đáng kể giữa hiệu năng thực tế và ngưỡng 40 GPixel/s.\n"))
+} else {
+  cat("    => KẾT LUẬN THỐNG KÊ: Chưa đủ cơ sở bác bỏ giả thuyết H0.\n")
+  cat(glue("    => Ý NGHĨA: Hiệu năng thực tế xấp xỉ đạt ngưỡng mục tiêu 40 GPixel/s.\n"))
+}
+
+# Bước 4: Đánh giá độ lớn của sự khác biệt (Effect Size)
+# Chỉ định rõ thư viện effectsize để tránh xung đột
+d_res <- effectsize::cohens_d(df_proc_log$Pixel_Rate, mu = mu_0)
+d_val <- abs(d_res$Cohens_d)
+
+cat(glue("\n[3] ĐÁNH GIÁ MỨC ĐỘ ẢNH HƯỞNG (Effect Size - Cohen's d):\n"))
+cat(glue("    - Cohen's d = {round(d_val, 3)}\n"))
+
+if (d_val < 0.2) {
+  interpretation <- "Rất nhỏ (Negligible)"
+} else if (d_val < 0.5) {
+  interpretation <- "Nhỏ (Small)"
+} else if (d_val < 0.8) {
+  interpretation <- "Trung bình (Medium)"
+} else {
+  interpretation <- "Lớn (Large)"
+}
+cat(glue("    => NHẬN ĐỊNH: Sự khác biệt có quy mô: {interpretation}.\n"))
+
+# Bước 5: Trực quan hóa
+if(!is.null(dev.list())) dev.off() # Reset graphics device
+ggplot(df_proc_log, aes(x = Pixel_Rate)) +
+  geom_density(fill = "steelblue", alpha = 0.4) +
+  geom_vline(aes(xintercept = mu_0, color = "Mục tiêu (40)"), linetype = "dashed", size = 1.2) +
+  geom_vline(aes(xintercept = mean(Pixel_Rate), color = "Thực tế trung bình"), size = 1.2) +
+  scale_color_manual(name = "Đường tham chiếu", values = c("Mục tiêu (40)" = "red", "Thực tế trung bình" = "darkgreen")) +
+  labs(title = "BIỂU ĐỒ PHÂN PHỐI HIỆU NĂNG PIXEL_RATE",
+       subtitle = glue("Kiểm định dựa trên ngưỡng mu_0 = {round(mu_0, 3)}"),
+       x = "Giá trị log(Pixel_Rate + 1)", y = "Mật độ phân phối") +
+  theme_minimal()
 #--------------------------------------------------
 # 7. Kiểm định hai mẫu
 #--------------------------------------------------
+cat("\n================================================================\n")
+cat("PHẦN 7: PHÂN TÍCH SO SÁNH HIỆU NĂNG GIỮA NVIDIA VÀ AMD\n")
+cat("Mục tiêu: So sánh Pixel_Rate giữa hai nhà sản xuất chính\n")
+cat("================================================================\n")
 
+# Lọc dữ liệu so sánh
+df_compare <- df_proc_log %>% 
+  filter(Manufacturer %in% c("Nvidia", "AMD")) %>%
+  mutate(Manufacturer = factor(Manufacturer))
+
+alpha <- 0.05
+
+# --- BƯỚC 1: KIỂM TRA TÍNH CHUẨN ---
+cat("\nBƯỚC 1: Kiểm tra giả định phân phối chuẩn (Normality Test)\n")
+norm_results <- df_compare %>%
+  group_by(Manufacturer) %>%
+  summarise(p_val = shapiro.test(Pixel_Rate)$p.value)
+print(norm_results)
+
+is_normal <- all(norm_results$p_val > alpha)
+
+if (is_normal) {
+  cat("=> Ý NGHĨA: Cả hai nhóm đều có p > 0.05, thỏa mãn giả định phân phối chuẩn.\n")
+  cat("=> KẾT LUẬN: Chuyển sang kiểm tra tính đồng nhất phương sai để chọn loại T-test.\n")
+} else {
+  cat("=> Ý NGHĨA: Có ít nhất một nhóm có p <= 0.05, vi phạm giả định phân phối chuẩn.\n")
+  cat("=> KẾT LUẬN: Sử dụng kiểm định phi tham số (Mann-Whitney U) - phương pháp này không phụ thuộc vào hình dạng phân phối.\n")
+}
+
+# --- BƯỚC 2: KIỂM TRA PHƯƠNG SAI (Chỉ thực hiện nếu dữ liệu chuẩn) ---
+cat("\nBƯỚC 2: Kiểm tra tính đồng nhất phương sai (Homogeneity of Variance)\n")
+levene_p <- car::leveneTest(Pixel_Rate ~ Manufacturer, data = df_compare)$`Pr(>F)`[1]
+cat(glue("   - Kết quả Levene's Test: p-value = {round(levene_p, 4)}\n"))
+
+if (levene_p > alpha) {
+  cat("=> Ý NGHĨA: Phương sai hai nhóm tương đồng (p > 0.05).\n")
+} else {
+  cat("=> Ý NGHĨA: Phương sai hai nhóm khác biệt đáng kể (p <= 0.05).\n")
+}
+
+# --- BƯỚC 3: THỰC HIỆN KIỂM ĐỊNH CHÍNH ---
+cat("\nBƯỚC 3: Thực hiện phép kiểm định so sánh giá trị trung tâm\n")
+
+if (is_normal) {
+  if (levene_p > alpha) {
+    cat("=> LỰA CHỌN: Student's T-test (do thỏa mãn cả tính chuẩn và đồng nhất phương sai).\n")
+    res <- t.test(Pixel_Rate ~ Manufacturer, data = df_compare, var.equal = TRUE)
+  } else {
+    cat("=> LỰA CHỌN: Welch T-test (do dữ liệu chuẩn nhưng phương sai không đồng nhất).\n")
+    res <- t.test(Pixel_Rate ~ Manufacturer, data = df_compare, var.equal = FALSE)
+  }
+} else {
+  cat("=> LỰA CHỌN: Mann-Whitney U test (Wilcoxon Rank-Sum) (do dữ liệu không chuẩn).\n")
+  res <- wilcox.test(Pixel_Rate ~ Manufacturer, data = df_compare, conf.int = TRUE)
+}
+
+cat("KẾT QUẢ:\n")
+print(res)
+
+# --- BƯỚC 4: KẾT LUẬN VỀ SỰ KHÁC BIỆT ---
+cat("\nBƯỚC 4: Kết luận về ý nghĩa thống kê\n")
+p_val_main <- res$p.value
+
+if (p_val_main < alpha) {
+  cat(glue("=> KẾT LUẬN: p-value ({format(p_val_main, scientific = TRUE)}) < 0.05. BÁC BỎ H0.\n"))
+  cat("=> Ý NGHĨA THỰC TẾ: Có sự khác biệt đáng kể về năng lực xử lý Pixel_Rate giữa Nvidia và AMD.\n")
+} else {
+  cat(glue("=> KẾT LUẬN: p-value ({format(p_val_main, scientific = TRUE)}) >= 0.05. CHƯA ĐỦ CƠ SỞ BÁC BỎ H0.\n"))
+  cat("=> Ý NGHĨA THỰC TẾ: Hiệu năng của hai hãng tương đương nhau trong tập dữ liệu này.\n")
+}
+
+# --- BƯỚC 5: ĐÁNH GIÁ ĐỘ LỚN (EFFECT SIZE) ---
+cat("\nBƯỚC 5: Đánh giá quy mô sự khác biệt (Effect Size)\n")
+d_res <- effectsize::cohens_d(Pixel_Rate ~ Manufacturer, data = df_compare)
+d_abs <- abs(d_res$Cohens_d)
+
+cat(glue("   - Chỉ số Cohen's d: {round(d_abs, 3)}\n"))
+
+if (d_abs < 0.2) interpretation <- "Rất nhỏ" else 
+  if (d_abs < 0.5) interpretation <- "Nhỏ" else 
+    if (d_abs < 0.8) interpretation <- "Trung bình" else interpretation <- "Lớn"
+
+cat(glue("=> Ý NGHĨA: Quy mô khác biệt được đánh giá là: {interpretation}.\n"))
+cat("=> Điều này giúp xác định xem sự khác biệt có thực sự quan trọng trong ứng dụng thực tế hay không.\n")
+
+# --- BƯỚC 6: TRỰC QUAN HÓA ---
+if(!is.null(dev.list())) dev.off()
+ggplot(df_compare, aes(x = Manufacturer, y = Pixel_Rate, fill = Manufacturer)) +
+  geom_violin(alpha = 0.3, color = NA) +
+  geom_boxplot(width = 0.15, outlier.shape = 16, outlier.alpha = 0.4) +
+  stat_summary(fun = mean, geom = "point", color = "yellow", size = 3) +
+  scale_fill_manual(values = c("Nvidia" = "#76b900", "AMD" = "#ed1c24")) +
+  labs(title = "SO SÁNH PIXEL_RATE GIỮA NVIDIA VÀ AMD",
+       subtitle = glue("P-value chính: {format(p_val_main, scientific=T)} \n Quy mô khác biệt: {interpretation}"),
+       y = "log(Pixel_Rate + 1)", x = "Nhà sản xuất") +
+  theme_minimal() + theme(legend.position = "none")
+  
 #--------------------------------------------------
 # 8. Xây dựng mô hình
 #--------------------------------------------------
