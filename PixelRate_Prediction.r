@@ -471,10 +471,10 @@ library(effectsize)
 cohens_d_two <- cohens_d(Pixel_Rate ~ Manufacturer, data = data_compare)
 print(cohens_d_two)
 
-# Memory_Speed ~ Memory_Type (GDDR6 vs GDDR5)
+# Memory_Speed ~ Memory_Type (eDRAAM vs GDDR)
 cat("\nKIỂM ĐỊNH HAI MẪU: Memory_Speed ~ Memory_Type\n")
 
-data_mem <- train[train$Memory_Type %in% c("GDDR6", "GDDR5"), ]
+data_mem <- train[train$Memory_Type %in% c("eDRAM", "GDDR"), ]
 
 var.test(Memory_Speed ~ Memory_Type, data = data_mem)
 t.test(Memory_Speed ~ Memory_Type, data = data_mem, var.equal = FALSE)
