@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.28)  1 MAY 2026 14:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.28)  1 MAY 2026 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -752,10 +752,8 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@env@ii=\count338
 \c@mdf@zref@counter=\count339
 Package zref Info: New property: mdf@pagevalue on input line 895.
-) (BTL.aux
-Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported on input line 9.
 )
+No file BTL.aux.
 \openout1 = `BTL.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
@@ -778,7 +776,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
 LaTeX Font Info:    ... okay on input line 136.
-
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 136.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -834,11 +833,10 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count346
 Package hyperref Info: Link coloring OFF on input line 136.
- (BTL.out) (BTL.out)
 \@outlinefile=\write3
 \openout3 = `BTL.out'.
 
-<images/LOGO_HCMUT.png, id=83, 114.4275pt x 115.632pt>
+<images/LOGO_HCMUT.png, id=3, 114.4275pt x 115.632pt>
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
 Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 149.
@@ -857,7 +855,8 @@ Overfull \hbox (4.16864pt too wide) in paragraph at lines 157--171
 
 [1
 
-{C:/Users/Minh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/LOGO_HCMUT.png>] (BTL.toc)
+{C:/Users/Minh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/LOGO_HCMUT.png>]
+No file BTL.toc.
 \tf@toc=\write4
 \openout4 = `BTL.toc'.
 
@@ -888,95 +887,4588 @@ LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T5/cmtt/m/n' tried instead on input line 196.
  [2
 
-] (sections/phan5_suy_dien.tex (C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2025/11/14 1.11b listings language file
-) (C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-) (C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 16.
-File: images/LOGO_HCMUT.png Graphic file (type png)
-<use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 68.
-(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
- [3
-
 ]
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:202: LaTeX Error: Command \thechapter undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.202 	\renewcommand{\thechapter}
+                                 {\arabic{chapter}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:203: Undefined control sequence.
+l.203 	\chapter
+               {T·ªîNG QUAN NGHI√äN C·ª®U}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:204: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.204 	\setcounter{chapter}{1}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/1.tex
+Sections/1.tex:16: Undefined control sequence.
+l.16 {\relsize
+              {0.6}\textbf{T·∫°i sao l·∫°i ch·ªçn Pixel\_Rate ?}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 123.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 29.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[3
+
+])
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:206: Undefined control sequence.
+l.206 	\chapter
+               {KI·∫æN TH·ª®C N·ªÄN}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:207: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 	\setcounter{chapter}{2}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/2.tex
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 1.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
  [4]
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 182.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 21.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
  [5]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 240.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\eta' on input line 240.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 240.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 240.
-
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 245.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 40.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
-[6]
+ [6]
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 302.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 68.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
  [7]
-Underfull \hbox (badness 3942) in paragraph at lines 380--382
- \T5/cmr/bx/n/12 2.2.10.1 Bi∏n \T5/cmtt/m/n/12 Manufacturer\T5/cmr/bx/n/12 .[] \T5/cmr/m/n/12 B£ng []4[] trºnh b†y k∏t qu£ Tukey HSD cho
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 100.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [8]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 148.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [9]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 199.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [10]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 257.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [11])
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:209: Undefined control sequence.
+l.209 	\chapter
+               {TI·ªÄN X·ª¨ L√ù S·ªê LI·ªÜU}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:210: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.210 	\setcounter{chapter}{3}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/3.tex
+
+Sections/3.tex:3: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{minted}
+                  {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:4: Missing $ inserted.
+<inserted text> 
+                $
+l.4 GPU = read.csv("D:/DHBK/HK243/XSTK/BTL/Code_
+                                                R/All_GPUs.csv",header=TRUE,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:4: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.4 ...GPUs.csv",header=TRUE,na.strings = c("","\n
+                                                  -","\n","\nUnknown Release...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/3.tex:4: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.4 ...sv",header=TRUE,na.strings = c("","\n-","\n
+                                                  ","\nUnknown Release Date"))
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/3.tex:4: Undefined control sequence.
+<argument> ... system@active"\endcsname \nUnknown 
+                                                  
+l.4 ...RUE,na.strings = c("","\n-","\n","\nUnknown
+                                                   Release Date"))
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Sections/3.tex:6: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \end{minted}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 \end{minted}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-07-29 105142.png, id=102, 657.95813pt x 405.76593pt>
+File: images/Screenshot 2025-07-29 105142.png Graphic file (type png)
+<use images/Screenshot 2025-07-29 105142.png>
+Package pdftex.def Info: images/Screenshot 2025-07-29 105142.png  used on input line 10.
+(pdftex.def)             Requested size: 341.43307pt x 210.56609pt.
+
+Underfull \hbox (badness 4569) in paragraph at lines 2--14
+\T5/cmr/m/n/12 GPU = read.csv("D:/DHBK/HK243/XSTK/BTL/Code$[]\OML/cmm/m/it/12 =All[]PUs:csv\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; header \OT1/cmr/m/n/12 =
  []
 
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 402.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 21.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
-[8]
-Underfull \hbox (badness 2343) in paragraph at lines 405--408
- \T5/cmr/bx/n/12 2.2.10.2 Bi∏n \T5/cmtt/m/n/12 Memory_Type\T5/cmr/bx/n/12 .[] \T5/cmr/m/n/12 Th¸c hiªn t˜Ïng t¸, k∏t qu£ Tukey HSD cho
+[12 <./images/Screenshot 2025-07-29 105142.png>]
+
+Sections/3.tex:22: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 plot1 <- ggplot(data = na_
+                               summary_df, aes(x = reorder(Variable, -Missin...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \uhorn invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 27.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 28.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \uhorn invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 29.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 29.
+
+Sections/3.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no Ë in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no Ò in font cmr12!
+Missing character: There is no ˙ in font cmr12!
+Missing character: There is no ª in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no Ë in font cmr12!
+Missing character: There is no ˜ in font cmr12!
+Missing character: There is no Ò in font cmr12!
+Missing character: There is no ˙ in font cmr12!
+Missing character: There is no ª in font cmr12!
+
+Overfull \hbox (4.0679pt too wide) in paragraph at lines 21--33
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Bin\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; y \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 SlngdliuNA\OT1/cmr/m/n/12 ") + \OML/cmm/m/it/12 theme[]inimal\OT1/cmr/m/n/12 () + \OML/cmm/m/it/12 theme\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 axis:text:x \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 element[]ext\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 angle \OT1/cmr/m/n/12 =
+ []
+
+Sections/3.tex:34: Missing $ inserted.
+<inserted text> 
+                $
+l.34 plot2 <- ggplot(data = na_
+                               summary_df, aes(x = reorder(Variable, -Percen...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \u invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 38.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 39.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \u invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 40.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 40.
+
+
+Sections/3.tex:46: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:46: Missing $ inserted.
+<inserted text> 
+                $
+l.46 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no ´ in font cmr12!
+Missing character: There is no ˙ in font cmr12!
+Missing character: There is no ª in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no ´ in font cmr12!
+Missing character: There is no ˙ in font cmr12!
+Missing character: There is no ª in font cmr12!
+
+Overfull \hbox (22.43369pt too wide) in paragraph at lines 34--47
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Bin\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; y \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 PhntrmdliuNA\OT1/cmr/m/n/12 ") + \OML/cmm/m/it/12 theme[]inimal\OT1/cmr/m/n/12 () + \OML/cmm/m/it/12 theme\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 axis:text:x \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 element[]ext\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 angle \OT1/cmr/m/n/12 =
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 48.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[13]
+<images/Rplot01.png, id=117, 1129.21875pt x 426.393pt>
+File: images/Rplot01.png Graphic file (type png)
+<use images/Rplot01.png>
+Package pdftex.def Info: images/Rplot01.png  used on input line 54.
+(pdftex.def)             Requested size: 455.24411pt x 171.90096pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--79
+[][][][][][]\T5/cmr/m/n/12 , [][][][][][], [][][][][][], [][][][][][], [][][][][][],
+ []
+
+
+Sections/3.tex:173: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.173 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:174: Missing $ inserted.
+<inserted text> 
+                $
+l.174 GPU_
+          new = GPU[,c("Resolution_WxH", "Manufacturer", "Core_Speed",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:178: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:178: Missing $ inserted.
+<inserted text> 
+                $
+l.178 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (656.97862pt too wide) in paragraph at lines 172--179
+[]\T5/cmr/m/n/12 C•u lªnh th¸c hiªn: r GPU$[]\OML/cmm/m/it/12 ew \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 GPU\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; c\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 Resolution[]xH\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Manufacturer\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Memory[]peed\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Memory[]ype\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ROPs\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 TMUs\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Memory[]us\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Memory\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Process\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Shader\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 ")]$ 
+ []
+
+
+Sections/3.tex:183: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:184: Missing $ inserted.
+<inserted text> 
+                $
+l.184     print(summary(GPU_
+                            new))
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:185: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.185 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:185: Missing $ inserted.
+<inserted text> 
+                $
+l.185 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 182--186
+[]\T5/cmr/m/n/12 Ti∏p theo ta t§o 1 b£n t‚m t≠t thËng k∂ cıa dataframe cıa GPU_new: r
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 187.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[14 <./images/Rplot01.png>]
+<images/Screenshot 2025-08-06 231813.png, id=124, 657.95813pt x 361.35pt>
+File: images/Screenshot 2025-08-06 231813.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 231813.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 231813.png  used on input line 191.
+(pdftex.def)             Requested size: 455.24411pt x 250.0265pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+
+Sections/3.tex:203: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.203 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Sections/3.tex:208: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.208 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Sections/3.tex:210: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.210 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:211: You can't use `macro parameter character #' in horizontal mode.
+l.211 #
+        Core_Speed
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:211: Missing $ inserted.
+<inserted text> 
+                $
+l.211 # Core_
+             Speed
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:212: Missing $ inserted.
+<inserted text> 
+                $
+l.212 GPU_new$Core_
+                   Speed <- sapply(GPU_new$Core_Speed, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:212: Missing $ inserted.
+<inserted text> 
+                $
+l.212 GPU_new$Core_Speed <- sapply(GPU_new$Core_
+                                                Speed, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:213: Missing $ inserted.
+<inserted text> 
+                $
+l.213 GPU_new$Core_
+                   Speed[is.na(GPU_new$Core_Speed)] <- median(GPU_new$Core_S...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:213: Missing $ inserted.
+<inserted text> 
+                $
+l.213 GPU_new$Core_Speed[is.na(GPU_new$Core_
+                                            Speed)] <- median(GPU_new$Core_S...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:213: Missing $ inserted.
+<inserted text> 
+                $
+l.213 ..._new$Core_Speed)] <- median(GPU_new$Core_
+                                                  Speed, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:214: Missing $ inserted.
+<inserted text> 
+                $
+l.214 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 202--214
+\T5/cmr/m/n/12 r helper <- func-tion(x) if(is.na(x)) re-turn(NA) as.double(strsplit(as.character(x),
+ []
+
+
+Underfull \hbox (badness 5533) in paragraph at lines 202--214
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 sapply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed; helper\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed\OT1/cmr/m/n/12 )] \OML/cmm/m/it/12 <
+ []
+
+Sections/3.tex:215: You can't use `macro parameter character #' in vertical mode.
+l.215 #
+        Memory_Speed
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:215: Missing $ inserted.
+<inserted text> 
+                $
+l.215 # Memory_
+               Speed
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:216: Missing $ inserted.
+<inserted text> 
+                $
+l.216 GPU_new$Memory_
+                     Speed <- sapply(GPU_new$Memory_Speed, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:216: Missing $ inserted.
+<inserted text> 
+                $
+l.216 ...ew$Memory_Speed <- sapply(GPU_new$Memory_
+                                                  Speed, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:217: Missing $ inserted.
+<inserted text> 
+                $
+l.217 GPU_new$Memory_
+                     Speed[is.na(GPU_new$Memory_Speed)] <- median(GPU_new$Me...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:217: Missing $ inserted.
+<inserted text> 
+                $
+l.217 GPU_new$Memory_Speed[is.na(GPU_new$Memory_
+                                                Speed)] <- median(GPU_new$Me...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:217: Missing $ inserted.
+<inserted text> 
+                $
+l.217 ...$Memory_Speed)] <- median(GPU_new$Memory_
+                                                  Speed, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:218: Missing $ inserted.
+<inserted text> 
+                $
+l.218 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (264.65952pt too wide) in paragraph at lines 215--218
+[]\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 peedGPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 peed < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 sapply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 peed; helper\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 peed\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 peed\OT1/cmr/m/n/12 )] \OML/cmm/m/it/12 <
+ []
+
+Sections/3.tex:219: You can't use `macro parameter character #' in vertical mode.
+l.219 #
+        ROPs
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:220: You can't use `macro parameter character #' in horizontal mode.
+l.220 #
+        Gi·∫£ s·ª≠ GPU_new$ROPs ƒëang l√† character, ch·ª©a c√°c gi√° tr·ªã ...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:220: Missing $ inserted.
+<inserted text> 
+                $
+l.220 # Gi·∫£ s·ª≠ GPU_
+                       new$ROPs ƒëang l√† character, ch·ª©a c√°c gi√° tr·ªã ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:221: Missing $ inserted.
+<inserted text> 
+                $
+l.221 GPU_
+          new$ROPs <- as.numeric(sub("^([0-9]+).*", "\\1", GPU_new$ROPs))
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:221: Missing $ inserted.
+<inserted text> 
+                $
+l.221 GPU_new$ROPs <- as.numeric(sub("^
+                                       ([0-9]+).*", "\\1", GPU_new$ROPs))
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 GPU_
+          new$ROPs[is.na(GPU_new$ROPs)] <- median(GPU_new$ROPs, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 GPU_new$ROPs[is.na(GPU_
+                             new$ROPs)] <- median(GPU_new$ROPs, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:222: Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...$ROPs[is.na(GPU_new$ROPs)] <- median(GPU_
+                                                  new$ROPs, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 219--223
+\OT1/cmr/m/n/12 1"\OML/cmm/m/it/12 ; GPU[]ew$\T5/cmr/m/n/12 ROPs)) GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 ROPs[is.na(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 ROPs)] <- median(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 ROPs,
+ []
+
+Sections/3.tex:224: You can't use `macro parameter character #' in vertical mode.
+l.224 #
+        TMUs
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:225: Missing $ inserted.
+<inserted text> 
+                $
+l.225 GPU_
+          new$TMUs <- as.double(GPU_new$TMUs)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:225: Missing $ inserted.
+<inserted text> 
+                $
+l.225 GPU_new$TMUs <- as.double(GPU_
+                                    new$TMUs)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:226: Missing $ inserted.
+<inserted text> 
+                $
+l.226 GPU_
+          new$TMUs[is.na(GPU_new$TMUs)] <- median(GPU_new$TMUs, na.rm =
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:226: Missing $ inserted.
+<inserted text> 
+                $
+l.226 GPU_new$TMUs[is.na(GPU_
+                             new$TMUs)] <- median(GPU_new$TMUs, na.rm =
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:226: Missing $ inserted.
+<inserted text> 
+                $
+l.226 ...$TMUs[is.na(GPU_new$TMUs)] <- median(GPU_
+                                                  new$TMUs, na.rm =
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (28.7445pt too wide) in paragraph at lines 224--228
+[]\T5/cmr/m/n/12 TMUs GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 TMUs <- as.double(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 TMUs) GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 TMUs[is.na(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 TMUs)]
+ []
+
+Sections/3.tex:229: You can't use `macro parameter character #' in vertical mode.
+l.229 #
+        Memory_Bus
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:229: Missing $ inserted.
+<inserted text> 
+                $
+l.229 # Memory_
+               Bus
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:230: Missing $ inserted.
+<inserted text> 
+                $
+l.230 GPU_new$Memory_
+                     Bus <- sapply(GPU_new$Memory_Bus, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:230: Missing $ inserted.
+<inserted text> 
+                $
+l.230 GPU_new$Memory_Bus <- sapply(GPU_new$Memory_
+                                                  Bus, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:231: Missing $ inserted.
+<inserted text> 
+                $
+l.231 GPU_new$Memory_
+                     Bus[is.na(GPU_new$Memory_Bus)] <- median(GPU_new$Memory...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:231: Missing $ inserted.
+<inserted text> 
+                $
+l.231 GPU_new$Memory_Bus[is.na(GPU_new$Memory_
+                                              Bus)] <- median(GPU_new$Memory...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:231: Missing $ inserted.
+<inserted text> 
+                $
+l.231 ...ew$Memory_Bus)] <- median(GPU_new$Memory_
+                                                  Bus, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:232: Missing $ inserted.
+<inserted text> 
+                $
+l.232 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (217.24336pt too wide) in paragraph at lines 229--232
+[]\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 usGPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 us < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 sapply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 us; helper\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 us\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 us\OT1/cmr/m/n/12 )] \OML/cmm/m/it/12 <
+ []
+
+Sections/3.tex:233: You can't use `macro parameter character #' in vertical mode.
+l.233 #
+        Memory
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:234: Missing $ inserted.
+<inserted text> 
+                $
+l.234 GPU_
+          new$Memory <- sapply(GPU_new$Memory, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:234: Missing $ inserted.
+<inserted text> 
+                $
+l.234 GPU_new$Memory <- sapply(GPU_
+                                   new$Memory, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:235: Missing $ inserted.
+<inserted text> 
+                $
+l.235 GPU_
+          new$Memory[is.na(GPU_new$Memory)] <- median(GPU_new$Memory, na.rm ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:235: Missing $ inserted.
+<inserted text> 
+                $
+l.235 GPU_new$Memory[is.na(GPU_
+                               new$Memory)] <- median(GPU_new$Memory, na.rm ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:235: Missing $ inserted.
+<inserted text> 
+                $
+l.235 ...ory[is.na(GPU_new$Memory)] <- median(GPU_
+                                                  new$Memory, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (99.2495pt too wide) in paragraph at lines 233--236
+[]\T5/cmr/m/n/12 Memory GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Memory <- sapply(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Memory, helper) GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Memory[is.na(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Memory)]
+ []
+
+Sections/3.tex:238: You can't use `macro parameter character #' in vertical mode.
+l.238 #
+        Process
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:239: Missing $ inserted.
+<inserted text> 
+                $
+l.239 GPU_
+          new$Process <- as.double(gsub("[^0-9\\.]", "", as.character(GPU_ne...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:239: Missing $ inserted.
+<inserted text> 
+                $
+l.239 GPU_new$Process <- as.double(gsub("[^
+                                           0-9\\.]", "", as.character(GPU_ne...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:240: Missing $ inserted.
+<inserted text> 
+                $
+l.240 GPU_
+          new$Process[is.na(GPU_new$Process)] <- median(GPU_new$Process, na....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:240: Missing $ inserted.
+<inserted text> 
+                $
+l.240 GPU_new$Process[is.na(GPU_
+                                new$Process)] <- median(GPU_new$Process, na....
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:240: Missing $ inserted.
+<inserted text> 
+                $
+l.240 ...ss[is.na(GPU_new$Process)] <- median(GPU_
+                                                  new$Process, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
+\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 ]"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ""\OML/cmm/m/it/12 ; as:character\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Process))) GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Process[is.na(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Process)] <-
+ []
+
+Sections/3.tex:242: You can't use `macro parameter character #' in vertical mode.
+l.242 #
+        Shader
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 242.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[15 <./images/Screenshot 2025-08-06 231813.png>]
+Sections/3.tex:243: Missing $ inserted.
+<inserted text> 
+                $
+l.243 GPU_
+          new$Shader <- as.double(GPU_new$Shader)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:243: Missing $ inserted.
+<inserted text> 
+                $
+l.243 GPU_new$Shader <- as.double(GPU_
+                                      new$Shader)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:244: Missing $ inserted.
+<inserted text> 
+                $
+l.244 GPU_
+          new$Shader[is.na(GPU_new$Shader)] <- median(GPU_new$Shader, na.rm ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:244: Missing $ inserted.
+<inserted text> 
+                $
+l.244 GPU_new$Shader[is.na(GPU_
+                               new$Shader)] <- median(GPU_new$Shader, na.rm ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:244: Missing $ inserted.
+<inserted text> 
+                $
+l.244 ...der[is.na(GPU_new$Shader)] <- median(GPU_
+                                                  new$Shader, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (41.51237pt too wide) in paragraph at lines 242--245
+[]\T5/cmr/m/n/12 Shader GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Shader <- as.double(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Shader) GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Shader[is.na(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Shader)]
+ []
+
+Sections/3.tex:246: You can't use `macro parameter character #' in vertical mode.
+l.246 #
+        Pixel_Rate
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:246: Missing $ inserted.
+<inserted text> 
+                $
+l.246 # Pixel_
+              Rate
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:247: Missing $ inserted.
+<inserted text> 
+                $
+l.247 GPU_new$Pixel_
+                    Rate <- sapply(GPU_new$Pixel_Rate, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:247: Missing $ inserted.
+<inserted text> 
+                $
+l.247 GPU_new$Pixel_Rate <- sapply(GPU_new$Pixel_
+                                                 Rate, helper)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:248: Missing $ inserted.
+<inserted text> 
+                $
+l.248 GPU_new$Pixel_
+                    Rate[is.na(GPU_new$Pixel_Rate)] <- median(GPU_new$Pixel_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:248: Missing $ inserted.
+<inserted text> 
+                $
+l.248 GPU_new$Pixel_Rate[is.na(GPU_new$Pixel_
+                                             Rate)] <- median(GPU_new$Pixel_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:248: Missing $ inserted.
+<inserted text> 
+                $
+l.248 ...new$Pixel_Rate)] <- median(GPU_new$Pixel_
+                                                  Rate, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:249: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:249: Missing $ inserted.
+<inserted text> 
+                $
+l.249 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (151.26306pt too wide) in paragraph at lines 246--250
+[]\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ateGPU[]ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 sapply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; helper\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate\OT1/cmr/m/n/12 )] \OML/cmm/m/it/12 <
+ []
+
+
+Sections/3.tex:258: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258     \begin{minted}
+                        {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:259: You can't use `macro parameter character #' in horizontal mode.
+l.259 #
+        Resolution_WxH
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:259: Missing $ inserted.
+<inserted text> 
+                $
+l.259 # Resolution_
+                   WxH
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:260: Missing $ inserted.
+<inserted text> 
+                $
+l.260 GPU_new$Resolution_
+                         WxH[is.na(GPU_new$Resolution_WxH)] = "4096x2160"
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:260: Missing $ inserted.
+<inserted text> 
+                $
+l.260 ...$Resolution_WxH[is.na(GPU_new$Resolution_
+                                                  WxH)] = "4096x2160"
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:261: Missing $ inserted.
+<inserted text> 
+                $
+l.261 GPU_new$Resolution_
+                         WxH <- ifelse(GPU_new$Resolution_WxH == "4096x2160"...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:261: Missing $ inserted.
+<inserted text> 
+                $
+l.261 ...olution_WxH <- ifelse(GPU_new$Resolution_
+                                                  WxH == "4096x2160", 1, ife...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:261: Missing $ inserted.
+<inserted text> 
+                $
+l.261 ...4096x2160", 1, ifelse(GPU_new$Resolution_
+                                                  WxH == "2560x1600", 2, 3))...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:261: You can't use `macro parameter character #' in math mode.
+l.261 ...w$Resolution_WxH == "2560x1600", 2, 3)) #
+                                                   Gom nh√≥m: 4096x2160 (39%...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 261.
+
+Missing character: There is no ‚ in font cmr12!
+Sections/3.tex:262: Missing $ inserted.
+<inserted text> 
+                $
+l.262 GPU_new$Resolution_
+                         WxH = factor(GPU_new$Resolution_WxH)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:262: Missing $ inserted.
+<inserted text> 
+                $
+l.262 ...solution_WxH = factor(GPU_new$Resolution_
+                                                  WxH)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:263: LaTeX Error: \begin{itemize} on input line 255 ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.263     \end{minted}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:263: Missing $ inserted.
+<inserted text> 
+                $
+l.263     \end{minted}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 256--264
+\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xHGPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH\OT1/cmr/m/n/12 )] =
+ []
+
+
+Overfull \hbox (3.42188pt too wide) in paragraph at lines 256--264
+\OT1/cmr/m/n/12 "4096\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 2160"\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ifelse\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH \OT1/cmr/m/n/12 ==
+ []
+
+
+Overfull \hbox (22.99625pt too wide) in paragraph at lines 256--264
+\OT1/cmr/m/n/12 "4096\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 2160"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; ifelse\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH \OT1/cmr/m/n/12 == "2560\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 1600"\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3))\OML/cmm/m/it/12 Gomnhm \OT1/cmr/m/n/12 :
+ []
+
+
+Sections/3.tex:265: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265         \begin{minted}
+                            {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:266: You can't use `macro parameter character #' in horizontal mode.
+l.266 #
+        Manufacturer
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:267: Missing $ inserted.
+<inserted text> 
+                $
+l.267 GPU_
+          new$Manufacturer = factor(GPU_new$Manufacturer)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:267: Missing $ inserted.
+<inserted text> 
+                $
+l.267 GPU_new$Manufacturer = factor(GPU_
+                                        new$Manufacturer)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:268: LaTeX Error: \begin{itemize} on input line 255 ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268     \end{minted}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (52.71184pt too wide) in paragraph at lines 264--269
+[]\T5/cmr/bx/n/12 Manufacturer: \T5/cmr/m/n/12 r  Man-u-fac-turer GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Manufacturer = factor(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Manufacturer) 
+ []
+
+
+Sections/3.tex:270: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.270     \begin{minted}
+                        {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:271: You can't use `macro parameter character #' in horizontal mode.
+l.271 #
+        Memory_Type
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:271: Missing $ inserted.
+<inserted text> 
+                $
+l.271 # Memory_
+               Type
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:272: Missing $ inserted.
+<inserted text> 
+                $
+l.272 ...<- GPU_new[complete.cases(GPU_new$Memory_
+                                                  Type), ]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:273: Missing $ inserted.
+<inserted text> 
+                $
+l.273 GPU_new$Memory_
+                     Type = gsub("[^A-Za-z]+.*","",GPU_new$Memory_Type)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:273: Missing $ inserted.
+<inserted text> 
+                $
+l.273 ... = gsub("[^A-Za-z]+.*","",GPU_new$Memory_
+                                                  Type)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:274: Missing $ inserted.
+<inserted text> 
+                $
+l.274 GPU_new$Memory_
+                     Type = factor(GPU_new$Memory_Type)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:274: Missing $ inserted.
+<inserted text> 
+                $
+l.274 GPU_new$Memory_Type = factor(GPU_new$Memory_
+                                                  Type)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:275: LaTeX Error: \begin{itemize} on input line 255 ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.275     \end{minted}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:275: Missing $ inserted.
+<inserted text> 
+                $
+l.275     \end{minted}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 269--276
+\T5/cmr/m/n/12 c°c kΩ t¸ ch˙ nh¨m ph•n lo§i tËt hÏn: r  Memory$[]\OML/cmm/m/it/12 ypeGPU[]ew <
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 269--276
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 GPU[]ew\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 complete:cases\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 ype\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 ype \OT1/cmr/m/n/12 =
+ []
+
+
+Sections/3.tex:288: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.288 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:289: Missing $ inserted.
+<inserted text> 
+                $
+l.289     str(GPU_
+                  new)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:292: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:292: Missing $ inserted.
+<inserted text> 
+                $
+l.292 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-08-06 232835.png, id=131, 528.17325pt x 371.58826pt>
+File: images/Screenshot 2025-08-06 232835.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 232835.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 232835.png  used on input line 298.
+(pdftex.def)             Requested size: 409.71692pt x 288.25574pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Sections/3.tex:335: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:336: You can't use `macro parameter character #' in horizontal mode.
+l.336 #
+        T·∫°o dataframe log-transformed
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:337: Missing $ inserted.
+<inserted text> 
+                $
+l.337 GPU_
+          new_log <- GPU_new
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:339: Missing $ inserted.
+<inserted text> 
+                $
+l.339 GPU_new_log$Pixel_
+                        Rate <- log(GPU_new_log$Pixel_Rate)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:339: Missing $ inserted.
+<inserted text> 
+                $
+l.339 ..._log$Pixel_Rate <- log(GPU_new_log$Pixel_
+                                                  Rate)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:340: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.340 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:340: Missing $ inserted.
+<inserted text> 
+                $
+l.340 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (25.38557pt too wide) in paragraph at lines 334--341
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 GPU[]ewGPU[]ew[]og\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ] \OML/cmm/m/it/12 < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ])\OML/cmm/m/it/12 GPU[]ew[]og$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate <
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 341.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[16]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 349.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [17 <./images/Screenshot 2025-08-06 232835.png>]
+
+Sections/3.tex:351: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.351 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:352: You can't use `macro parameter character #' in horizontal mode.
+l.352 #
+        Ki·ªÉm tra xem c√≥ gi√° tr·ªã < 0 trong d·ªØ li·ªáu g·ªëc
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:354: Missing $ inserted.
+<inserted text> 
+                $
+l.354     has_
+              negative <- any(GPU_new[[var]] < 0, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:356: Extra }, or forgotten $.
+l.356 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Sections/3.tex:357: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:357: Missing $ inserted.
+<inserted text> 
+                $
+l.357 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Sections/3.tex:357: Missing } inserted.
+<inserted text> 
+                }
+l.357 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-08-05 153233.png, id=144, 656.4525pt x 122.70844pt>
+File: images/Screenshot 2025-08-05 153233.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 153233.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 153233.png  used on input line 361.
+(pdftex.def)             Requested size: 455.24411pt x 85.09767pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 361--362
+ [][] 
+ []
+
+
+Sections/3.tex:364: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:365: You can't use `macro parameter character #' in horizontal mode.
+l.365 #
+        Ki·ªÉm tra xem c√≥ gi√° tr·ªã < 0 sau khi log-transform
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:367: Missing $ inserted.
+<inserted text> 
+                $
+l.367  has_
+           negative_log <- any(GPU_new_log[[var]] < 0, na.rm = TRUE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/3.tex:369: Extra }, or forgotten $.
+l.369 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Sections/3.tex:370: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.370 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:370: Missing $ inserted.
+<inserted text> 
+                $
+l.370 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Sections/3.tex:370: Missing } inserted.
+<inserted text> 
+                }
+l.370 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-08-05 153442.png, id=145, 658.71094pt x 121.20282pt>
+File: images/Screenshot 2025-08-05 153442.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 153442.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 153442.png  used on input line 374.
+(pdftex.def)             Requested size: 455.24411pt x 83.76688pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 374--375
+ [][] 
+ []
+
+
+Sections/3.tex:382: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:383: You can't use `macro parameter character #' in horizontal mode.
+l.383 #
+        Th·ªëng k√™ nhanh tr√™n GPU_new_log
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:383: Missing $ inserted.
+<inserted text> 
+                $
+l.383 # Th·ªëng k√™ nhanh tr√™n GPU_
+                                    new_log
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:386: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.386 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:386: Missing $ inserted.
+<inserted text> 
+                $
+l.386 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (82.66609pt too wide) in paragraph at lines 382--387
+[]\T5/cmr/m/n/12 r  ThËng k∂ nhanh tr∂n GPU$[]\OML/cmm/m/it/12 ew[]ogprint\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 summary\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 print\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 colSums\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 is:na\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og\OT1/cmr/m/n/12 )))$ 
+ []
+
+<images/Screenshot 2025-08-06 233507.png, id=146, 660.21657pt x 313.17pt>
+File: images/Screenshot 2025-08-06 233507.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 233507.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 233507.png  used on input line 390.
+(pdftex.def)             Requested size: 455.24411pt x 215.94894pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 390--391
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/Screenshot 2025-08-06 233245.png, id=147, 662.475pt x 85.06781pt>
+File: images/Screenshot 2025-08-06 233245.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 233245.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 233245.png  used on input line 396.
+(pdftex.def)             Requested size: 455.24411pt x 58.45671pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 396--397
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Sections/3.tex:401: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:402: You can't use `macro parameter character #' in horizontal mode.
+l.402 #
+        Xem 10 d√≤ng ƒë·∫ßu c·ªßa GPU_new_log
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/3.tex:402: Missing $ inserted.
+<inserted text> 
+                $
+l.402 # Xem 10 d√≤ng ƒë·∫ßu c·ªßa GPU_
+                                      new_log
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/3.tex:404: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.404 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/3.tex:404: Missing $ inserted.
+<inserted text> 
+                $
+l.404 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-08-06 233357.png, id=148, 655.69969pt x 331.2375pt>
+File: images/Screenshot 2025-08-06 233357.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 233357.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 233357.png  used on input line 408.
+(pdftex.def)             Requested size: 455.24411pt x 229.97437pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 408--409
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:212: Undefined control sequence.
+l.212 	\chapter
+               {TH·ªêNG K√ä M√î T·∫¢}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:213: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 	\setcounter{chapter}{4}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/4.tex
+
+Sections/4.tex:5: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{minted}
+                  {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:6: Missing $ inserted.
+<inserted text> 
+                $
+l.6 mean<-apply(GPU_
+                    new[,numerical],2,mean)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:12: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (52.26463pt too wide) in paragraph at lines 5--13
+[]\T5/cmr/m/n/12 r mean<-apply(GPU$[]\OML/cmm/m/it/12 ew\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; mean\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 sd < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 apply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; sd\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 min <
+ []
+
+
+Overfull \hbox (29.3469pt too wide) in paragraph at lines 5--13
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 apply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; min\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 max < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 apply\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; numerical\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; max\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 median <
+ []
+
+<images/Screenshot 2025-08-05 155550.png, id=149, 663.22781pt x 137.7647pt>
+File: images/Screenshot 2025-08-05 155550.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 155550.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 155550.png  used on input line 16.
+(pdftex.def)             Requested size: 455.24411pt x 94.56163pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 16--17
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/Screenshot 2025-08-05 155536.png, id=150, 662.475pt x 134.75343pt>
+File: images/Screenshot 2025-08-05 155536.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 155536.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 155536.png  used on input line 31.
+(pdftex.def)             Requested size: 455.24411pt x 92.59956pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 34.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[18 <./images/Screenshot 2025-08-05 153233.png> <./images/Screenshot 2025-08-05 153442.png>]
+
+LaTeX Warning: Text page 19 contains only floats.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 34.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[19 <./images/Screenshot 2025-08-06 233507.png> <./images/Screenshot 2025-08-06 233245.png> <./images/Screenshot 2025-08-06 233357.png> <./images/Screenshot 2025-08-05 155550.png>]
+
+Sections/4.tex:39: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:40: You can't use `macro parameter character #' in horizontal mode.
+l.40 #
+       Chia layout th√†nh 3 h√†ng v√† 3 c·ªôt
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:43: You can't use `macro parameter character #' in vertical mode.
+l.43 #
+       V·∫Ω histogram cho t·ª´ng bi·∫øn numerical trong GPU_new
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...ram cho t·ª´ng bi·∫øn numerical trong GPU_
+                                                  new
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:52: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (1250.86122pt too wide) in paragraph at lines 43--53
+[]\T5/cmr/m/n/12 V≥ his-togram cho t¯ng bi∏n nu-mer-i-cal trong GPU$[]\OML/cmm/m/it/12 ewfor\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 iin\OT1/cmr/m/n/12 1 : \OML/cmm/m/it/12 length\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 numerical\OT1/cmr/m/n/12 ))[]$ 
+ []
+
+<images/Screenshot 2025-08-05 160712.png, id=168, 1444.64719pt x 745.28438pt>
+File: images/Screenshot 2025-08-05 160712.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 160712.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 160712.png  used on input line 56.
+(pdftex.def)             Requested size: 409.71692pt x 211.36201pt.
+
+Sections/4.tex:63: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:64: You can't use `macro parameter character #' in horizontal mode.
+l.64     #
+           Chia layout th√†nh 3 h√†ng v√† 3 c·ªôt
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:67: You can't use `macro parameter character #' in vertical mode.
+l.67 #
+       V·∫Ω histogram cho t·ª´ng bi·∫øn numerical trong GPU_new_log
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:67: Missing $ inserted.
+<inserted text> 
+                $
+l.67 ...ram cho t·ª´ng bi·∫øn numerical trong GPU_
+                                                  new_log
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:76: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:76: Missing $ inserted.
+<inserted text> 
+                $
+l.76 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (1375.84972pt too wide) in paragraph at lines 67--77
+[]\T5/cmr/m/n/12 V≥ his-togram cho t¯ng bi∏n nu-mer-i-cal trong GPU$[]\OML/cmm/m/it/12 ew[]ogfor\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 iin\OT1/cmr/m/n/12 1 : \OML/cmm/m/it/12 length\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 numerical\OT1/cmr/m/n/12 ))[]$ 
+ []
+
+<images/Screenshot 2025-08-05 161203.png, id=169, 1442.38875pt x 741.52031pt>
+File: images/Screenshot 2025-08-05 161203.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 161203.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 161203.png  used on input line 80.
+(pdftex.def)             Requested size: 455.24411pt x 234.03271pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Sections/4.tex:87: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 87.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[20 <./images/Screenshot 2025-08-05 155536.png> <./images/Screenshot 2025-08-05 160712.png>]
+Sections/4.tex:88: You can't use `macro parameter character #' in horizontal mode.
+l.88 #
+       Chia layout th√†nh 1 h√†ng v√† 3 c·ªôt
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:91: You can't use `macro parameter character #' in vertical mode.
+l.91 #
+       V·∫Ω b·∫£ng barplot th·ªÉ hi·ªán ph√¢n ph·ªëi bi·∫øn ƒë·ªãnh lu·ªçng
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:92: Missing $ inserted.
+<inserted text> 
+                $
+l.92 barplot(table(GPU_
+                       new$Manufacturer), xlab="Manufacturer", ylab="Frequen...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:93: Missing $ inserted.
+<inserted text> 
+                $
+l.93 barplot(table(GPU_
+                       new$Memory_Type), xlab="Memory_Type", ylab="Frequency...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:93: Missing $ inserted.
+<inserted text> 
+                $
+l.93 barplot(table(GPU_new$Memory_
+                                  Type), xlab="Memory_Type", ylab="Frequency...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:94: Missing $ inserted.
+<inserted text> 
+                $
+l.94 barplot(table(GPU_new$Resolution_
+                                      WxH), xlab="Resolution_WxH", ylab="Fre...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:95: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:95: Missing $ inserted.
+<inserted text> 
+                $
+l.95 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (16.42653pt too wide) in paragraph at lines 91--96
+[]\T5/cmr/m/n/12 V≥ b£ng barplot th∫ hiªn ph•n phËi bi∏n ^^_‡nh luÂng barplot(table(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Manufacturer),
+ []
+
+
+Overfull \hbox (88.70459pt too wide) in paragraph at lines 91--96
+\T5/cmr/m/n/12 xlab="Manufacturer", ylab="Frequency", main="Barplot of Man-u-fac-turer", col=c("red","green","blue"))
+ []
+
+
+Overfull \hbox (12.82057pt too wide) in paragraph at lines 91--96
+\T5/cmr/m/n/12 barplot(table(GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Memory$[]\OML/cmm/m/it/12 ype\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; xlab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Memory[]ype\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Frequency\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (89.02171pt too wide) in paragraph at lines 91--96
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 BarplotofMemory[]ype\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 green\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 "))\OML/cmm/m/it/12 barplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 table\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Resolution$[]\OML/cmm/m/it/12 xH\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; xlab \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-05 163146.png, id=177, 929.72343pt x 456.20438pt>
+File: images/Screenshot 2025-08-05 163146.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 163146.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 163146.png  used on input line 99.
+(pdftex.def)             Requested size: 455.24411pt x 223.38199pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 99--100
+ [][] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 105.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[21 <./images/Screenshot 2025-08-05 161203.png> <./images/Screenshot 2025-08-05 163146.png>]
+
+Sections/4.tex:106: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 boxplot(Pixel_
+                    Rate~Manufacturer, data=GPU_new, main="boxplot of Pixel_...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:110: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:110: Missing $ inserted.
+<inserted text> 
+                $
+l.110 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (41.11946pt too wide) in paragraph at lines 106--111
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 boxplotofPixel[]ateforManufacturer\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 boxplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate Manufacturer; data \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-05 163159.png, id=184, 932.73468pt x 456.95718pt>
+File: images/Screenshot 2025-08-05 163159.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 163159.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 163159.png  used on input line 114.
+(pdftex.def)             Requested size: 455.24411pt x 223.03242pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 114--115
+ [][] 
+ []
+
+
+Sections/4.tex:119: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:121: Missing $ inserted.
+<inserted text> 
+                $
+l.121 boxplot(Pixel_
+                    Rate~Memory_Type, data=GPU_new, main="boxplot of Pixel_R...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:123: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:123: Missing $ inserted.
+<inserted text> 
+                $
+l.123 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (23.90886pt too wide) in paragraph at lines 119--124
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 boxplotofPixel[]ateforMemory[]ype\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 boxplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate Memory[]ype; data \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-05 163216.png, id=185, 933.4875pt x 456.95718pt>
+File: images/Screenshot 2025-08-05 163216.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 163216.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 163216.png  used on input line 127.
+(pdftex.def)             Requested size: 409.71692pt x 200.55974pt.
+
+Sections/4.tex:132: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 132.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[22 <./images/Screenshot 2025-08-05 163159.png> <./images/Screenshot 2025-08-05 163216.png>]
+Sections/4.tex:134: Missing $ inserted.
+<inserted text> 
+                $
+l.134 boxplot(Pixel_
+                    Rate~Resolution_WxH, data=GPU_new, main="boxplot of Pixe...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/4.tex:136: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:136: Missing $ inserted.
+<inserted text> 
+                $
+l.136 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (52.45766pt too wide) in paragraph at lines 132--137
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 boxplotofPixel[]ateforResolution[]xH\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 boxplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate Resolution[]xH; data \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-05 163257.png, id=192, 930.47626pt x 459.21562pt>
+File: images/Screenshot 2025-08-05 163257.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 163257.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 163257.png  used on input line 140.
+(pdftex.def)             Requested size: 455.24411pt x 224.67427pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 140--141
+ [][] 
+ []
+
+
+Sections/4.tex:148: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:149: You can't use `macro parameter character #' in horizontal mode.
+l.149 #
+        Chia layout th√†nh 3 h√†ng v√† 2 c·ªôt
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:151: You can't use `macro parameter character #' in horizontal mode.
+l.151 #
+        V·∫Ω scatter plot
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:152: You can't use `macro parameter character #' in horizontal mode.
+l.152 #
+        Core_Speed vs Pixel_Rate
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:152: Missing $ inserted.
+<inserted text> 
+                $
+l.152 # Core_
+             Speed vs Pixel_Rate
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:153: Missing $ inserted.
+<inserted text> 
+                $
+l.153 plot(GPU_new$Core_
+                        Speed, GPU_new$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:153: Missing $ inserted.
+<inserted text> 
+                $
+l.153 plot(GPU_new$Core_Speed, GPU_new$Pixel_
+                                             Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:158: You can't use `macro parameter character #' in math mode.
+l.158 #
+        log(Core_Speed) vs log(Pixel_Rate)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:159: Missing $ inserted.
+<inserted text> 
+                $
+l.159 plot(GPU_new_log$Core_
+                            Speed, GPU_new_log$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:159: Missing $ inserted.
+<inserted text> 
+                $
+l.159 ...PU_new_log$Core_Speed, GPU_new_log$Pixel_
+                                                  Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:164: You can't use `macro parameter character #' in math mode.
+l.164 #
+        ROPs vs Pixel_Rate
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:165: Missing $ inserted.
+<inserted text> 
+                $
+l.165 plot(GPU_new$ROPs, GPU_
+                             new$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:165: Missing $ inserted.
+<inserted text> 
+                $
+l.165 plot(GPU_new$ROPs, GPU_new$Pixel_
+                                       Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:170: You can't use `macro parameter character #' in math mode.
+l.170 #
+        log(ROPs) vs log(Pixel_Rate)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:171: Missing $ inserted.
+<inserted text> 
+                $
+l.171 plot(GPU_new_log$ROPs, GPU_
+                                 new_log$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:171: Missing $ inserted.
+<inserted text> 
+                $
+l.171 plot(GPU_new_log$ROPs, GPU_new_log$Pixel_
+                                               Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:176: You can't use `macro parameter character #' in math mode.
+l.176 #
+        Shader vs Pixel_Rate
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:177: Missing $ inserted.
+<inserted text> 
+                $
+l.177 plot(GPU_new$Shader, GPU_
+                               new$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:177: Missing $ inserted.
+<inserted text> 
+                $
+l.177 plot(GPU_new$Shader, GPU_new$Pixel_
+                                         Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:182: You can't use `macro parameter character #' in math mode.
+l.182 #
+        log(Core_Speed) vs log(Pixel_Rate)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/4.tex:183: Missing $ inserted.
+<inserted text> 
+                $
+l.183 plot(GPU_new_log$Core_
+                            Speed, GPU_new_log$Pixel_Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:183: Missing $ inserted.
+<inserted text> 
+                $
+l.183 ...PU_new_log$Core_Speed, GPU_new_log$Pixel_
+                                                  Rate,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/4.tex:188: You can't use `macro parameter character #' in math mode.
+l.188 #
+        Reset layout
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Sections/4.tex:190: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/4.tex:190: Missing $ inserted.
+<inserted text> 
+                $
+l.190 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 5787) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Pixel[]ateandCore[]peed\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (37.96893pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 vslog\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 plot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed; GPU[]ew[]og$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; xlab \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (33.90364pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 andlog\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (1.47023pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; pch \OT1/cmr/m/n/12 = 20)\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 2 \OML/cmm/m/it/12 < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 lm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate Core[]peed; data \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 GPU[]ew[]og\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 abline\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (5.62898pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 ROPsvsPixel[]ateplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 ROPs, GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; xlab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 ROPs\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 =
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Pixel[]ateandROPs\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; pch \OT1/cmr/m/n/12 = 20)\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 3 \OML/cmm/m/it/12 <
+ []
+
+
+Overfull \hbox (144.69652pt too wide) in paragraph at lines 148--191
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 lm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate ROPs; data \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 GPU[]ew\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 abline\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ROPs\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 vslog\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 plot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og$\T5/cmr/m/n/12 ROPs,
+ []
+
+
+Underfull \hbox (badness 4353) in paragraph at lines 148--191
+\T5/cmr/m/n/12 GPU$[]\OML/cmm/m/it/12 ew[]og$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; xlab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ROPs\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (22.0232pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 andlog\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ROPs\OT1/cmr/m/n/12 )"\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; pch \OT1/cmr/m/n/12 = 20)\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 4 \OML/cmm/m/it/12 < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 lm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate ROPs; data \OT1/cmr/m/n/12 =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--191
+\OML/cmm/m/it/12 GPU[]ew[]og\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 abline\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 fit\OT1/cmr/m/n/12 4\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 ShadervsPixel[]ateplot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew$\T5/cmr/m/n/12 Shader,
+ []
+
+
+Overfull \hbox (38.80312pt too wide) in paragraph at lines 148--191
+\T5/cmr/m/n/12 GPU$[]\OML/cmm/m/it/12 ew$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; xlab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Shader\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; ylab \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; main \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Pixel[]ateandShader\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; col \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (37.96893pt too wide) in paragraph at lines 148--191
+\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 ")\OML/cmm/m/it/12 log\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Core[]peed\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 vslog\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 plot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 GPU[]ew[]og$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed; GPU[]ew[]og$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; xlab \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-05 164224.png, id=193, 931.22906pt x 454.69875pt>
+File: images/Screenshot 2025-08-05 164224.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 164224.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 164224.png  used on input line 194.
+(pdftex.def)             Requested size: 455.24411pt x 222.28397pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 194--195
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:215: Undefined control sequence.
+l.215 	\chapter
+               {TH·ªêNG K√ä SUY DI·ªÑN}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:216: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 	\setcounter{chapter}{5}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/5.tex
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 5.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [23 <./images/Screenshot 2025-08-05 163257.png>]
+<images/Screenshot 2025-08-05 215207.png, id=199, 667.74469pt x 135.50626pt>
+File: images/Screenshot 2025-08-05 215207.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 215207.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 215207.png  used on input line 17.
+(pdftex.def)             Requested size: 455.24411pt x 92.38493pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+<images/Screenshot 2025-08-05 215544.png, id=200, 1434.86063pt x 706.13812pt>
+File: images/Screenshot 2025-08-05 215544.png Graphic file (type png)
+<use images/Screenshot 2025-08-05 215544.png>
+Package pdftex.def Info: images/Screenshot 2025-08-05 215544.png  used on input line 26.
+(pdftex.def)             Requested size: 455.24411pt x 224.04013pt.
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 28.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[24 <./images/Screenshot 2025-08-05 164224.png> <./images/Screenshot 2025-08-05 215207.png>]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 59.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [25 <./images/Screenshot 2025-08-05 215544.png>]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 107.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [26]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 133.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [27]
+
+Sections/5.tex:143: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.143 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:145: Undefined control sequence.
+<argument> ...me system@active"\endcsname \nANOVA 
+                                                  
+l.145   cat("\nANOVA
+                     for", cat, "on Train set\n")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/5.tex:145: Undefined control sequence.
+l.145   cat("\nANOVA for", cat, "on Train set\n
+                                               ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/5.tex:146: Missing $ inserted.
+<inserted text> 
+                $
+l.146   aov_
+            mod <- aov(as.formula(paste("Pixel_Rate ~", cat)), data = train)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/5.tex:148: Extra }, or forgotten $.
+l.148 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Sections/5.tex:149: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:149: Missing $ inserted.
+<inserted text> 
+                $
+l.149 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Sections/5.tex:149: Missing } inserted.
+<inserted text> 
+                }
+l.149 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (156.1388pt too wide) in paragraph at lines 143--150
+[]\T5/cmr/m/n/12 r for (cat in cat-e-gor-i-cal)  cat("for", cat, "on Train set") aov$[]\OML/cmm/m/it/12 od < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 aov\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 as:formula\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 paste\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 Pixel[]ate \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; cat\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ; data \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-06 002901.png, id=235, 885.3075pt x 96.36pt>
+File: images/Screenshot 2025-08-06 002901.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 002901.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 002901.png  used on input line 158.
+(pdftex.def)             Requested size: 455.24411pt x 49.55168pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 158--159
+ [][] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 168.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[28 <./images/Screenshot 2025-08-06 002901.png>]
+<images/Screenshot 2025-08-06 002942.png, id=244, 872.50969pt x 97.11281pt>
+File: images/Screenshot 2025-08-06 002942.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 002942.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 002942.png  used on input line 171.
+(pdftex.def)             Requested size: 455.24411pt x 50.66936pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 171--172
+ [][] 
+ []
+
+<images/Screenshot 2025-08-06 002957.png, id=245, 867.24pt x 101.62968pt>
+File: images/Screenshot 2025-08-06 002957.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 002957.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 002957.png  used on input line 184.
+(pdftex.def)             Requested size: 455.24411pt x 53.34862pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 184--185
+ [][] 
+ []
+
+
+Overfull \hbox (62.23492pt too wide) in alignment at lines 197--207
+ [] [] [] [] [] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 221.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[29 <./images/Screenshot 2025-08-06 002942.png> <./images/Screenshot 2025-08-06 002957.png>]
+
+Sections/5.tex:242: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:244: Undefined control sequence.
+<argument> ...me system@active"\endcsname \nANOVA 
+                                                  
+l.244   cat("\nANOVA
+                     for", cat, "on Train set\n")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/5.tex:244: Undefined control sequence.
+l.244   cat("\nANOVA for", cat, "on Train set\n
+                                               ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Sections/5.tex:245: Missing $ inserted.
+<inserted text> 
+                $
+l.245   aov_
+            mod <- aov(as.formula(paste("Pixel_Rate ~", cat)), data = train)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/5.tex:246: You can't use `macro parameter character #' in math mode.
+l.246   #
+          5.2.2 H·∫≠u nghi·ªám Tukey & Effect size (Œ∑¬≤)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 246.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 246.
+
+Sections/5.tex:246: Misplaced alignment tab character &.
+l.246   # 5.2.2 H·∫≠u nghi·ªám Tukey &
+                                       Effect size (Œ∑¬≤)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Sections/5.tex:246: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.246 ....2 H·∫≠u nghi·ªám Tukey & Effect size (Œ∑
+                                                  ¬≤)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 246.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 246.
+
+Sections/5.tex:253: Extra }, or forgotten $.
+l.253 }
+       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Sections/5.tex:254: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:254: Missing $ inserted.
+<inserted text> 
+                $
+l.254 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no ª in font cmr12!
+Missing character: There is no ≤ in font cmr12!
+Sections/5.tex:254: Missing } inserted.
+<inserted text> 
+                }
+l.254 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (156.1388pt too wide) in paragraph at lines 242--255
+[]\T5/cmr/m/n/12 r for (cat in cat-e-gor-i-cal)  cat("for", cat, "on Train set") aov$[]\OML/cmm/m/it/12 od < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 aov\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 as:formula\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 paste\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 Pixel[]ate \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; cat\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ; data \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (206.66557pt too wide) in paragraph at lines 242--255
+\OML/cmm/m/it/12 train\OT1/cmr/m/n/12 )5\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 HunghimTukeyEffectsize\OT1/cmr/m/n/12 ()\OML/cmm/m/it/12 tukey[]esult < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 TukeyHSD\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 aov[]od\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 print\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 tukey[]esult\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 plot\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 TukeyHSD\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 aov[]od\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; las \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (72.93456pt too wide) in paragraph at lines 242--255
+\OT1/cmr/m/n/12 1)\OML/cmm/m/it/12 tab < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 summary\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 aov[]od\OT1/cmr/m/n/12 )[[1]]\OML/cmm/m/it/12 eta\OT1/cmr/m/n/12 2 \OML/cmm/m/it/12 < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 tab\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 SumSq\OT1/cmr/m/n/12 "]\OML/cmm/m/it/12 =sum\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 tab\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 SumSq\OT1/cmr/m/n/12 "])\OML/cmm/m/it/12 print\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 cbind\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 tab; Eta\OT1/cmr/m/n/12 2 =
+ []
+
+<images/Screenshot 2025-08-06 003238.png, id=255, 658.71094pt x 194.97844pt>
+File: images/Screenshot 2025-08-06 003238.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003238.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003238.png  used on input line 262.
+(pdftex.def)             Requested size: 455.24411pt x 134.75542pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 262--263
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Sections/5.tex:265: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 \textbf{K·∫øt qu·∫£ ANOVA v√† Œ∑¬≤:}
+                                          
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<images/Screenshot 2025-08-06 003246.png, id=256, 662.475pt x 41.4047pt>
+File: images/Screenshot 2025-08-06 003246.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003246.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003246.png  used on input line 269.
+(pdftex.def)             Requested size: 455.24411pt x 28.45236pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 269--270
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/Screenshot 2025-08-06 003404.png, id=257, 660.96938pt x 345.54094pt>
+File: images/Screenshot 2025-08-06 003404.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003404.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003404.png  used on input line 276.
+(pdftex.def)             Requested size: 455.24411pt x 238.0017pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 276--277
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 279.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[30]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 288.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [31 <./images/Screenshot 2025-08-06 003238.png> <./images/Screenshot 2025-08-06 003246.png> <./images/Screenshot 2025-08-06 003404.png>]
+
+Sections/5.tex:298: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 \textbf{Effect size (Œ∑¬≤):}
+                                   Gi√° tr·ªã Œ∑¬≤ = 0.0729, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:298: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 \textbf{Effect size (Œ∑¬≤):} Gi√° tr·ªã Œ∑
+                                                ¬≤ = 0.0729, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<images/Screenshot 2025-08-06 003257.png, id=274, 661.72218pt x 194.22563pt>
+File: images/Screenshot 2025-08-06 003257.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003257.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003257.png  used on input line 308.
+(pdftex.def)             Requested size: 455.24411pt x 133.61868pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+
+Sections/5.tex:311: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 \textbf{K·∫øt qu·∫£ ANOVA v√† Œ∑¬≤:}
+                                          
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<images/Screenshot 2025-08-06 003304.png, id=275, 664.73344pt x 45.16875pt>
+File: images/Screenshot 2025-08-06 003304.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003304.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003304.png  used on input line 315.
+(pdftex.def)             Requested size: 455.24411pt x 30.93419pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 315--316
+ [][] 
+ []
+
+<images/Screenshot 2025-08-06 003419.png, id=276, 685.8122pt x 341.77687pt>
+File: images/Screenshot 2025-08-06 003419.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003419.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003419.png  used on input line 322.
+(pdftex.def)             Requested size: 455.24411pt x 226.8772pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 322--323
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 330.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[32 <./images/Screenshot 2025-08-06 003257.png> <./images/Screenshot 2025-08-06 003304.png>]
+
+Sections/5.tex:341: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \textbf{Effect size (Œ∑¬≤):}
+                                   Gi√° tr·ªã Œ∑¬≤ = 0.3122, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:341: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \textbf{Effect size (Œ∑¬≤):} Gi√° tr·ªã Œ∑
+                                                ¬≤ = 0.3122, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<images/Screenshot 2025-08-06 003315.png, id=285, 663.22781pt x 148.30406pt>
+File: images/Screenshot 2025-08-06 003315.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003315.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003315.png  used on input line 351.
+(pdftex.def)             Requested size: 455.24411pt x 101.79584pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 351--352
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 354.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[33 <./images/Screenshot 2025-08-06 003419.png>]
+
+Sections/5.tex:356: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.356 \textbf{K·∫øt qu·∫£ ANOVA v√† Œ∑¬≤:}
+                                          
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+<images/Screenshot 2025-08-06 003323.png, id=292, 660.96938pt x 45.92157pt>
+File: images/Screenshot 2025-08-06 003323.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003323.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003323.png  used on input line 360.
+(pdftex.def)             Requested size: 455.24411pt x 31.62985pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 360--361
+ [][] 
+ []
+
+<images/Screenshot 2025-08-06 003429.png, id=293, 621.82312pt x 329.73187pt>
+File: images/Screenshot 2025-08-06 003429.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 003429.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 003429.png  used on input line 367.
+(pdftex.def)             Requested size: 455.24411pt x 241.4016pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 367--368
+ [][] 
+ []
+
+
+Sections/5.tex:384: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 \textbf{Effect size (Œ∑¬≤):}
+                                   Gi√° tr·ªã Œ∑¬≤ = 0.2189, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:384: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.384 \textbf{Effect size (Œ∑¬≤):} Gi√° tr·ªã Œ∑
+                                                ¬≤ = 0.2189, cho th·∫•y bi·∫...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 386.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[34 <./images/Screenshot 2025-08-06 003315.png> <./images/Screenshot 2025-08-06 003323.png> <./images/Screenshot 2025-08-06 003429.png>]
+
+Sections/5.tex:390: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.390 ...∫≠u nghi·ªám Tukey HSD v√† effect size Œ∑
+                                                  ¬≤ cho th·∫•y:
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:392: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.392 ...l\_Rate trung b√¨nh cao nh·∫•t, nh∆∞ng Œ∑
+                                                  ¬≤ = 0.0729 cho th·∫•y bi·...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:393: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.393 ...ixel\_Rate trung b√¨nh cao nh·∫•t, v√† Œ∑
+                                                  ¬≤ = 0.3122 cho th·∫•y bi·...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:394: LaTeX Error: Unicode character Œ∑ (U+03B7)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...ixel\_Rate trung b√¨nh cao nh·∫•t, v√† Œ∑
+                                                  ¬≤ = 0.2189 cho th·∫•y bi·...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Sections/5.tex:408: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.408 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:409: You can't use `macro parameter character #' in horizontal mode.
+l.409 #
+        Chia d·ªØ li·ªáu th√†nh t·∫≠p hu·∫•n luy·ªán v√† t·∫≠p ki·ªÉm tra (2...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/5.tex:411: Missing $ inserted.
+<inserted text> 
+                $
+l.411 index <- createDataPartition(GPU_
+                                       new_log$Pixel_Rate, p = 2/3, list = F...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/5.tex:411: Missing $ inserted.
+<inserted text> 
+                $
+l.411 ...<- createDataPartition(GPU_new_log$Pixel_
+                                                  Rate, p = 2/3, list = FALSE)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/5.tex:414: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.414 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:414: Missing $ inserted.
+<inserted text> 
+                $
+l.414 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 421.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[35]
+
+Sections/5.tex:422: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.422 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:423: You can't use `macro parameter character #' in horizontal mode.
+l.423 #
+        T·∫°o c√¥ng th·ª©c v·ªõi t·∫•t c·∫£ bi·∫øn
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/5.tex:424: Missing $ inserted.
+<inserted text> 
+                $
+l.424 full_
+           form <- as.formula(
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/5.tex:427: You can't use `macro parameter character #' in math mode.
+l.427 #
+        Hu·∫•n luy·ªán m√¥ h√¨nh ƒë·∫ßy ƒë·ªß
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 427.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 427.
+
+Sections/5.tex:429: You can't use `macro parameter character #' in math mode.
+l.429 print(vif(full_mod))  #
+                              Ki·ªÉm tra multicollinearity
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 429.
+
+
+Sections/5.tex:430: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:430: Missing $ inserted.
+<inserted text> 
+                $
+l.430 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ß in font cmr12!
+Missing character: There is no ª in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no º in font cmr12!
+Missing character: There is no ¶ in font cmr12!
+Missing character: There is no ı in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+
+Overfull \hbox (176.99234pt too wide) in paragraph at lines 422--431
+[]\T5/cmr/m/n/12 r  T§o cÊng th˘c vÓi tßt c£ bi∏n full$[]\OML/cmm/m/it/12 orm < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 as:formula\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 paste\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 Pixel[]ate \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; paste\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 numerical; categorical\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; collapse \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (124.6682pt too wide) in paragraph at lines 422--431
+\OT1/cmr/m/n/12 " + ")))\OML/cmm/m/it/12 Hunluynmhnh\OT1/cmr/m/n/12 ^^_\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ^^_\OML/cmm/m/it/12 full[]od < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 lm\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 full[]orm; data \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 train\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 print\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 vif\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 full[]od\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 Kimtramulticollinearity$ 
+ []
+
+<images/Screenshot 2025-08-06 010408.png, id=308, 661.72218pt x 179.16937pt>
+File: images/Screenshot 2025-08-06 010408.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 010408.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 010408.png  used on input line 435.
+(pdftex.def)             Requested size: 455.24411pt x 123.26065pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 435--436
+ [][] 
+ []
+
+
+Sections/5.tex:444: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.444 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:445: You can't use `macro parameter character #' in horizontal mode.
+l.445 #
+        L·ª±a ch·ªçn bi·∫øn b·∫±ng stepwise selection
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/5.tex:446: Missing $ inserted.
+<inserted text> 
+                $
+l.446 step_
+           mod <- step(full_mod, direction = "both", trace = 0)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/5.tex:448: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.448 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:448: Missing $ inserted.
+<inserted text> 
+                $
+l.448 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+<images/Screenshot 2025-08-06 010632.png, id=309, 663.98062pt x 282.30469pt>
+File: images/Screenshot 2025-08-06 010632.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 010632.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 010632.png  used on input line 454.
+(pdftex.def)             Requested size: 455.24411pt x 193.55846pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 454--455
+ [][] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 458.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[36 <./images/Screenshot 2025-08-06 010408.png> <./images/Screenshot 2025-08-06 010632.png>]
+
+Sections/5.tex:463: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.463 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:464: You can't use `macro parameter character #' in horizontal mode.
+l.464 #
+        5.3.2 X√¢y d·ª±ng m√¥ h√¨nh ƒëa bi·∫øn
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/5.tex:465: Missing $ inserted.
+<inserted text> 
+                $
+l.465 model_
+            final <- step_mod
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/5.tex:467: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.467 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:467: Missing $ inserted.
+<inserted text> 
+                $
+l.467 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (9.67194pt too wide) in paragraph at lines 463--468
+[]\T5/cmr/m/n/12 r  5.3.2 X•y d¸ng mÊ hºnh ^^_a bi∏n model$[]\OML/cmm/m/it/12 inal < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 step[]odprint\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 summary\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 model[]inal\OT1/cmr/m/n/12 ))$ 
+ []
+
+<images/Screenshot 2025-08-06 010852.png, id=319, 663.22781pt x 515.67656pt>
+File: images/Screenshot 2025-08-06 010852.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 010852.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 010852.png  used on input line 471.
+(pdftex.def)             Requested size: 341.43307pt x 265.47017pt.
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 484.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[37 <./images/Screenshot 2025-08-06 010852.png>]
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 519.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [38]
+<images/Screenshot 2025-08-06 012450.png, id=330, 1361.085pt x 657.95813pt>
+File: images/Screenshot 2025-08-06 012450.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 012450.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 012450.png  used on input line 526.
+(pdftex.def)             Requested size: 455.24411pt x 220.06847pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 526--527
+ [][] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 528.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[39 <./images/Screenshot 2025-08-06 012450.png>]
+
+Sections/5.tex:551: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.551 \begin{minted}
+                    {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:552: You can't use `macro parameter character #' in horizontal mode.
+l.552 #
+        5.3.4 Cross-validation (k-fold)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/5.tex:554: Missing $ inserted.
+<inserted text> 
+                $
+l.554 cv <- train(full_
+                       form, data = train,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Sections/5.tex:558: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.558 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/5.tex:558: Missing $ inserted.
+<inserted text> 
+                $
+l.558 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 551--559
+[]\T5/cmr/m/n/12 r  5.3.4 Cross-validation (k-fold) set.seed(123) cv <- train(full$[]\OML/cmm/m/it/12 orm; data \OT1/cmr/m/n/12 =
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 551--559
+\OML/cmm/m/it/12 train; method \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 lm\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; trControl \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 trainControl\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 method \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 cv\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; number \OT1/cmr/m/n/12 =
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 559.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[40]
+<images/Screenshot 2025-08-06 012927.png, id=342, 663.22781pt x 211.54031pt>
+File: images/Screenshot 2025-08-06 012927.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 012927.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 012927.png  used on input line 562.
+(pdftex.def)             Requested size: 455.24411pt x 145.20119pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 562--563
+ [][] 
  []
 
 )
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:218: Undefined control sequence.
+l.218 	\chapter
+               {ƒê√ÅNH GI√Å V√Ä D·ª∞ B√ÅO}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:219: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 	\setcounter{chapter}{6}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/6.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
 File: images/LOGO_HCMUT.png Graphic file (type png)
 <use images/LOGO_HCMUT.png>
-Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 204.
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 4.
 (pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
- [9] (BTL.aux)
+[41 <./images/Screenshot 2025-08-06 012927.png>]
+
+Sections/6.tex:5: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{minted}
+                  {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:6: You can't use `macro parameter character #' in horizontal mode.
+l.6 #
+      6.1 D·ª± b√°o tr√™n t·∫≠p test: MAE, MSE, R¬≤, RMSE
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 pred <- predict(model_
+                          final, newdata = test)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 test$predicted_
+                   value <- pred
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:9: Missing $ inserted.
+<inserted text> 
+                $
+l.9 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (18.19276pt too wide) in paragraph at lines 5--9
+[]\T5/cmr/m/n/12 r  6.1 D¸ b°o tr∂n t™p test: MAE, MSE, R\TS1/cmr/m/n/12 ≤\T5/cmr/m/n/12 , RMSE pred <- predict(model$[]\OML/cmm/m/it/12 inal; newdata \OT1/cmr/m/n/12 =
+ []
+
+Sections/6.tex:10: You can't use `macro parameter character #' in vertical mode.
+l.10 #
+       T√≠nh to√°n c√°c ch·ªâ s·ªë
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 mae_
+         value <- mae(test$Pixel_Rate, test$predicted_value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 mae_value <- mae(test$Pixel_
+                                 Rate, test$predicted_value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:11: Missing $ inserted.
+<inserted text> 
+                $
+l.11 ...ue <- mae(test$Pixel_Rate, test$predicted_
+                                                  value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 mse_value <- mse(test$Pixel_
+                                 Rate, test$predicted_value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:12: Missing $ inserted.
+<inserted text> 
+                $
+l.12 ...ue <- mse(test$Pixel_Rate, test$predicted_
+                                                  value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13 rmse_value <- rmse(test$Pixel_
+                                   Rate, test$predicted_value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:13: Missing $ inserted.
+<inserted text> 
+                $
+l.13 ...e <- rmse(test$Pixel_Rate, test$predicted_
+                                                  value)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 r2_value <- cor(test$Pixel_
+                                Rate, test$predicted_value)^2
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ...ue <- cor(test$Pixel_Rate, test$predicted_
+                                                  value)^2
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (85.62689pt too wide) in paragraph at lines 10--15
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 mse\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 test$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; test$\T5/cmr/m/n/12 predicted$[]\OML/cmm/m/it/12 alue\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rmse[]alue < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 rmse\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 test$\T5/cmr/m/n/12 Pixel$[]\OML/cmm/m/it/12 ate; test$\T5/cmr/m/n/12 predicted$[]\OML/cmm/m/it/12 alue\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 2[]\OML/cmm/m/it/12 alue <
+ []
+
+Sections/6.tex:16: Missing $ inserted.
+<inserted text> 
+                $
+l.16 cat("MAE tr√™n t·∫≠p ki·ªÉm tra:", mae_
+                                            value, "\n")
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:16: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.16 ...E tr√™n t·∫≠p ki·ªÉm tra:", mae_value, "\n
+                                                  ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 17.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 17.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 17.
+
+Sections/6.tex:17: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.17 ...E tr√™n t·∫≠p ki·ªÉm tra:", mse_value, "\n
+                                                  ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 18.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 18.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 18.
+
+Sections/6.tex:18: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.18 ... tr√™n t·∫≠p ki·ªÉm tra:", rmse_value, "\n
+                                                  ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 19.
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 19.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 19.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 19.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 19.
+
+Sections/6.tex:19: Undefined control sequence.
+<argument> \csname system@active"\endcsname \n 
+                                               
+l.19 ...¬≤ tr√™n t·∫≠p ki·ªÉm tra:", r2_value, "\n
+                                                  ")
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Sections/6.tex:20: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:20: Missing $ inserted.
+<inserted text> 
+                $
+l.20 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+Missing character: There is no ≤ in font cmr12!
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+
+Overfull \hbox (134.25455pt too wide) in paragraph at lines 16--21
+[]\T5/cmr/m/n/12 cat("MAE tr∂n t™p ki∫m tra:", mae$[]\OML/cmm/m/it/12 alue; \OT1/cmr/m/n/12 "")\OML/cmm/m/it/12 cat\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 MSEtrntpkimtra \OT1/cmr/m/n/12 : "\OML/cmm/m/it/12 ; mse[]alue; \OT1/cmr/m/n/12 "")\OML/cmm/m/it/12 cat\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 RMSEtrntpkimtra \OT1/cmr/m/n/12 :
+ []
+
+<images/Screenshot 2025-08-06 013419.png, id=350, 663.98062pt x 116.68594pt>
+File: images/Screenshot 2025-08-06 013419.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 013419.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 013419.png  used on input line 24.
+(pdftex.def)             Requested size: 455.24411pt x 80.00415pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 43.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[42 <./images/Screenshot 2025-08-06 013419.png>]
+
+Sections/6.tex:48: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:49: You can't use `macro parameter character #' in horizontal mode.
+l.49 #
+       6.2 Density plot/Scatter plot th·ª±c vs d·ª± ƒëo√°n
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:50: You can't use `macro parameter character #' in horizontal mode.
+l.50 #
+       Density plot
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 test_
+          long <- test %>%
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:55: Missing $ inserted.
+<inserted text> 
+                $
+l.55 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--55
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 testselect\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Pixel[]ate; predicted[]alue\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rename\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Thuc[]e \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Pixel[]ate; Du[]oan \OT1/cmr/m/n/12 =
+ []
+
+Sections/6.tex:56: Missing $ inserted.
+<inserted text> 
+                $
+l.56 ggplot(test_
+                 long, aes(x = Value, fill = Type)) +
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 60.
+
+
+LaTeX Warning: Command \h invalid in math mode on input line 60.
+
+
+Sections/6.tex:61: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:61: Missing $ inserted.
+<inserted text> 
+                $
+l.61 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no ∫ in font cmr12!
+
+Overfull \hbox (124.42221pt too wide) in paragraph at lines 56--62
+\OML/cmm/m/it/12 scale[]ill[]anual\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 values \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 ("\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 "\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 ")) + \OML/cmm/m/it/12 theme[]w\OT1/cmr/m/n/12 () + \OML/cmm/m/it/12 labs\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 title \OT1/cmr/m/n/12 = "\OML/cmm/m/it/12 Thct\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 red\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 vsD\OT1/cmr/m/n/12 ^^_\OML/cmm/m/it/12 on\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 blue\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 trntpkimtra\OT1/cmr/m/n/12 "\OML/cmm/m/it/12 ; x \OT1/cmr/m/n/12 =
+ []
+
+<images/Screenshot 2025-08-06 013747.png, id=358, 1403.99532pt x 671.50874pt>
+File: images/Screenshot 2025-08-06 013747.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 013747.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 013747.png  used on input line 65.
+(pdftex.def)             Requested size: 455.24411pt x 217.73569pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 65--66
+ [][] 
+ []
+
+
+Sections/6.tex:73: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:74: You can't use `macro parameter character #' in horizontal mode.
+l.74 #
+       Scatter plot
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:75: Missing $ inserted.
+<inserted text> 
+                $
+l.75 ggplot(test, aes(x = Pixel_
+                                Rate, y = predicted_value)) +
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 79.
+
+
+Sections/6.tex:80: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 \end{minted}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:80: Missing $ inserted.
+<inserted text> 
+                $
+l.80 \end{minted}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ° in font cmr12!
+<images/Screenshot 2025-08-06 013950.png, id=359, 1400.23125pt x 636.87938pt>
+File: images/Screenshot 2025-08-06 013950.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 013950.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 013950.png  used on input line 84.
+(pdftex.def)             Requested size: 455.24411pt x 207.06108pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 84--85
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 88.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[43 <./images/Screenshot 2025-08-06 013747.png>]
+
+Sections/6.tex:96: LaTeX Error: Environment minted undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 \begin{minted}
+                   {r}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:97: You can't use `macro parameter character #' in horizontal mode.
+l.97 #
+       6.4 K·ªãch b·∫£n d·ª± b√°o (gi·∫£ ƒë·ªãnh tƒÉng/gi·∫£m bi·∫øn X)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+Sections/6.tex:98: Missing $ inserted.
+<inserted text> 
+                $
+l.98 scenario_
+              data <- test
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 scenario_data$Core_
+                        Speed <- scenario_data$Core_Speed * 1.1
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Sections/6.tex:99: Missing $ inserted.
+<inserted text> 
+                $
+l.99 ...rio_data$Core_Speed <- scenario_data$Core_
+                                                  Speed * 1.1
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \d invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \dj invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \u invalid in math mode on input line 101.
+
+
+Sections/6.tex:103: LaTeX Error: \begin{document} ended by \end{minted}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{minted}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Sections/6.tex:103: Missing $ inserted.
+<inserted text> 
+                $
+l.103 \end{minted}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no ¸ in font cmr12!
+Missing character: There is no ° in font cmr12!
+Missing character: There is no Ó in font cmr12!
+Missing character: There is no ´ in font cmr12!
+
+Overfull \hbox (57.01573pt too wide) in paragraph at lines 96--104
+[]\T5/cmr/m/n/12 r  6.4 K‡ch b£n d¸ b°o (gi£ ^^_‡nh t´ng/gi£m bi∏n X) scenario$[]\OML/cmm/m/it/12 ata < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 testscenario[]ata$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed <
+ []
+
+
+Underfull \hbox (badness 5741) in paragraph at lines 96--104
+\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 scenario[]ata$\T5/cmr/m/n/12 Core$[]\OML/cmm/m/it/12 peed \OMS/cmsy/m/n/12 ^^C \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 pred[]cenario < \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 predict\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 model[]inal; newdata \OT1/cmr/m/n/12 =
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 105.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+[44 <./images/Screenshot 2025-08-06 013950.png>]
+<images/Screenshot 2025-08-06 014223.png, id=375, 666.23906pt x 76.78688pt>
+File: images/Screenshot 2025-08-06 014223.png Graphic file (type png)
+<use images/Screenshot 2025-08-06 014223.png>
+Package pdftex.def Info: images/Screenshot 2025-08-06 014223.png  used on input line 108.
+(pdftex.def)             Requested size: 455.24411pt x 52.4698pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 108--109
+ [][] 
+ []
+
+)
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:221: Undefined control sequence.
+l.221 	\chapter
+               {TH·∫¢O LU·∫¨N V√Ä M·ªû R·ªòNG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:222: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 	\setcounter{chapter}{7}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/7.tex
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 23.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [45 <./images/Screenshot 2025-08-06 014223.png>])
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:224: Undefined control sequence.
+l.224 	\chapter
+               {NGU·ªíN D·ªÆ LI·ªÜU V√Ä NGU·ªíN CODE}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/Minh/Documents/GitHub/XSTK_252/BTL.tex:225: LaTeX Error: No counter 'chapter' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 	\setcounter{chapter}{8}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(Sections/8.tex)
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 230.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+ [46] (BTL.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
-Package rerunfilecheck Info: File `BTL.out' has not changed.
-(rerunfilecheck)             Checksum: AD2FA214AE601C7D9BD6A1A2C66DB123;4091.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `BTL.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `BTL.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D475E1893BFD3C77457F2785BDA23CA4;15882.
  ) 
 Here is how much of TeX's memory you used:
- 16607 strings out of 467691
- 257206 string characters out of 5415471
- 939820 words of memory out of 5000000
- 45313 multiletter control sequences out of 15000+600000
- 646067 words of font info for 82 fonts, out of 8000000 for 9000
+ 16053 strings out of 467691
+ 262145 string characters out of 5415471
+ 849194 words of memory out of 5000000
+ 44703 multiletter control sequences out of 15000+600000
+ 653518 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,22n,79p,514b,2118s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Minh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt8.pfb>
-Output written on BTL.pdf (10 pages, 338149 bytes).
+ 76i,22n,79p,1191b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Minh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\Minh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt8.pfb>
+Output written on BTL.pdf (47 pages, 1560981 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 499 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 
