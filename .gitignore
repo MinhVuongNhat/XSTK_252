@@ -1,0 +1,19 @@
+# Ignore specific files requested by user
+Makefile
+section5.tex
+PixelRate_Prediction.r
+# Common LaTeX build artifacts (nên ignore vì chúng tự sinh ra)
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+*.gz
+*.fdb_latexmk
+*.fls
+
+# Common R temporary files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
