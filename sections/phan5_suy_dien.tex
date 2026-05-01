@@ -277,7 +277,7 @@ cặp nhóm:
 
 \subsubsection{Thực hiện trong R}
 
-\begin{lstlisting}[language=R, caption={ANOVA một yếu tố với Tukey HSD và η²}]
+\begin{lstlisting}[language=R, caption={ANOVA một yếu tố với Tukey HSD và $\eta$²}]
 for (cat_var in c("Manufacturer", "Memory_Type", "Resolution_WxH")) {
   formula_str <- as.formula(paste("Pixel_Rate ~", cat_var))
   aov_mod     <- aov(formula_str, data = train)
