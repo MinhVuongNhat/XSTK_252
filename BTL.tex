@@ -197,6 +197,241 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% NỘI DUNG CÁC CHƯƠNG
+	\chapter*{Chương 1}
+\addcontentsline{toc}{chapter}{Chương 1}
+\noindent \textbf{\Huge TỔNG QUAN NGHIÊN CỨU}
+
+\vspace{1.5cm}
+\setcounter{chapter}{1} 
+\section{Tổng quan bộ dữ liệu}
+
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textbf{Tên tập tin:} \highlight{All\_GPUs.csv}
+    
+    \item \textbf{Nguồn:} \url{https://www.kaggle.com/datasets/iliassekkaf/computerparts/}
+    
+    \item \textbf{Số lượng quan trắc:} 3406 quan trắc tương ứng với 3406 hàng trong tệp dữ liệu.
+    
+    \item \textbf{Số lượng biến:} 34 biến tương ứng với 34 cột trong tệp dữ liệu.
+    
+    \item \textbf{Mô tả chung:} Bộ tập tin \highlight{All\_GPUs.csv} là một nguồn dữ liệu phong phú chứa thông số kỹ thuật của GPU, phục vụ cho việc phân tích và dự đoán hiệu suất. Nó cung cấp cả thông tin định lượng như \highlight{Max\_Power}, \highlight{Memory}, \highlight{ROPs} và định tính như \highlight{Manufacturer} và \highlight{Dedicated}, đòi hỏi các bước tiền xử lý như làm sạch, chuẩn hóa, và biến đổi để phù hợp với phân tích thống kê và mô hình hóa. Kết quả từ phân tích dữ liệu này có thể hỗ trợ các nhà nghiên cứu, kỹ sư, hoặc nhà sản xuất trong việc đánh giá và thiết kế GPU.
+    \end{itemize}
+\section{Đối tượng nghiên cứu}
+    Mục tiêu chính là dự đoán thông số \redhighlight{Pixel\_Rate} (tốc độ xử lý pixel, đơn vị GPixel/s), một chỉ số hiệu suất quan trọng của GPU, dựa trên các đặc trưng khác như \highlight{Boost\_Clock}, \highlight{Core\_Speed}, \highlight{Memory\_Type}, v.v
+    
+    \textbf{Tại sao lại chọn Pixel\_Rate ?}
+    \begin{enumerate}[label=\arabic*., leftmargin=1.5em, itemsep=0.5em]
+    \item \textbf{Pixel\_Rate là chỉ số trực tiếp phản ánh hiệu năng đồ họa:}
+    
+    \redhighlight{Pixel\_Rate} phản ánh trực tiếp hiệu suất của GPU trong việc xử lý các tác vụ đồ họa liên quan đến pixel, một khía cạnh cốt lõi của hiệu năng GPU. Trong các ứng dụng thực tế, \redhighlight{Pixel\_Rate} ảnh hưởng đến chất lượng hình ảnh, độ mượt mà của chuyển động, và khả năng hiển thị ở độ phân giải cao, khiến nó trở thành một chỉ số phù hợp để đo lường hiệu năng tổng thể. So với các chỉ số khác như số lượng shader hoặc dung lượng bộ nhớ, \redhighlight{Pixel\_Rate} là kết quả trực tiếp của nhiều đặc trưng kỹ thuật (như \highlight{ROPs}, \highlight{Core\_Speed}), giúp nó trở thành biến mục tiêu lý tưởng để phân tích mối quan hệ với các đặc trưng khác.
+    % Tiếp tục danh sách enumerate từ phần trước
+    \item \textbf{Pixel\_Rate là biến định lượng, phù hợp với mô hình hồi quy:}
+    
+    Biến định lượng liên tục như \redhighlight{Pixel\_Rate} cho phép áp dụng các kỹ thuật phân tích như tương quan Pearson, hồi quy tuyến tính đa biến, và đánh giá hiệu suất mô hình bằng các chỉ số như MAE, MSE, RMSE, $R^2$. Các biến định lượng khác (như \highlight{Boost\_Clock}, \highlight{Core\_Speed}) có thể đóng vai trò là biến độc lập để dự đoán \redhighlight{Pixel\_Rate}, tạo ra một mô hình dự đoán rõ ràng và dễ diễn giải.
+
+    \item \textbf{Pixel\_Rate tổng hợp ảnh hưởng của nhiều đặc trưng GPU:}
+    
+    \redhighlight{Pixel\_Rate} là một chỉ số tổng hợp, phản ánh hiệu quả của nhiều thành phần phần cứng trong GPU. Do đó, nó là một biến mục tiêu lý tưởng để nghiên cứu cách các đặc trưng khác nhau (như \highlight{ROPs}, \highlight{Core\_Speed}) kết hợp để tạo ra hiệu năng tổng thể. So với các chỉ số khác, các chỉ số khác như Shader (số lượng đơn vị shader) hoặc Memory (dung lượng bộ nhớ) chỉ phản ánh một khía cạnh cụ thể của GPU, trong khi \redhighlight{Pixel\_Rate} là kết quả tổng hợp của nhiều yếu tố phần cứng, do đó đại diện tốt hơn cho hiệu năng tổng thể.
+\end{enumerate}
+\section{Phương pháp nghiên cứu}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textbf{Khám phá dữ liệu (EDA):} Sử dụng histogram, barplot, boxplot, scatter plot để hiểu phân phối và mối quan hệ giữa các biến.
+    
+    \item \textbf{Tiền xử lý:} Chuẩn hóa dữ liệu, xử lý NA, biến đổi log, loại bỏ trùng lặp.
+    
+    \item \textbf{Thống kê mô tả:} Tính mean, sd, min, max, median để mô tả đặc điểm dữ liệu.
+    
+    \item \textbf{Thống kê suy diễn:} Tương quan Pearson, ANOVA, kiểm định giả thuyết (Shapiro, Levene), và Tukey HSD để đánh giá mối quan hệ và sự khác biệt.
+    
+    \item \textbf{Mô hình hóa:} Hồi quy tuyến tính đa biến với lựa chọn biến (stepwise), cross-validation, và đánh giá đa cộng tuyến (VIF).
+    % Nối tiếp vào danh sách itemize của phần 1.3
+    \item \textbf{Dự báo:} Sử dụng mô hình để dự đoán \redhighlight{Pixel\_Rate} và đánh giá hiệu suất trên tập kiểm tra.
+\end{itemize}
+\section{Kết quả hướng tới}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+\subsection{Mô hình dự đoán}
+Xây dựng một mô hình hồi quy tuyến tính để dự đoán \redhighlight{Pixel\_Rate} dựa trên các đặc trưng quan trọng như \highlight{Core\_Speed}, \highlight{ROPs}, và \highlight{Memory\_Speed}. Mô hình sẽ được kiểm tra để đảm bảo độ chính xác cao và có thể áp dụng cho các tập dữ liệu mới, hỗ trợ việc dự đoán hiệu suất GPU một cách hiệu quả.
+
+\subsection{Hiểu biết sâu sắc}
+Xác định các yếu tố ảnh hưởng chính đến \redhighlight{Pixel\_Rate}, bao gồm \highlight{Core\_Speed}, \highlight{ROP\_Speed}, \highlight{Memory\_Speed}, và các đặc trưng khác như \highlight{Manufacturer}. Phân tích sẽ làm rõ cách các yếu tố này tác động đến hiệu suất, giúp hiểu rõ hơn về mối quan hệ giữa các thông số kỹ thuật của GPU.
+
+\subsection{Trực quan hóa}
+Tạo các biểu đồ như histogram để xem phân phối \redhighlight{Pixel\_Rate}, boxplot để so sánh hiệu suất giữa các nhóm (như \highlight{Manufacturer}), và scatter plot để xem mối quan hệ với \highlight{Core\_Speed}. Các bảng thống kê, như kết quả ANOVA, sẽ được thêm vào để cung cấp dữ liệu rõ ràng, hỗ trợ việc đánh giá mô hình.
+
+\subsection{Ứng dụng thực tiễn}
+Sử dụng kết quả để so sánh hiệu suất giữa các GPU từ các nhà sản xuất khác nhau, dự đoán hiệu suất của GPU mới dựa trên thông số kỹ thuật, và đánh giá tác động của các cải tiến như tăng \highlight{Core\_Speed} hoặc nâng cấp \highlight{Memory\_Type}. Điều này giúp tối ưu hóa thiết kế và lựa chọn GPU phù hợp với nhu cầu cụ thể.
+\end{itemize}
+
+\clearpage
+\setcounter{chapter}{2} % Thiết lập chương hiện tại là chương 2
+\setcounter{section}{0} % Đảm bảo section bắt đầu lại từ 1
+
+\noindent {\Huge \textbf{Chương 2}} \vspace{1em}
+
+\noindent {\Huge \textbf{KIẾN THỨC NỀN}}
+\addcontentsline{toc}{chapter}{Chương 2: KIẾN THỨC NỀN}
+
+\vspace{1.5cm}
+
+\section{Đề Xuất Mô Hình Thống Kê và Lý Do Lựa Chọn}
+
+Để dự đoán hiệu suất đồ họa (\redhighlight{Pixel\_Rate}) của các đơn vị xử lý đồ họa (GPU), mô hình hồi quy tuyến tính đa biến được lựa chọn làm công cụ cốt lõi, nổi bật với khả năng phân tích chính xác và cung cấp cái nhìn sâu sắc về các yếu tố ảnh hưởng đến hiệu suất. Phần này trình bày lý do lựa chọn mô hình này và khả năng đáp ứng các mục tiêu nghiên cứu.
+
+\subsection{Mô Hình Hồi Quy Tuyến Tính Đa Biến}
+
+\textbf{Đề xuất:} Mô hình hồi quy tuyến tính đa biến được chọn để dự đoán \redhighlight{Pixel\_Rate} dựa trên một tập hợp các biến độc lập bao gồm các thông số kỹ thuật như tốc độ lõi (\highlight{Core\_Speed}), tốc độ bộ nhớ (\highlight{Memory\_Speed}), số đơn vị xuất hình ảnh (\highlight{ROPs}), số đơn vị ánh xạ texture (\highlight{TMUs}), độ rộng bus bộ nhớ (\highlight{Memory\_Bus}), dung lượng bộ nhớ (\highlight{Memory}), quy trình sản xuất (\highlight{Process}), và số đơn vị shader (\highlight{Shader}), cùng với các biến phân loại như nhà sản xuất (\highlight{Manufacturer}), loại bộ nhớ (\highlight{Memory\_Type}), và độ phân giải (\highlight{Resolution\_WxH}).
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Tính cơ bản và mạnh mẽ:}} Hồi quy tuyến tính đa biến là một phương pháp thống kê nền tảng, được sử dụng rộng rãi để mô hình hóa mối quan hệ giữa một biến phụ thuộc liên tục như \redhighlight{Pixel\_Rate} và nhiều biến độc lập khác. Với mục tiêu dự đoán hiệu suất đồ họa – một giá trị số liên tục – mô hình này là lựa chọn tự nhiên và phù hợp để khám phá mối liên hệ giữa các thông số kỹ thuật và hiệu suất.
+
+    \item \textit{\textbf{Khả năng phân tích đóng góp của từng biến:}} Một trong những điểm mạnh của mô hình này là khả năng cung cấp các hệ số hồi quy cho từng biến độc lập. Những hệ 
+% Tiếp tục nội dung đoạn văn đang dang dở
+số này không chỉ cho biết mức độ ảnh hưởng của từng yếu tố đến \redhighlight{Pixel\_Rate}, mà còn giúp trả lời các câu hỏi thực tiễn như: "Tăng tốc độ lõi thêm 100 MHz sẽ cải thiện hiệu suất đồ họa bao nhiêu?", hoặc "Quy trình sản xuất nhỏ hơn (nm) có thực sự tạo ra sự khác biệt đáng kể không?". Điều này rất quan trọng để đạt được sự hiểu biết sâu sắc về các yếu tố kỹ thuật ảnh hưởng đến GPU.
+
+    \item \textit{\textbf{Tích hợp linh hoạt dữ liệu định lượng và định tính:}} Nghiên cứu bao gồm cả các biến số (như \highlight{Core\_Speed}, \highlight{Memory}) và các biến phân loại (như \highlight{Manufacturer}, \highlight{Memory\_Type}). Mô hình hồi quy tuyến tính đa biến cho phép chuyển đổi các biến phân loại thành biến giả (dummy variables), giúp kết hợp cả hai loại dữ liệu này một cách liền mạch. Ví dụ, biến \highlight{Manufacturer} có thể được mã hóa để so sánh hiệu suất giữa NVIDIA, AMD, và Intel, từ đó đánh giá tác động của yếu tố nhà sản xuất lên \redhighlight{Pixel\_Rate}.
+
+    \item \textit{\textbf{Đánh giá hiệu suất đơn giản và thực tiễn:}} Mô hình này dễ dàng được đánh giá thông qua các chỉ số như hệ số xác định $R^2$ (đo lường mức độ giải thích biến thiên của \redhighlight{Pixel\_Rate}), sai số tuyệt đối trung bình (MAE), sai số bình phương trung bình (MSE), và căn bậc hai của sai số bình phương trung bình (RMSE). Những chỉ số này không chỉ cung cấp cái nhìn rõ ràng về độ chính xác của dự đoán mà còn phù hợp với ứng dụng thực tiễn, khi cần một công cụ dễ triển khai và đáng tin cậy để dự báo hiệu suất GPU trong thực tế.
+\end{itemize}
+\section{Công Cụ và phương pháp xây dựng mô hình}
+
+\subsection{Phân Tích Tương Quan Pearson}
+
+\noindent \textbf{Tổng quan:} Tương quan Pearson là một công cụ thống kê cơ bản, dùng để đo lường mức độ và hướng của mối quan hệ tuyến tính giữa hai biến liên tục. Công cụ này xác định liệu hai biến có thay đổi cùng chiều (tăng hoặc giảm cùng nhau) hay ngược chiều, đồng thời đánh giá mức độ mạnh yếu của mỗi quan hệ đó. Kết quả được thể hiện qua một giá trị từ -1 đến 1, với giá trị gần 1 hoặc -1 cho thấy mỗi quan hệ mạnh, và gần 0 cho thấy mối quan hệ yếu.
+
+\vspace{0.5em}
+
+\noindent \textbf{Mục đích:} Phân tích mối quan hệ giữa \redhighlight{Pixel\_Rate} và các biến độc lập liên tục như \highlight{Core\_Speed}, \highlight{Memory\_Speed}, \highlight{ROPs}, \highlight{TMUs}, \highlight{Memory\_Bus}, \highlight{Memory}, \highlight{Process}, và \highlight{Shader} để xác định các biến có ảnh hưởng đáng kể đến hiệu suất đồ họa. Kết quả này định hướng việc lựa chọn biến đưa vào mô hình hồi quy, đảm bảo chỉ những biến có mối quan hệ tuyến tính mạnh được sử dụng, đồng thời hỗ trợ trực quan hóa dữ liệu qua
+các biểu đồ phân tán để phát hiện xu hướng hoặc bất thường.
+
+\textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+\item \textit{\textbf{Hỗ trợ kiểm định ý nghĩa thống kê:}}Ngoài việc tính toán r, kiểm định tương quan
+Pearson cung cấp p-value để đánh giá liệu mối quan hệ giữa hai biến có ý nghĩa
+thống kê (p < 0.05) hay chỉ là ngẫu nhiên. Điều này giúp xác định các biến tiềm
+năng ảnh hưởng lớn đến \redhighlight{Pixel\_Rate} trước khi xây dựng mô hình phức tạp hơn.
+\item \textit{\textbf{Đơn giản và trực quan:}} Phương pháp này dễ thực hiện và cung cấp cái nhìn nhanh
+về mối quan hệ giữa các biến, làm nền tảng cho các phân tích sâu hơn như hồi quy
+tuyến tính. Nó cũng hỗ trợ việc trực quan hóa dữ liệu thông qua biểu đồ phân tán
+(scatter plot), giúp phát hiện các xu hướng tuyến tính hoặc bất thường trong dữ liệu.
+\end{itemize}
+\subsection{Kiểm Định Phi Tham Số Kruskal-Wallis và Hậu Nghiệm Dunn}
+\noindent \textbf{Tổng quan:} Kruskal-Wallis test là một phương pháp kiểm định phi tham số dùng để
+so sánh giá trị trung vị của một biến số giữa nhiều nhóm độc lập. Đây là lựa chọn thay
+thế cho One-Way ANOVA khi dữ liệu không thỏa mãn các giả định như phân phối chuẩn
+hoặc phương sai đồng nhất. Phương pháp này dựa trên việc xếp hạng (ranking) toàn bộ
+dữ liệu và đánh giá sự khác biệt về phân bố giữa các nhóm. Khi Kruskal-Wallis cho thấy
+có sự khác biệt đáng kể, kiểm định hậu nghiệm Dunn được áp dụng để xác định cặp
+nhóm nào khác biệt, đồng thời điều chỉnh p-value để kiểm soát sai lầm loại I.
+\noindent \textbf{Mục đích:} Sử dụng Kruskal-Wallis test để đánh giá sự khác biệt về \redhighlight{Pixel\_Rate} giữa các nhóm được phân loại bởi các biến định tính như \highlight{Manufacturer}, \highlight{Memory\_Type}, và \highlight{Resolution\_WxH} trong trường hợp dữ liệu vi phạm giả định phân phối chuẩn hoặc đồng nhất phương sai. Nếu kiểm định cho kết quả có ý nghĩa thống kê (p < 0.05), áp dụng Dunn's post-hoc test với điều chỉnh Bonferroni hoặc Holm để xác định cặp nhóm nào có sự khác biệt đáng kể.
+
+\textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Thích hợp khi dữ liệu không chuẩn:}} Trong nghiên cứu thực tế, dữ liệu \redhighlight{Pixel\_Rate} có thể không tuân theo phân phối chuẩn hoặc có phương sai khác nhau giữa các nhóm. Kruskal-Wallis là phương pháp phi tham số, không yêu cầu giả định này, nên phù hợp để đảm bảo kết quả kiểm định đáng tin cậy.
+    \item \textit{\textbf{Khả năng áp dụng cho nhiều nhóm:}} Giống như ANOVA, Kruskal-Wallis có thể xử lý các biến phân loại với từ ba nhóm trở lên, chẳng hạn \highlight{Manufaturer} có nhiều hãng sản xuất. Điều này giúp đánh giá tổng quát sự khác biệt giữa các nhóm mà không cần thực hiện nhiều phép so sánh đôi một.
+    \item \textit{\textbf{Phân tích chi tiết với Dunn’s test:}} Khi phát hiện sự khác biệt tổng thể, Dunn’s posthoc test cho phép xác định cụ thể cặp nhóm nào khác biệt. Việc điều chỉnh p-value (như Bonferroni, Holm) giúp kiểm soát nguy cơ sai lầm loại I, đặc biệt khi số lượng so sánh lớn.
+    \item \textit{\textbf{Bổ sung cho ANOVA:}} Trong quy trình phân tích, Kruskal-Wallis + Dunn được dùng như phương án dự phòng khi ANOVA và kiểm định giả thiết cho thấy dữ liệu vi phạm điều kiện. Điều này đảm bảo rằng kết quả phân tích không bị sai lệch do sử dụng phương pháp không phù hợp với bản chất dữ liệu.
+\end{itemize}
+\subsection{Kiểm Định Giả Thiết}
+\noindent \textbf{Tổng quan:} Kiểm định giả thiết là tập hợp các phương pháp thống kê dùng để kiểm
+tra tính hợp lệ của các giả định cần thiết cho các mô hình thống kê, chẳng hạn như phân
+phối chuẩn của dữ liệu hoặc tính đồng nhất phương sai giữa các nhóm. Các kiểm định
+này đảm bảo rằng các phân tích thống kê được thực hiện trên cơ sở đáng tin cậy, tránh
+sai lệch trong kết quả.
+\noindent \textbf{Mục đích:} Sử dụng kiểm định Shapiro-Wilk để kiểm tra xem sai số của mô hình hoặc dữ liệu \redhighlight{Pixel\_Rate} có phân phối chuẩn hay không, và kiểm định Levene để đánh giá
+tính đồng nhất phương sai giữa các nhóm được xác định bởi biến phân loại. Các kiểm
+định này xác minh các giả định cần thiết cho mô hình hồi quy và ANOVA, đảm bảo rằng
+kết quả dự đoán \redhighlight{Pixel\_Rate} không bị sai lệch do vi phạm các điều kiện thống kê.
+
+\textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+\item \textit{\textbf{Đảm bảo tính hợp lệ của kết quả:}} Để các kết luận từ hồi quy và ANOVA có giá
+trị, các giả định cơ bản của chúng (như sai số phân phối chuẩn và phương sai đồng
+nhất giữa các nhóm) phải được thỏa mãn. Nếu không kiểm tra và xác nhận những
+giả định này, các kết quả thống kê có thể bị sai lệch, làm giảm độ tin cậy của nghiên
+cứu.
+\end{itemize}
+\subsection{Cross-Validation (Kiểm Chứng Chéo)}
+
+\noindent \textbf{Tổng quan:} Cross-validation là một kỹ thuật đánh giá hiệu suất mô hình bằng cách chia dữ liệu thành nhiều phần, sử dụng một phần để kiểm tra và các phần còn lại để huấn luyện mô hình, sau đó lặp lại quá trình này nhiều lần. Kỹ thuật này giúp đánh giá khả năng tổng quát hóa của mô hình trên dữ liệu mới, đảm bảo tính thực tiễn và độ ổn định.
+
+\vspace{0.5em}
+
+\noindent \textbf{Mục đích:} Áp dụng k-fold cross-validation với $k = 5$ để đánh giá khả năng dự đoán \redhighlight{Pixel\_Rate} của mô hình hồi quy tuyến tính đa biến trên các tập dữ liệu khác nhau. Kỹ thuật này đảm bảo rằng mô hình không bị overfitting, có khả năng dự đoán chính xác trên dữ liệu mới, và mang lại hiệu suất ổn định trong các kịch bản thực tế.
+
+\vspace{0.5em}
+
+\noindent \textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Hỗ trợ ứng dụng thực tiễn:}} Mục tiêu yêu cầu mô hình không chỉ hoạt động tốt trên dữ liệu hiện tại mà còn phải dự đoán chính xác trên dữ liệu mới. Cross-validation giải quyết vấn đề này bằng cách chia dữ liệu thành 5 phần, lần lượt sử dụng 4 phần để huấn luyện và 1 phần để kiểm tra, qua đó đánh giá hiệu suất thực tế của mô hình. Điều này giúp giảm thiểu nguy cơ overfitting – tình trạng mô hình "học thuộc" dữ liệu huấn luyện nhưng thất bại khi dự đoán trên dữ liệu chưa từng thấy, một vấn đề thường gặp trong phân tích hiệu suất GPU.
+    
+    \item \textit{\textbf{Đo lường độ ổn định và chính xác:}} Kết quả từ cross-validation cung cấp các chỉ số trung bình như $R^2$ và RMSE qua 5 lần kiểm tra, cho phép đánh giá mức độ ổn định và chính xác của mô hình trên các tập dữ liệu khác nhau.
+\end{itemize}
+\subsection{Stepwise Selection (Lựa Chọn Biến Theo Bước)}
+
+\noindent \textbf{Tổng quan:} Stepwise selection là một phương pháp tự động chọn lọc các biến độc lập quan trọng nhất để đưa vào mô hình, dựa trên việc thêm hoặc loại bỏ biến theo các tiêu chí thống kê như p-value hoặc tiêu chí thông tin (AIC). Phương pháp này giúp tối ưu hóa mô hình bằng cách giảm độ phức tạp và tăng độ chính xác.
+
+\vspace{0.5em}
+
+\noindent \textbf{Mục đích:} Sử dụng stepwise selection để xác định các biến độc lập quan trọng nhất, chẳng hạn như \highlight{Core\_Speed}, \highlight{ROPs}, hoặc \highlight{TMUs}, nhằm xây dựng một mô hình hồi quy tuyến tính đa biến tối ưu. Phương pháp này giúp loại bỏ các biến không quan trọng, giảm độ phức tạp của mô hình, và nâng cao độ chính xác khi dự đoán \redhighlight{Pixel\_Rate}.
+
+\vspace{0.5em}
+
+\noindent \textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Tăng hiệu quả dự đoán:}} Với 11 biến độc lập trong nghiên cứu, không phải tất cả đều có ý nghĩa thống kê hoặc đóng góp đáng kể vào việc dự đoán \redhighlight{Pixel\_Rate} Stepwise selection giúp loại bỏ các biến không quan trọng, giảm độ phức tạp của mô hình và cải thiện độ chính xác dự đoán. Điều này rất phù hợp với mục tiêu tìm mô hình dự đoán hiệu quả, vì một mô hình quá phức tạp có thể dẫn đến overfitting và giảm khả năng ứng dụng thực tế.
+    \item \textit{\textbf{Tự động hóa và tiết kiệm thời gian:}} Phương pháp này sử dụng các tiêu chí như giá
+trị p (p-value) hoặc chỉ số thông tin Akaike (AIC) để tự động thêm hoặc loại bỏ
+biến, thay vì yêu cầu nhà nghiên cứu thử nghiệm thủ công từng tổ hợp biến. Với số
+lượng biến lớn như trong nghiên cứu này, cách tiếp cận tự động hóa không chỉ tiết
+kiệm công sức mà còn đảm bảo tính khách quan trong quá trình xây dựng mô hình.
+\end{itemize}
+\subsection{Diagnostic Plots (Đồ Thị Chẩn Đoán)}
+
+\noindent \textbf{Tổng quan:} Diagnostic plots là tập hợp các biểu đồ trực quan được sử dụng để kiểm tra tính đúng đắn của mô hình hồi quy, bao gồm các vấn đề như mối quan hệ phi tuyến, sai số không chuẩn, hoặc sự hiện diện của các điểm dữ liệu bất thường (outliers). Các biểu đồ này cung cấp cái nhìn trực quan về chất lượng mô hình, giúp phát hiện và khắc phục các vấn đề tiềm ẩn.
+\vspace{0.5em}
+
+\noindent \textbf{Mục đích:} Sử dụng các đồ thị như Residuals vs Fitted, Normal Q-Q, Scale-Location, và Residuals vs Leverage để kiểm tra các giả định của mô hình hồi quy tuyến tính đa biến. Các biểu đồ này giúp phát hiện các vấn đề như mối quan hệ phi tuyến, sai số không chuẩn, hoặc outliers, từ đó điều chỉnh mô hình để đảm bảo độ tin cậy và chính xác khi dự đoán \redhighlight{Pixel\_Rate}.
+
+\vspace{0.5em}
+
+\noindent \textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Hỗ trợ hiểu biết sâu sắc:}} Các đồ thị này cung cấp cái nhìn trực quan về tính đúng đắn của mô hình, giúp phát hiện các vấn đề như mối quan hệ phi tuyến tính, sai số không chuẩn, hoặc sự hiện diện của các điểm dữ liệu bất thường (outliers/influential points). Ví dụ, đồ thị Residuals vs Fitted cho thấy liệu sai số có phân bổ ngẫu nhiên hay có xu hướng nào đó, từ đó xác nhận giả định về tính tuyến tính.
+    
+    \item \textit{\textbf{Đảm bảo kết quả đáng tin cậy:}} Việc kiểm tra các giả định thông qua đồ thị chẩn đoán giúp đảm bảo rằng mô hình được xây dựng đúng đắn và các dự đoán không bị sai lệch bởi các yếu tố không mong muốn. Điều này phù hợp với yêu cầu trực quan hóa và đánh giá mô hình, khi cần cả sự chính xác và khả năng trình bày kết quả một cách rõ ràng.
+\end{itemize}
+\subsection{Kiểm Tra Đa Cộng Tuyến (VIF - Variance Inflation Factor)}
+
+\noindent \textbf{Tổng quan:} VIF (Variance Inflation Factor) là một chỉ số thống kê đo lường mức độ tương quan giữa các biến độc lập trong mô hình hồi quy. Đa cộng tuyến xảy ra khi các biến độc lập có mối quan hệ tuyến tính mạnh với nhau, dẫn đến sai lệch trong các hệ số hồi quy, làm giảm độ tin cậy của mô hình. VIF giúp phát hiện và xử lý vấn đề này bằng cách định lượng mức độ ảnh hưởng của sự tương quan giữa các biến.
+
+\vspace{0.5em}
+
+\noindent \textbf{Mục đích:} Áp dụng VIF để kiểm tra và loại bỏ đa cộng tuyến giữa các biến độc lập như \highlight{Core\_Speed}, \highlight{Memory\_Speed}, \highlight{ROPs}, \highlight{TMUs}, \highlight{Memory\_Bus}, \highlight{Memory}, \highlight{Process}, \highlight{Shader}, và các biến khác trong mô hình hồi quy tuyến tính đa biến. Công cụ này đảm bảo rằng các biến độc lập không có mối quan hệ tuyến tính mạnh với nhau, từ đó giúp các hệ số hồi quy phản ánh chính xác mức độ ảnh hưởng của từng biến đến \redhighlight{Pixel\_Rate}, nâng cao độ tin cậy và chất lượng của mô hình dự đoán.
+
+\vspace{0.5em}
+
+\noindent \textbf{Lý do lựa chọn:}
+\begin{itemize}[label=\textbullet, leftmargin=1.5em, itemsep=0.8em]
+    \item \textit{\textbf{Đảm bảo độ chính xác tối ưu của mô hình:}} Đa cộng tuyến có thể làm sai lệch các hệ số hồi quy, dẫn đến việc đánh giá sai mức độ ảnh hưởng của các biến như \highlight{Core\_Speed} hoặc \highlight{ROPs} đến \redhighlight{Pixel\_Rate}. VIF cung cấp một cách tiếp cận khoa học để phát hiện và loại bỏ vấn đề này, đảm bảo rằng mỗi biến được đánh giá độc lập và chính xác, từ đó mang lại kết quả dự đoán đáng tin cậy hơn.
+    
+    \item \textit{\textbf{Hiệu quả và dễ triển khai:}} VIF là một chỉ số dễ tính toán, cung cấp kết quả rõ ràng và trực quan (thông thường, VIF > 5 hoặc 10 cho thấy đa cộng tuyến nghiêm trọng). Điều này cho phép các nhà nghiên cứu nhanh chóng xác định các biến có vấn đề và điều chỉnh mô hình mà không cần các phương pháp phức tạp, tiết kiệm thời gian và nguồn lực.
+    
+    \item \textit{\textbf{Tầm quan trọng trong mô hình đa biến:}} Với tập dữ liệu chứa 11 biến độc lập, bao gồm các thông số kỹ thuật của GPU có khả năng tương quan cao (ví dụ, \highlight{Core\_Speed} và \highlight{Memory\_Speed}), kiểm tra đa cộng tuyến bằng VIF là một bước không thể thiếu. Điều này đảm bảo rằng mô hình hồi quy tuyến tính đa biến không bị ảnh hưởng bởi các mối quan hệ không mong muốn giữa các biến, từ đó duy trì tính ổn định và khả năng diễn giải của mô hình.
+\end{itemize}
+\clearpage
+\section{Lưu đồ thuật toán}
+\begin{figure}[htbp] % h: tại đây, t: đầu trang, b: cuối trang, p: trang riêng
+    \centering
+    \includegraphics[width=0.8\textwidth]{codechart.png} 
+    % width=0.8\textwidth giúp ảnh chiếm 80% chiều rộng dòng văn bản
+    
+    \caption{Lưu đồ các bước thực hiện phân tích} 
+    \label{fig:luu_do} 
+    % Label dùng để trích dẫn trong văn bản sau này bằng lệnh \ref{fig:luu_do}
+\end{figure}
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	% Chương 5 – Thống kê suy diễn (Phần 6.1 Pearson + 6.2 ANOVA)
