@@ -1,2 +1,28 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {section}{\numberline {1}Danh sách thành viên và phân công công việc}{2}{section.1}%
+\contentsline {section}{\numberline {2}Thống kê suy diễn}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Ma trận tương quan Pearson}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Tổng quan}{3}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Điều kiện áp dụng}{3}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Giả thuyết kiểm định}{4}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Thực hiện trong R}{4}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Kết quả và nhận xét}{4}{subsubsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.2}Phân tích phương sai một yếu tố (ANOVA)}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Mục tiêu}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Lý thuyết ANOVA một yếu tố}{5}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Giả thuyết kiểm định}{6}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Các điều kiện cần kiểm tra trước ANOVA}{6}{subsubsection.2.2.4}%
+\contentsline {paragraph}{\numberline {2.2.4.1}Điều kiện 1: Độc lập của các quan sát.}{6}{paragraph.2.2.4.1}%
+\contentsline {paragraph}{\numberline {2.2.4.2}Điều kiện 2: Biến phụ thuộc là biến liên tục.}{6}{paragraph.2.2.4.2}%
+\contentsline {paragraph}{\numberline {2.2.4.3}Điều kiện 3: Phân phối chuẩn của phần dư (Normality).}{6}{paragraph.2.2.4.3}%
+\contentsline {paragraph}{\numberline {2.2.4.4}Điều kiện 4: Đồng nhất phương sai (Homogeneity of Variance).}{6}{paragraph.2.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}Effect size $\eta ^2$ (Eta bình phương)}{7}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}Hậu nghiệm Tukey HSD}{7}{subsubsection.2.2.6}%
+\contentsline {subsubsection}{\numberline {2.2.7}Thực hiện trong R}{7}{subsubsection.2.2.7}%
+\contentsline {subsubsection}{\numberline {2.2.8}Kết quả kiểm tra điều kiện}{8}{subsubsection.2.2.8}%
+\contentsline {subsubsection}{\numberline {2.2.9}Kết quả ANOVA}{8}{subsubsection.2.2.9}%
+\contentsline {subsubsection}{\numberline {2.2.10}Kết quả phân tích hậu nghiệm Tukey HSD}{8}{subsubsection.2.2.10}%
+\contentsline {paragraph}{\numberline {2.2.10.1}Biến \texttt {Manufacturer}.}{9}{paragraph.2.2.10.1}%
+\contentsline {paragraph}{\numberline {2.2.10.2}Biến \texttt {Memory\_Type}.}{9}{paragraph.2.2.10.2}%
+\contentsline {paragraph}{\numberline {2.2.10.3}Biến \texttt {Resolution\_WxH}.}{9}{paragraph.2.2.10.3}%
+\contentsline {subsubsection}{\numberline {2.2.11}Kết luận phần 6.2}{9}{subsubsection.2.2.11}%
