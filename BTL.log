@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.28)  28 APR 2026 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.28)  1 MAY 2026 11:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -838,10 +838,10 @@ Package hyperref Info: Link coloring OFF on input line 136.
 \@outlinefile=\write3
 \openout3 = `BTL.out'.
 
-<images/LOGO HCMUT.png, id=3, 114.4275pt x 115.632pt>
-File: images/LOGO HCMUT.png Graphic file (type png)
-<use images/LOGO HCMUT.png>
-Package pdftex.def Info: images/LOGO HCMUT.png  used on input line 149.
+<images/LOGO_HCMUT.png, id=7, 114.4275pt x 115.632pt>
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 149.
 (pdftex.def)             Requested size: 113.81102pt x 115.01416pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 157.
  (C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -857,7 +857,7 @@ Overfull \hbox (4.16864pt too wide) in paragraph at lines 157--171
 
 [1
 
-{C:/Users/Minh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/LOGO HCMUT.png>] (BTL.toc)
+{C:/Users/Minh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/LOGO_HCMUT.png>] (BTL.toc)
 \tf@toc=\write4
 \openout4 = `BTL.toc'.
 
@@ -865,27 +865,49 @@ Overfull \hbox (4.16864pt too wide) in paragraph at lines 157--171
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.195 	\newpage
-                [1] (BTL.aux)
+l.194 	\clearpage
+                  [1] (sections/DSTV.tex)
+Overfull \hbox (12.96458pt too wide) in paragraph at lines 5--196
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--196
+
+ []
+
+File: images/LOGO_HCMUT.png Graphic file (type png)
+<use images/LOGO_HCMUT.png>
+Package pdftex.def Info: images/LOGO_HCMUT.png  used on input line 196.
+(pdftex.def)             Requested size: 28.45274pt x 28.75089pt.
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 196.
+(C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T5/cmtt/m/n' tried instead on input line 196.
+ [2
+
+] (BTL.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `BTL.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 534F0531CD2461959CE0550FBC8CC84B;306.
  ) 
 Here is how much of TeX's memory you used:
- 15408 strings out of 467691
- 243528 string characters out of 5415471
- 841192 words of memory out of 5000000
- 44232 multiletter control sequences out of 15000+600000
- 637245 words of font info for 63 fonts, out of 8000000 for 9000
+ 15467 strings out of 467691
+ 244725 string characters out of 5415471
+ 844194 words of memory out of 5000000
+ 44278 multiletter control sequences out of 15000+600000
+ 638839 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,8n,79p,514b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on BTL.pdf (2 pages, 71061 bytes).
+ 76i,21n,79p,514b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb><C:/Users/Minh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt8.pfb>
+Output written on BTL.pdf (3 pages, 111221 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
+ 14 words of extra memory for PDF output out of 10000 (max. 10000000)
 

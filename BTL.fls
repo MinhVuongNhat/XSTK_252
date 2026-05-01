@@ -197,17 +197,17 @@ INPUT .\BTL.out
 INPUT .\BTL.out
 INPUT BTL.out
 INPUT BTL.out
+OUTPUT BTL.pdf
 INPUT .\BTL.out
 INPUT .\BTL.out
 OUTPUT BTL.out
-OUTPUT BTL.pdf
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
-INPUT .\images\LOGO HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -240,6 +240,19 @@ INPUT .\BTL.toc
 INPUT .\BTL.toc
 INPUT BTL.toc
 OUTPUT BTL.toc
+INPUT .\sections\DSTV.tex
+INPUT .\sections\DSTV.tex
+INPUT sections\DSTV.tex
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr8.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt8.tfm
 INPUT BTL.aux
 INPUT .\BTL.out
 INPUT .\BTL.out
@@ -249,3 +262,7 @@ INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pf
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt8.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt8.pfb
