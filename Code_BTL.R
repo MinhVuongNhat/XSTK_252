@@ -691,6 +691,62 @@ ggplot(df_compare, aes(x = Manufacturer, y = Pixel_Rate, fill = Manufacturer)) +
 #--------------------------------------------------
 # 8. Xây dựng mô hình
 #--------------------------------------------------
+#--------------------------------------------------
+# 8. Xây dựng mô hình
+#--------------------------------------------------
+
+# Tạo một bản sao dữ liệu sạch (loại bỏ các dòng chứa NA) để xây dựng mô hình
+df_model <- na.omit(df_proc_log)
+
+#==================================================
+# 8.1. Chia tập Train / Test và Cài đặt Cross-validation
+#==================================================
+set.seed(123)
+
+trainIndex <- createDataPartition(df_model$Pixel_Rate, p = 0.8, list = FALSE)
+train_data <- df_model[trainIndex, ]
+test_data  <- df_model[-trainIndex, ]
+
+cat("Số lượng quan sát tập Train:", nrow(train_data), "\n")
+cat("Số lượng quan sát tập Test:", nrow(test_data), "\n")
+
+train_control <- trainControl(method = "cv", number = 5)
+
+#==================================================
+# 8.2. Kiểm tra Đa cộng tuyến (Multicollinearity - VIF)
+#==================================================
+
+model_full <- lm(Pixel_Rate ~ Core_Speed + Memory + Memory_Speed + 
+                   Memory_Bus + Process + ROPs + TMUs, 
+                 data = train_data)
+
+print("====== Hệ số VIF của các biến ======")
+vif_values <- vif(model_full)
+print(vif_values)
+
+high_vif_vars <- names(vif_values[vif_values > 5])
+if(length(high_vif_vars) > 0) {
+  cat("Các biến có VIF > 5 cần xem xét loại bỏ:", paste(high_vif_vars, collapse = ", "), "\n")
+} else {
+  cat("Không có biến nào có VIF > 5. Không bị đa cộng tuyến nghiêm trọng.\n")
+}
+
+plot(model_full$fitted.values, train_data$Pixel_Rate,
+     main = "Giá trị dự đoán vs Thực tế (Mô hình ban đầu)",
+     xlab = "Giá trị dự đoán (Fitted Values)",
+     ylab = "Giá trị thực tế (Actual Pixel_Rate)",
+     col = "blue", pch = 16, cex = 0.7)
+abline(a = 0, b = 1, col = "red", lwd = 2)
+
+#==================================================
+# 8.3. Lựa chọn biến tự động (Stepwise Selection)
+#==================================================
+model_stepwise <- step(model_full, direction = "both", trace = 0) 
+
+print("====== Tóm tắt mô hình tối ưu (Stepwise Model) ======")
+summary(model_stepwise)
+
+cat("Các biến được giữ lại trong mô hình:", paste(names(coef(model_stepwise))[-1], collapse = ", "), "\n")--------------------------------------------------
 
 #--------------------------------------------------
 # 9. Đánh giá và Dự đoán
