@@ -1,4 +1,3 @@
-
 \section{Tương quan và kiểm định một mẫu}
 
 Sau khi hoàn thành các bước tiền xử lý dữ liệu ở các phần trước, bộ dữ liệu \texttt{All\_GPUs.csv} được rút gọn còn các biến có ý nghĩa đối với bài toán dự báo \texttt{Pixel\_Rate}. Các biến định lượng như \texttt{Core\_Speed}, \texttt{Memory\_Speed}, \texttt{ROPs}, \texttt{TMUs}, \texttt{Memory\_Bus}, \texttt{Memory}, \texttt{Process}, \texttt{Shader} và biến mục tiêu \texttt{Pixel\_Rate} đã được chuyển đổi về dạng số, xử lý giá trị khuyết, loại bỏ dòng trùng lặp và loại bỏ ngoại lệ bằng quy tắc IQR. Sau đó, nhóm thực hiện biến đổi log để làm giảm độ lệch phải của dữ liệu và giúp các kiểm định thống kê phù hợp hơn.
