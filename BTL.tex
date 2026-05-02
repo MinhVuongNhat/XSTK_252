@@ -1,10 +1,10 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
 
 % Encoding & language
 \usepackage[T5]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
-
+\usepackage{minted}
 % Math
 \usepackage{amsmath,amsfonts,amssymb}
 
@@ -53,6 +53,12 @@
     breaklines=true,
     frame=single,
     numbers=left
+}
+
+\setminted{
+	linenos=true,       % Đánh số dòng
+	breaklines=true,    % Tự động ngắt dòng nếu code dài
+	bgcolor=lightgray!10 % Thêm nền xám nhạt (cần gói xcolor)
 }
 
 \usepackage{fancyhdr}

@@ -1,5 +1,6 @@
 \section{Thông tin tổng quát về các biến của bộ dữ liệu}
 
+$\indent$
 Sau khi làm sạch dữ liệu, ta thực hiện thống kê mô tả cho các biến đã chọn
 
 \begin{minted}{r}
@@ -33,7 +34,7 @@ Tương tự, ta cũng lập bảng tính các giá trị thống kê mô tả c
 Ta thấy nếu biểu diễn dưới dạng bảng như này thì khó có thể hình dung dữ liệu như thế nào hay có liên hệ với nhau ra sao. Do đó ta sẽ biểu diễn các dữ liệu này dưới dạng các biểu đồ để dễ quan sát hơn.
 
 \section{Biểu đồ - đồ thị}
-
+$\indent$
 Biểu đồ tần suất (histogram) thường dùng để thể hiện phân phối của biến định lượng. Ta vẽ biểu đồ tần suất cho các dữ liệu GPU\_new và GPU\_new\_log. Ta tiến hành vẽ biểu đồ tần suất cho dữ liệu GPU\_new.
 
 \begin{minted}{r}
@@ -57,6 +58,8 @@ for (i in 1:length(numerical)) {
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy các biến Process, Memory, TMUs và ROPs có phân phối lệch phải. Biến Core\_Speed có phân phối gần giống phân phối chuẩn. Trong khi đó biến Memory\_Speed có hầu hết các cột cao gần bằng nhau ngoại trừ các cột ở biên, còn biến Memory\_Bus và Shader thì gần như chỉ có một cột, các cột còn lại không đáng kể.
+
+\vspace{0.5em}
 
 Ta tiếp tục tiến hành vẽ biểu đồ tần suất cho dữ liệu của GPU\_new\_log.
 
@@ -82,6 +85,8 @@ for (i in 1:length(numerical)) {
 
 \textbf{Nhận xét:} Ta thấy sau khi chuyển đổi các biến x sang dạng log(x) thì phân phối các biến trở nên gần giống với phân phối chuẩn hơn, ví dụ như biến Memory\_Bus hay Memory\_Speed. Các biến Core\_Speed, Memory, TMUs và ROPs cũng không còn phân phối lệch như trước.
 
+\vspace{0.5em}
+
 Biểu đồ cột (Barplot) thường được dùng để thể hiện phân phối giữa các biến định tính. Ta tiến hành vẽ biểu đồ cột như sau:
 
 \begin{minted}{r}
@@ -100,6 +105,8 @@ barplot(table(GPU_new$Resolution_WxH), xlab="Resolution_WxH", ylab="Frequency", 
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy hầu hết GPU đều được sản xuất bởi AMD và Nvidia, 2 nhà sản xuất còn lại (ATI và Intel) không đáng kể. Chỉ có 2 kiểu bộ nhớ là DDR và GDDR, và đa số thuộc về GDDR. Về chỉ số Resolution\_WxH thì ta thấy không có sự chênh lệch đáng kể giữa 3 cột như 2 biến kia.
+
+\vspace{0.5em}
 
 Biểu đồ boxplot là biểu đồ diễn tả 5 vị trí phân bố của dữ liệu: giá trị nhỏ nhất (min), tứ phân vị thứ nhất (Q1), trung vị (median), tứ phân vị thứ 3 (Q3) và giá trị lớn nhất (max). Ta vẽ biểu đồ boxplot thể hiện phân phối của biến Pixel\_Rate và log(Pixel\_Rate) theo từng phân loại của các biến rời rạc.
 
@@ -141,6 +148,8 @@ boxplot(Pixel_Rate~Resolution_WxH, data=GPU_new_log, main="boxplot of log(Pixel_
 \end{figure}
 
 \textbf{Nhận xét:} Các phân phối ở 2 hình trên đều gần với phân phối chuẩn kể cả trước và sau khi dùng hàm log(x).
+
+\vspace{0.5em}
 
 Biểu đồ phân tán là biểu đồ thường được dùng để thể hiện mối liên hệ giữa 2 biến định lượng. Ta vẽ biểu đồ phân tán giữa biến Pixel\_Rate với một số biến định lượng khác.
 

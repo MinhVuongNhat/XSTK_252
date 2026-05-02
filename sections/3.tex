@@ -1,9 +1,10 @@
 \section{Đọc dữ liệu}
-Trước tiên, ta đọc dữ liệu thu từ file "All\_GPUs.csv" và sau đó in ra 3 dòng đầu tiên tương ứng với dữ liệu của mỗi biến. Việc này giúp chúng ta có cái nhìn tổng quan về dữ liệu, hiểu cấu trúc, định hướng trước khi đi sâu vào phân tích. Đồng thời, các giá trị như chuỗi rỗng,\verb|\n|- ", "\verb|\n|", hoặc "\verb|\n|Unknown Release Date" trong file CSV được chuyển thành NA trong data.frame, qua đó giúp chuẩn hóa dữ liệu, tránh các giá trị không hợp lệ và hỗ trợ việc phân tích dữ liệu khuyết sau này.
+$\indent$ Đầu tiên, ta đọc dữ liệu thu từ file "All\_GPUs.csv" và sau đó in ra 3 dòng đầu tiên tương ứng với dữ liệu của mỗi biến. Việc này giúp chúng ta có cái nhìn tổng quan về cấu trúc và đặc tính của dữ liệu từ đó đưa ra được định hướng sơ lược trước khi đi sâu vào phân tích. Đồng thời, các giá trị như chuỗi rỗng,\verb|\n|- ", "\verb|\n|", hoặc "\verb|\n|Unknown Release Date" trong file CSV được chuyển thành NA trong data.frame, qua đó giúp chuẩn hóa dữ liệu, tránh các giá trị không hợp lệ và hỗ trợ việc phân tích dữ liệu khuyết sau này.
 \begin{minted}{r}
 GPU = read.csv("D:/DHBK/HK243/XSTK/BTL/Code_R/All_GPUs.csv",header=TRUE,na.strings = c("","\n-","\n","\nUnknown Release Date"))
 head(GPU,3), dim(GPU)
 \end{minted}
+
 \textbf{Kết quả:}
 \begin{figure}[!h]
     \centering
@@ -13,12 +14,14 @@ head(GPU,3), dim(GPU)
 \end{figure}
 
 \textbf{Nhận xét:}
-Kết quả cho thấy, bộ dữ liệu bao gồm 3406 quan sát và 34 biến, tuy nhiên lại có rất nhiều biến chứa dữ liệu khuyết dù chỉ mới xuất ra màn hình 3 dòng đầu. Chính vì thế, việc phân tích dữ liệu khuyết và chọn lọc các biến liên tục và biến phân loại phải được thực hiện một cách hợp lý, tạo tiền đề cho các phân tích chuyên sâu.
+Từ thống kê phía trên, ta thấy bộ dữ liệu bao gồm 3406 quan sát và 34 biến, tuy nhiên lại có rất nhiều biến chứa dữ liệu khuyết dù chỉ mới xuất ra màn hình 3 dòng đầu. Chính vì thế, việc phân tích dữ liệu khuyết và chọn lọc các biến liên tục và biến phân loại phải được thực hiện một cách hợp lý, tạo tiền đề cho các phân tích chuyên sâu.
 
 \section{Chọn biến và xử lí dữ liệu}
 \textbf{a) Cơ sở lựa chọn biến}
 
-Ta thực hiện in bảng thống kê số lượng và tỷ lệ dữ liệu khuyết trong tệp tin bằng các câu lệnh:
+\vspace{0.5em}
+
+Ta thực hiện in bảng thống kê số lượng và tỷ lệ dữ liệu khuyết của từng biến trong tập dữ liệu bằng các câu lệnh:
 \begin{minted}{r}
 plot1 <- ggplot(data = na_summary_df, aes(x = reorder(Variable, -Missing), y = Missing)) +
   geom_bar(stat = "identity", fill = "sienna3") +
@@ -57,7 +60,9 @@ ggsave("na_combined_filtered_plot.png", width = 5, height = 12)
 \end{figure}
 
 \textbf{Nhận xét:}
-Ta nhận thấy tỷ lệ dữ liệu khuyết ở các biến có sự khác biệt và chênh lệch nhau lớn. Do đó, đối với những biến có tỷ lệ dữ liệu khuyết cao, ta sẽ không lựa chọn mà chỉ giữ lại các biến có dữ liệu khuyết tương đối.
+Từ đồ thị phía trên, ta nhận thấy tỷ lệ dữ liệu khuyết ở các biến có sự khác biệt và chênh lệch nhau lớn. Do đó, đối với những biến có tỷ lệ dữ liệu khuyết cao, ta sẽ không lựa chọn mà chỉ giữ lại các biến có dữ liệu khuyết tương đối.
+
+\vspace{0.5em}
 
 Qua các cơ sở trên, nhằm tối ưu hóa kết quả khi phân tích hiệu năng GPU máy tính, nhóm quyết định lựa chọn các biến sau:
 \colorbox{blue!10}{\hspace{2pt}\textbf{Resolution\_WxH}\hspace{2pt}},
@@ -73,10 +78,10 @@ Qua các cơ sở trên, nhằm tối ưu hóa kết quả khi phân tích hiệ
 \colorbox{blue!10}{\hspace{2pt}\textbf{Process}\hspace{2pt}},
 \colorbox{blue!10}{\hspace{2pt}\textbf{Shader}\hspace{2pt}},
 \colorbox{blue!10}{\hspace{2pt}\textbf{Pixel\_Rate}\hspace{2pt}} (trong đó gồm 3 biến phân loại là
-\newline
 \colorbox{red!10}{\hspace{2pt}\textbf{Resolution\_WxH}\hspace{2pt}},
 \colorbox{red!10}{\hspace{2pt}\textbf{Manufacturer}\hspace{2pt}}, \colorbox{red!10}{\hspace{2pt}\textbf{Memory\_Type}\hspace{2pt}} và 9 biến liên tục) vì các biến này cung cấp cái nhìn toàn diện về hiệu năng GPU, từ sức mạnh xử lý, khả năng kết xuất, đến hiệu quả công nghệ, giúp nhóm đánh giá và so sánh các GPU một cách chi tiết.
 
+\vspace{0.5em}
 
 % \textbf{1. Resolution\_WxH (Độ phân giải)}
 
@@ -179,6 +184,8 @@ GPU_new = GPU[,c("Resolution_WxH", "Manufacturer", "Core_Speed",
 
 \textbf{b) Xử lí dữ liệu từ các biến đã chọn}
 
+\vspace{0.5em}
+
 Tiếp theo ta tạo 1 bản tóm tắt thống kê của dataframe của GPU\_new:
 \begin{minted}{r}
     print(summary(GPU_new))
@@ -199,13 +206,14 @@ Tiếp theo ta tạo 1 bản tóm tắt thống kê của dataframe của GPU\_n
     \item \textbf{Đối với các biến định lượng:}
 \end{itemize}
 
-Hầu hết đều ở dạng character (dạng ký tự). Chính vì thế, để có thể phân tích bằng R, ta sẽ chuyển các dữ liệu cần thiết sang số thực. Ta định nghĩa một hàm để tách các đơn vị với chữ số bằng khoảng trắng và chuyển về dạng số thực:
+Hầu hết đều ở dạng character (dạng ký tự) trong đó có cả các biến định lượng. Vì vậy, để có thể xử lý và thực hiện các phép toán trên các biến định lượng ta cần thực hiện chuyển giá trị dạng chuỗi sang giá trị dạng số (numeric). Ta định nghĩa một hàm để tách các đơn vị với chữ số bằng khoảng trắng và chuyển về dạng số thực:
 \begin{minted}{r}
 helper <- function(x){ 
     if(is.na(x)) return(NA)
     as.double(strsplit(as.character(x), " ")[[1]][1])
 }
 \end{minted}
+
 Sau đó lần lượt chuyển đổi thành dữ liệu số thực, đồng thời, đối với các dữ liệu khuyết đã chuyển thành NA ban đầu của từng biến, ta thay bằng trung vị của tất cả các dữ liệu trong biến tương ứng:
 \begin{minted}{r}   
 # Core_Speed
@@ -254,7 +262,7 @@ GPU_new$Pixel_Rate[is.na(GPU_new$Pixel_Rate)] <- median(GPU_new$Pixel_Rate, na.r
 
 \begin{itemize}
     \item \textbf{Resolution\_WxH:}
-    Vì giá trị “4096x2160” là mode (giá trị xuất hiện nhiều nhất, chiếm 39\%) nên thay thế các giá trị khuyết bằng giá trị này. Sau đó, chúng ta thực hiện gom nhóm: 4096x2160 (39\%), 2560x1600 (34\%), Other (26\%):
+    Vì giá trị “4096x2160” là mode (giá trị xuất hiện nhiều nhất, chiếm 39\%) nên thay thế các giá trị khuyết bằng giá trị này. Sau đó, nhận thấy rằng các nhóm giá trị 4096x2160 (39\%), 2560x1600 (34\%) chiếm tỉ trọng lớn hơn đáng kể so với các phân loại còn lại vì vậy chúng ta thực hiện gom nhóm: 4096x2160 (39\%), 2560x1600 (34\%), Other - Các phân loại còn lại (26\%):
     \begin{minted}{r}
 # Resolution_WxH
 GPU_new$Resolution_WxH[is.na(GPU_new$Resolution_WxH)] = "4096x2160"
@@ -277,13 +285,23 @@ GPU_new$Memory_Type = factor(GPU_new$Memory_Type)
 \end{itemize}
 
 \section{Loại bỏ trùng lặp}
-Loại bỏ trùng lặp là quá trình loại bỏ các bản ghi hoặc giá trị lặp lại trong một tập dữ liệu để đảm bảo rằng mỗi hàng hoặc giá trị chỉ xuất hiện một lần. Mục đích chính là làm sạch dữ liệu, tránh sai lệch trong phân tích hoặc mô hình hóa do các bản ghi trùng lặp gây ra.
+$\indent$
+Loại bỏ trùng lặp là quá trình loại bỏ các bản ghi hoặc giá trị lặp lại trong một tập dữ liệu để đảm bảo rằng mỗi hàng hoặc giá trị chỉ xuất hiện một lần. Mục đích chính là làm sạch dữ liệu, tránh sai lệch trong phân tích hoặc mô hình hóa do các bản ghi trùng lặp gây ra.kể
+
+\vspace{0.8em}
 
 \textbf{1. Ý nghĩa của loại bỏ trùng lặp:}
 
+\vspace{0.5em}
+
 Nếu một hàng hoặc giá trị xuất hiện nhiều lần (do lỗi nhập liệu, sao chép dữ liệu, v.v.), việc loại bỏ trùng lặp giúp giữ lại chỉ một phiên bản duy nhất. Ngoài ra còn cải thiện độ chính xác bởi trùng lặp có thể làm sai lệch các thống kê (như trung bình, tổng) hoặc làm tăng sai số trong mô hình. Hơn thế, còn có thể giảm kích thước tập dữ liệu, giúp xử lý nhanh hơn.
 
+\vspace{0.8em}
+
 \textbf{2. Thực hiện trong R:}
+
+\vspace{0.5em}
+
 Ta sẽ so sánh bộ dữ liệu trước và sau khi đã loại bỏ trùng lặp bằng câu lệnh:
 \begin{minted}{r}
     str(GPU_new)
@@ -291,9 +309,10 @@ Ta sẽ so sánh bộ dữ liệu trước và sau khi đã loại bỏ trùng l
     str(GPU_new)
 \end{minted}
 
+\newpage
 
 \textbf{Kết quả:}
-\begin{figure}[!h]
+\begin{figure}[h!]
     \centering
     \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2025-08-06 232835.png}}
     \caption{Hình ảnh đối chiếu trước và sau khi loại bỏ trùng lặp}
@@ -331,6 +350,8 @@ Ta sẽ so sánh bộ dữ liệu trước và sau khi đã loại bỏ trùng l
 
 
 \section{Chuyển đổi logarit}
+
+$\indent$
 Chuyển dữ liệu sang dạng log: Ta thực hiện đoạn code sau để biến đổi thành dataframe mới tên là GPU\_new\_log. 
 \begin{minted}{r}
 # Tạo dataframe log-transformed
@@ -339,13 +360,16 @@ GPU_new_log[, numerical] <- log(GPU_new_log[, numerical])
 GPU_new_log$Pixel_Rate <- log(GPU_new_log$Pixel_Rate)
 \end{minted}
 
-\textbf{*Giải thích lý do chuyển sang dạng log}
+\textbf{* Giải thích lý do chuyển sang dạng log}
 \begin{itemize}
     \item \textbf{Mối quan hệ phi tuyến tính:} Mối quan hệ giữa biến phụ thuộc và biến độc lập không tuyến tính với nhau, tức là biến độc lập ảnh hưởng đối với biến phụ thuộc không theo cách tuyến tính, mô hình hồi quy thông thường có thể không đáp ứng được. Khi mô hình hồi quy cần mô hình hóa một quan hệ phi tuyến, sử dụng logarit có thể giúp biểu diễn mối quan hệ theo cách linh hoạt và dễ dàng diễn giải.
     \item \textbf{Biến độc lập có biên độ lớn:} Khi biến độc lập có biên độ lớn và tác động không đồng nhất trên biến phụ thuộc, có thể xảy ra hiện tượng hiệu ứng không chính xác hoặc không đồng đều. Bằng cách áp dụng logarit, chúng ta giảm điều lo âu làm cho mô hình trở nên ổn định, đơn giản trong việc diễn giải và tiếp cận.
     \item \textbf{Biến phụ thuộc không tuân theo phân phối chuẩn:} Nếu biến phụ thuộc không tuân theo phân phối chuẩn, điều này có thể ảnh hưởng đến giả định của mô hình hồi quy. Áp dụng logarit có thể giúp làm cho phân phối của biến phụ thuộc gần với phân phối chuẩn hơn, từ đó cải thiện chất lượng của mô hình.
 \end{itemize}
+
 Quá trình áp dụng mô hình hồi quy với việc sử dụng logarit đòi hỏi sự cẩn trọng và chặt chẽ. Việc đưa ra quyết định này nên dựa trên quá trình kiểm tra chi tiết và sự hiểu biết sâu sắc về bản chất của dữ liệu. Điều này là chìa khóa quan trọng để đảm bảo rằng mô hình hồi quy không chỉ phản ánh chính xác mối quan hệ giữa các biến mà còn đáp ứng đúng nhu cầu và yêu cầu của vấn đề nghiên cứu.
+
+\vspace{0.5em}
 
 Kiểm tra lại dữ liệu âm trong dữ liệu gốc và trong dữ liệu sau khi chuyển đổi log-transform:
 \begin{minted}{r}
@@ -377,6 +401,7 @@ for (var in numerical) {
 
 \section{Tổng kết}
 
+$\indent$
 Cuối cùng, ta tạo bảng tóm tắt các cột dữ liệu và tính tổng số giá trị thiếu (NA) trong mỗi cột của dataframe GPU\_new\_log sau khi xử lý missing value.
 
 \begin{minted}{r}
@@ -398,13 +423,13 @@ print(colSums(is.na(GPU_new_log)))
 
 Đến đây xem như đã hoàn thành việc tiền xử lý số liệu bởi bộ dữ liệu đã được loại bỏ những chỗ bị khuyết cũng như đã được xử lý sơ bộ trước khi tiến hành thống kê. Sau đây, ta sẽ in ra 10 dòng đầu tiên của dataframe GPU\_new\_log. Điều này giúp ta có cái nhìn tổng quan về dữ liệu bằng cách hiển thị một phần của dataframe.
 
-\begin{minted}{r}
-# Xem 10 dòng đầu của GPU_new_log
-head(GPU_new_log, 10)
-\end{minted}
+%\begin{minted}{r}
+%# Xem 10 dòng đầu của GPU_new_log
+%head(GPU_new_log, 10)
+%\end{minted}
 
-\begin{figure}[!h]
-    \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-06 233357.png}}
-\end{figure}
+%\begin{figure}[!h]
+ %   \centering
+%    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-06 233357.png}}
+%\end{figure}
 
