@@ -1,9 +1,6 @@
 \section{Tương quan và kiểm định một mẫu}
-
 Sau khi hoàn thành các bước tiền xử lý dữ liệu ở các phần trước, bộ dữ liệu \texttt{All\_GPUs.csv} được rút gọn còn các biến có ý nghĩa đối với bài toán dự báo \texttt{Pixel\_Rate}. Các biến định lượng như \texttt{Core\_Speed}, \texttt{Memory\_Speed}, \texttt{ROPs}, \texttt{TMUs}, \texttt{Memory\_Bus}, \texttt{Memory}, \texttt{Process}, \texttt{Shader} và biến mục tiêu \texttt{Pixel\_Rate} đã được chuyển đổi về dạng số, xử lý giá trị khuyết, loại bỏ dòng trùng lặp và loại bỏ ngoại lệ bằng quy tắc IQR. Sau đó, nhóm thực hiện biến đổi log để làm giảm độ lệch phải của dữ liệu và giúp các kiểm định thống kê phù hợp hơn.
-
 Phần này tập trung vào hai nội dung chính. Thứ nhất, nhóm phân tích tương quan Pearson nhằm đánh giá mức độ liên hệ tuyến tính giữa các biến định lượng và biến mục tiêu \texttt{Pixel\_Rate}. Thứ hai, nhóm thực hiện kiểm định một mẫu để xem trung bình \texttt{Pixel\_Rate} của các GPU trong dữ liệu có khác một ngưỡng tham chiếu được chọn trước hay không.
-
 Toàn bộ phân tích trong phần này được thực hiện trên tập dữ liệu đã tiền xử lý và biến đổi log. Trong file code R, nhóm chia dữ liệu thành tập huấn luyện và tập kiểm tra theo tỉ lệ khoảng $2/3$ và $1/3$. Tập huấn luyện được sử dụng cho phân tích suy diễn, còn tập kiểm tra được giữ lại cho phần đánh giá mô hình dự báo.
 
 \begin{lstlisting}[language=R, caption={Chia dữ liệu thành tập huấn luyện và tập kiểm tra}]
@@ -13,40 +10,30 @@ index <- createDataPartition(GPU_new_log$Pixel_Rate,
                              list = FALSE)
 train <- GPU_new_log[index, ]
 test  <- GPU_new_log[-index, ]
-
 nrow(train)
 nrow(test)
 \end{lstlisting}
 
 Trong đó, biến \texttt{Pixel\_Rate} được hiểu là tốc độ xử lý điểm ảnh của GPU, đơn vị ban đầu là GPixel/s. Sau khi biến đổi log, các kết quả kiểm định được diễn giải trên thang log; khi cần diễn giải theo thang gốc, nhóm sử dụng phép biến đổi ngược bằng hàm mũ.
-
 % ============================================================
 \subsection{Phân tích tương quan Pearson}
 % ============================================================
 
 \subsubsection{Mục tiêu phân tích}
-
 Mục tiêu của phân tích tương quan là xác định biến nào có mối liên hệ tuyến tính rõ ràng với \texttt{Pixel\_Rate}. Kết quả này giúp nhóm hiểu sơ bộ vai trò của từng đặc trưng phần cứng đối với hiệu suất xử lý điểm ảnh, đồng thời làm cơ sở tham khảo cho bước xây dựng mô hình hồi quy ở phần sau.
 
 Các biến định lượng được đưa vào kiểm định tương quan gồm:
-
 \begin{center}
 \texttt{Core\_Speed}, \texttt{Memory\_Speed}, \texttt{ROPs}, \texttt{TMUs}, \texttt{Memory\_Bus}, \texttt{Memory}, \texttt{Process}, \texttt{Shader}.
 \end{center}
-
 Hệ số tương quan Pearson giữa hai biến $X$ và $Y$ được tính theo công thức:
-
 \[
 r = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}
 {\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2}\sqrt{\sum_{i=1}^{n}(y_i-\bar{y})^2}}
 \]
-
 Trong đó, $r$ nằm trong khoảng $[-1,1]$. Nếu $r>0$, hai biến có xu hướng đồng biến; nếu $r<0$, hai biến có xu hướng nghịch biến; nếu $|r|$ càng gần 1 thì quan hệ tuyến tính càng mạnh.
-
 \subsubsection{Giả thuyết kiểm định}
-
 Với mỗi biến định lượng $X_j$, nhóm kiểm định cặp giả thuyết:
-
 \[
 H_0: \rho_j = 0
 \]
@@ -56,9 +43,7 @@ H_1: \rho_j \neq 0
 \]
 
 Trong đó, $\rho_j$ là hệ số tương quan tuyến tính trong tổng thể giữa biến $X_j$ và \texttt{Pixel\_Rate}. Mức ý nghĩa được chọn là $\alpha = 0{,}05$. Nếu $p\text{-value} < 0{,}05$, nhóm bác bỏ $H_0$ và kết luận rằng biến đang xét có tương quan tuyến tính có ý nghĩa thống kê với \texttt{Pixel\_Rate}.
-
 \subsubsection{Code thực hiện trong R}
-
 \begin{lstlisting}[language=R, caption={Kiểm định tương quan Pearson giữa Pixel\_Rate và các biến định lượng}]
 correlation_results <- data.frame(
   Variable = character(),
@@ -201,7 +186,6 @@ H_1: \texttt{log(Pixel\_Rate)} \text{ không tuân theo phân phối chuẩn}
 shapiro_pixel <- shapiro.test(train$Pixel_Rate)
 print(shapiro_pixel)
 \end{lstlisting}
-
 Kết quả kiểm định Shapiro--Wilk cho $p\text{-value} < 0{,}001$, do đó bác bỏ giả thuyết dữ liệu tuân theo phân phối chuẩn. Tuy nhiên, do kích thước mẫu sau tiền xử lý tương đối lớn, kiểm định t một mẫu vẫn có tính bền vững nhất định theo định lý giới hạn trung tâm. Để tăng độ tin cậy, nhóm thực hiện thêm kiểm định Wilcoxon signed-rank, đây là kiểm định phi tham số không yêu cầu giả định phân phối chuẩn nghiêm ngặt.
 
 \subsubsection{Code kiểm định một mẫu trong R}
@@ -229,7 +213,6 @@ n_train <- length(train$Pixel_Rate)
 mean_log <- mean(train$Pixel_Rate)
 sd_log <- sd(train$Pixel_Rate)
 cohen_d <- (mean_log - mu_pixel) / sd_log
-
 cat("n =", n_train, "\n")
 cat("Mean log(Pixel_Rate) =", mean_log, "\n")
 cat("SD log(Pixel_Rate) =", sd_log, "\n")
@@ -241,9 +224,7 @@ cat("95 percent CI on original scale =",
 \end{lstlisting}
 
 \subsubsection{Kết quả kiểm định một mẫu}
-
 Bảng dưới đây trình bày kết quả kiểm định một mẫu đối với \texttt{log(Pixel\_Rate)}. Do dữ liệu được chia train/test bằng hàm \texttt{createDataPartition}, các giá trị có thể dao động rất nhỏ nếu thay đổi hạt giống ngẫu nhiên, nhưng kết luận thống kê không thay đổi.
-
 \begin{table}[htbp]
 \centering
 \caption{Kết quả kiểm định một mẫu cho \texttt{log(Pixel\_Rate)}}
@@ -273,17 +254,11 @@ Trung bình sau khi đổi về thang gốc & khoảng 13--14 GPixel/s \\
 \end{table}
 
 Kết quả t-test cho $p\text{-value} < 0{,}001$, nhỏ hơn mức ý nghĩa 0{,}05. Vì vậy, nhóm bác bỏ giả thuyết $H_0$. Điều này cho thấy trung bình \texttt{log(Pixel\_Rate)} khác biệt có ý nghĩa thống kê so với $\log(40)$.
-
 Thống kê kiểm định $t$ mang giá trị âm, đồng thời trung bình mẫu của \texttt{log(Pixel\_Rate)} chỉ khoảng 2{,}60--2{,}62, nhỏ hơn $\log(40) \approx 3{,}689$. Khi chuyển về thang gốc, trung bình hình học của \texttt{Pixel\_Rate} chỉ khoảng 13--14 GPixel/s, thấp hơn đáng kể so với ngưỡng 40 GPixel/s. Như vậy, có thể kết luận rằng trung bình \texttt{Pixel\_Rate} của các GPU trong tập dữ liệu sau tiền xử lý thấp hơn 40 GPixel/s một cách có ý nghĩa thống kê.
-
 Kết quả Wilcoxon signed-rank test cũng cho $p\text{-value} < 0{,}001$. Điều này củng cố kết luận của t-test, đặc biệt trong bối cảnh kiểm định Shapiro--Wilk cho thấy dữ liệu không hoàn toàn tuân theo phân phối chuẩn. Chỉ số Cohen's $d$ xấp xỉ $-1{,}15$, có độ lớn lớn hơn 0{,}8, cho thấy mức chênh lệch giữa trung bình mẫu và ngưỡng 40 GPixel/s là lớn về mặt thực tế, không chỉ có ý nghĩa thống kê.
-
 % ============================================================
 \subsection{Kết luận của phần tương quan và kiểm định một mẫu}
 % ============================================================
-
 Phân tích tương quan Pearson cho thấy \texttt{ROPs} và \texttt{TMUs} là hai biến có mối quan hệ tuyến tính mạnh nhất với \texttt{Pixel\_Rate}. Kết quả này phù hợp với ý nghĩa kỹ thuật của GPU vì hai nhóm thông số này liên quan trực tiếp đến khả năng xử lý đồ họa. Ngoài ra, \texttt{Memory\_Bus}, \texttt{Core\_Speed} và \texttt{Memory\_Speed} cũng có tương quan dương với \texttt{Pixel\_Rate}, cho thấy khi các thông số phần cứng này tăng, hiệu suất xử lý điểm ảnh có xu hướng tăng theo.
-
 Biến \texttt{Process} có tương quan âm với \texttt{Pixel\_Rate}. Do \texttt{Process} được đo bằng nm, giá trị nhỏ hơn thường thể hiện công nghệ sản xuất hiện đại hơn, nên mối tương quan âm là hợp lý. Trong khi đó, \texttt{Memory} và \texttt{Shader} chỉ có tương quan rất yếu, vì vậy không nên chỉ dựa vào hai biến này để giải thích sự thay đổi của \texttt{Pixel\_Rate}.
-
 Đối với kiểm định một mẫu, cả one-sample t-test và Wilcoxon signed-rank test đều cho thấy trung bình \texttt{Pixel\_Rate} sau tiền xử lý thấp hơn đáng kể so với ngưỡng 40 GPixel/s. Như vậy, bộ dữ liệu GPU được sử dụng trong nghiên cứu có mức \texttt{Pixel\_Rate} trung bình chưa đạt ngưỡng tham chiếu 40 GPixel/s. Kết quả của phần này cung cấp cơ sở thống kê quan trọng để lựa chọn biến và xây dựng mô hình hồi quy dự báo \texttt{Pixel\_Rate} ở các phần tiếp theo.
