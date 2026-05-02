@@ -1,0 +1,35 @@
+\section{Tổng kết kết quả chính}
+
+Bài báo cáo đã tiến hành phân tích toàn diện các yếu tố ảnh hưởng đến hiệu suất dựng ảnh Pixel Rate của GPU dựa trên dữ liệu từ các thông số kỹ thuật như Core Speed, Memory Speed, Memory Bus, Shader,  TMUs, ROPs và các biến khác. Thông qua các phương pháp thống kê mô tả, kiểm định giả thuyết, hồi quy tuyến tính đa biến, và các kỹ thuật đánh giá như cross-validation và dự báo, nghiên cứu đã làm rõ mối quan hệ giữa các biến độc lập và hiệu suất xử lý pixel của GPU.
+
+Dưới đây là các kết quả mà nhóm đã thu được:
+
+\begin{itemize}
+    \item \textbf{Thống kê mô tả và trực quan hóa:} Các đồ thị density plot và scatter plot (phần 6.2) cho thấy sự tương đồng giữa giá trị thực tế và dự đoán trên tập kiểm tra, với R² = 0.9377371, khẳng định mô hình giải thích tốt sự biến thiên của Pixel\_Rate.
+    \item \textbf{Kiểm định giả thuyết:} Phân tích ANOVA (phần 5.3.3) cho thấy tất cả các biến độc lập (như Core\_Speed, ROPs, Memory) đều có ý nghĩa thống kê (p-value < 0.05), hỗ trợ câu hỏi nghiên cứu về tác động của các thông số đến hiệu suất GPU.
+    \item \textbf{Hồi quy tuyến tính đa biến:} Mô hình đạt Adjusted R² = 0.9445508 (phần 5.3.3) và R² = 0.9426636 (phần 5.3.5 từ cross-validation), chứng tỏ mô hình giải thích được hơn 94\% sự biến thiên của Pixel\_Rate. Tuy nhiên, RMSE = 0.2767408 (phần 6.1) và các khoảng dự đoán rộng (phần 6.3) cho thấy vẫn tồn tại sai số cần cải thiện.
+    \item \textbf{Dự báo và kịch bản:} Phần 6.3 và 6.4 cung cấp các khoảng dự đoán và phân tích kịch bản (tăng 10\% Core\_Speed làm tăng trung bình Pixel\_Rate lên 3.1737), hỗ trợ ứng dụng thực tế.
+\end{itemize}
+
+
+\section{Hạn chế của phân tích}
+
+Mặc dù mô hình đạt hiệu suất cao, bài báo cáo vẫn tồn tại một số hạn chế:
+
+\begin{itemize}
+    \item \textbf{Dữ liệu chuẩn hóa:} Kết quả âm từ khoảng dự đoán với dữ liệu mẫu chưa chuẩn hóa (phần 6.3) cho thấy mô hình nhạy cảm với việc tiền xử lý dữ liệu. Nếu dữ liệu mới không được chuẩn hóa giống như tập huấn luyện, dự đoán có thể không chính xác.
+    \item \textbf{Biến chưa khai thác:} Một số yếu tố tiềm năng như nhiệt độ hoạt động, công suất tiêu thụ, hoặc hiệu suất thực tế trong các ứng dụng cụ thể (ví dụ: game, AI) chưa được đưa vào mô hình, có thể ảnh hưởng đến Pixel\_Rate.
+    \item \textbf{Ngoại lệ và ngoại suy:} Các giá trị ngoại lai trong tập dữ liệu (phát hiện từ đồ thị Residuals vs Leverage, phần 5.3.3) và kết quả âm từ ngoại suy (phần 6.3 với new\_data ban đầu) cho thấy mô hình có thể không ổn định khi áp dụng cho dữ liệu ngoài miền huấn luyện.
+    \item \textbf{Giới hạn tuyến tính:} Mô hình hồi quy tuyến tính có thể không bắt được các mối quan hệ phi tuyến giữa các biến, đặc biệt với các giá trị cực đại hoặc cực tiểu.
+\end{itemize}
+
+
+\section{Đề xuất hướng phát triển tiếp theo}
+
+\begin{itemize}
+    \item \textbf{Sử dụng mô hình phi tuyến:} Thử nghiệm các mô hình phi tuyến như hồi quy polynomial hoặc mạng nơ-ron nhân tạo (ANN) để bắt các mối quan hệ phức tạp hơn, đặc biệt khi xử lý ngoại suy hoặc dữ liệu ngoại lệ.
+    \item \textbf{Chuẩn hóa và mở rộng dữ liệu:} Phát triển một quy trình tự động chuẩn hóa dữ liệu mới (ví dụ: log transformation hoặc scaling) để đảm bảo tính nhất quán với tập huấn luyện. Thu thập thêm dữ liệu từ các GPU hiện đại với thông số đa dạng hơn (như nhiệt độ, công suất) để mở rộng mô hình.
+    \item \textbf{Thêm dữ liệu và feature engineering:} Bổ sung các biến như L2 cache, băng thông bộ nhớ thực đo, kiến trúc nhân (CUDA cores / stream processors), tiêu thụ điện năng… Tạo biến tương tác (ví dụ ROPs × Core\_Speed) hoặc biến tỷ lệ (Memory\_Bus × Memory\_Speed) để tăng độ giải thích.
+    \item \textbf{Phân tích chuỗi thời gian:} Dùng ngày phát hành (Release\_Date) để xây dựng mô hình dự báo xu hướng theo thời gian, ví dụ ARIMA hoặc prophet, kết hợp hồi quy đa biến.
+    \item \textbf{Ứng dụng thực tế:} Áp dụng mô hình vào các bài toán cụ thể như tối ưu hóa GPU cho học máy hoặc xử lý đồ họa thời gian thực, đồng thời kiểm tra hiệu quả trên tập dữ liệu độc lập từ các nhà sản xuất khác nhau (Intel, AMD, Nvidia).
+\end{itemize}

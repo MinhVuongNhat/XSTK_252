@@ -1,0 +1,262 @@
+\section{Đề Xuất Mô Hình Thống Kê và Lý Do Lựa Chọn}
+
+Dựa trên mục tiêu nghiên cứu tập trung vào việc dự đoán sự phát triển của các thông số kỹ thuật và hiệu suất máy tính trong tương lai, cụ thể là hiệu suất đồ họa (Pixel\_Rate) của các đơn vị xử lý đồ họa (GPU). Để thực hiện điều này một cách hiệu quả, các mô hình thống kê sau được đề xuất, kèm theo lý do lựa chọn được giải thích chi tiết và thuyết phục nhằm làm rõ tính phù hợp của chúng với mục tiêu nghiên cứu.
+
+\subsection{Phân Tích Tương Quan Pearson}
+
+\textbf{Đề xuất:} Sử dụng hệ số tương quan Pearson để đánh giá mối quan hệ tuyến tính giữa Pixel\_Rate và các biến độc lập liên tục như Core\_Speed, Memory\_Speed, ROPs, TMUs, Memory\_Bus, Memory, Process, và Shader.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Khám phá mối quan hệ ban đầu:}} Tương quan Pearson là một công cụ cơ bản nhưng mạnh mẽ để đo lường mức độ và hướng của mối quan hệ tuyến tính giữa Pixel\_Rate và từng biến độc lập. Hệ số tương quan $  r  $ (nằm trong khoảng [-1, 1]) giúp xác định xem các thông số kỹ thuật như Core\_Speed hay Memory\_Speed có ảnh hưởng mạnh đến hiệu suất đồ họa hay không. Ví dụ, $  r  $ gần 1 cho thấy mối quan hệ tuyến tính mạnh, rất hữu ích để lựa chọn biến cho mô hình hồi quy sau này.
+    \item \textbf{\textit{Hỗ trợ kiểm định ý nghĩa thống kê:}} Ngoài việc tính toán $  r  $, kiểm định tương quan Pearson cung cấp p-value để đánh giá liệu mối quan hệ giữa hai biến có ý nghĩa thống kê (p < 0.05) hay chỉ là ngẫu nhiên. Điều này phù hợp với mục tiêu "hiểu biết sâu sắc" trong Chương 1, giúp xác định các biến tiềm năng ảnh hưởng lớn đến Pixel\_Rate trước khi xây dựng mô hình phức tạp hơn.
+    \item \textbf{\textit{Đơn giản và trực quan:}} Phương pháp này dễ thực hiện và cung cấp cái nhìn nhanh về mối quan hệ giữa các biến, làm nền tảng cho các phân tích sâu hơn như hồi quy tuyến tính. Nó cũng hỗ trợ việc trực quan hóa dữ liệu thông qua biểu đồ phân tán (scatter plot), giúp phát hiện các xu hướng tuyến tính hoặc bất thường trong dữ liệu.
+\end{itemize}
+
+\subsection{Mô Hình Hồi Quy Tuyến Tính Đa Biến (Multiple Linear Regression)}
+
+\textbf{Đề xuất:} Mô hình hồi quy tuyến tính đa biến được chọn để dự đoán Pixel\_Rate dựa trên một tập hợp các biến độc lập bao gồm các thông số kỹ thuật như tốc độ lõi (Core\_Speed), tốc độ bộ nhớ (Memory\_Speed), số đơn vị xuất hình ảnh (ROPs), số đơn vị ánh xạ texture (TMUs), độ rộng bus bộ nhớ (Memory\_Bus), dung lượng bộ nhớ (Memory), quy trình sản xuất (Process), và số đơn vị shader (Shader), cùng với các biến phân loại như nhà sản xuất (Manufacturer), loại bộ nhớ (Memory\_Type), và độ phân giải (Resolution\_WxH).
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textit{\textbf{Tính cơ bản và mạnh mẽ:}} Hồi quy tuyến tính đa biến là một phương pháp thống kê nền tảng, được sử dụng rộng rãi để mô hình hóa mối quan hệ giữa một biến phụ thuộc liên tục như Pixel\_Rate và nhiều biến độc lập khác. Với mục tiêu dự đoán hiệu suất đồ họa – một giá trị số liên tục – mô hình này là lựa chọn tự nhiên và phù hợp để khám phá mối liên hệ giữa các thông số kỹ thuật và hiệu suất.
+    \item \textit{\textbf{Khả năng phân tích đóng góp của từng biến:}} Một trong những điểm mạnh của mô hình này là khả năng cung cấp các hệ số hồi quy cho từng biến độc lập. Những hệ số này không chỉ cho biết mức độ ảnh hưởng của từng yếu tố đến Pixel\_Rate, mà còn giúp trả lời các câu hỏi thực tiễn như: "Tăng tốc độ lõi thêm 100 MHz sẽ cải thiện hiệu suất đồ họa bao nhiêu?", hoặc "Quy trình sản xuất nhỏ hơn (nm) có thực sự tạo ra sự khác biệt đáng kể không?". Điều này rất quan trọng để đạt được sự hiểu biết sâu sắc về các yếu tố kỹ thuật ảnh hưởng đến GPU.
+    \item \textit{\textbf{Tích hợp linh hoạt dữ liệu định lượng và định tính:}} Nghiên cứu bao gồm cả các biến số (như Core\_Speed, Memory) và các biến phân loại (như Manufacturer, Memory\_Type). Mô hình hồi quy tuyến tính đa biến cho phép chuyển đổi các biến phân loại thành biến giả (dummy variables), giúp kết hợp cả hai loại dữ liệu này một cách liền mạch. Ví dụ, biến Manufacturer có thể được mã hóa để so sánh hiệu suất giữa NVIDIA, AMD, và Intel, từ đó đánh giá tác động của yếu tố nhà sản xuất lên Pixel\_Rate.
+    \item \textit{\textbf{Đánh giá hiệu suất đơn giản và thực tiễn:}} Mô hình này dễ dàng được đánh giá thông qua các chỉ số như hệ số xác định $\text{R}^{\text{2}}$ (đo lường mức độ giải thích biến thiên của Pixel\_Rate), sai số tuyệt đối trung bình (MAE), sai số bình phương trung bình (MSE), và căn bậc hai của sai số bình phương trung bình (RMSE). Những chỉ số này không chỉ cung cấp cái nhìn rõ ràng về độ chính xác của dự đoán mà còn phù hợp với ứng dụng thực tiễn, khi cần một công cụ dễ triển khai và đáng tin cậy để dự báo hiệu suất GPU trong thực tế.
+\end{itemize}
+
+
+\subsection{Phân Tích Phương Sai Một Yếu Tố (One-Way ANOVA)}
+
+\textbf{Đề xuất:} Phương pháp phân tích phương sai một yếu tố (ANOVA) được sử dụng để kiểm tra sự khác biệt về Pixel\_Rate giữa các nhóm được xác định bởi các biến phân loại như Manufacturer, Memory\_Type, và Resolution\_WxH.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Tăng mức độ hiểu biết:}} Nghiên cứu nhấn mạnh việc khám phá các yếu tố ảnh hưởng đến hiệu suất GPU. ANOVA giúp trả lời các câu hỏi như: "Liệu GPU từ các nhà sản xuất khác nhau (NVIDIA, AMD, Intel) có hiệu suất đồ họa trung bình khác biệt đáng kể không?" hoặc "Loại bộ nhớ (GDDR5, GDDR6) có ảnh hưởng rõ rệt đến Pixel\_Rate hay không?" Điều này mang lại sự hiểu biết sâu hơn về tác động của các yếu tố định tính lên hiệu suất.
+    \item \textbf{\textit{Nền tảng cho phân tích chi tiết:}} ANOVA không chỉ dừng lại ở việc phát hiện sự khác biệt tổng thể, mà còn là bước khởi đầu để thực hiện các kiểm định hậu nghiệm như Tukey HSD. Phương pháp này cho phép so sánh từng cặp nhóm (ví dụ: NVIDIA vs. AMD, GDDR5 vs. GDDR6), từ đó cung cấp thông tin chi tiết hơn về mức độ khác biệt và hỗ trợ trực quan hóa kết quả.
+    \item \textbf{\textit{Hiệu quả với dữ liệu phân loại đa nhóm:}} Khi phân tích các biến như Manufacturer (có ít nhất 4 nhóm: AMD, NVIDIA, ATI, Intel), ANOVA tỏ ra vượt trội so với việc thực hiện nhiều kiểm định t-test riêng lẻ giữa các cặp nhóm. Điều này không chỉ đơn giản hóa quá trình phân tích mà còn giảm nguy cơ sai lầm loại I (tức là kết luận sai rằng có sự khác biệt khi thực tế không có), đảm bảo tính chính xác và đáng tin cậy của kết quả.
+\end{itemize}
+
+
+
+\subsection{Kiểm Định Giả Thiết}
+
+\textbf{Đề xuất:} Các kiểm định giả thiết như Shapiro-Wilk (đánh giá phân phối chuẩn) và Levene (đánh giá tính đồng nhất phương sai) được áp dụng để kiểm tra các giả định cần thiết cho hồi quy tuyến tính và ANOVA.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Đảm bảo tính hợp lệ của kết quả:}} Để các kết luận từ hồi quy và ANOVA có giá trị, các giả định cơ bản của chúng (như sai số phân phối chuẩn và phương sai đồng nhất giữa các nhóm) phải được thỏa mãn. Nếu không kiểm tra và xác nhận những giả định này, các kết quả thống kê có thể bị sai lệch, làm giảm độ tin cậy của nghiên cứu.
+    \item \textbf{\textit{Shapiro-Wilk và tính phân phối chuẩn:}} Kiểm định Shapiro-Wilk đánh giá xem sai số của mô hình (phần còn lại sau khi dự đoán) có tuân theo phân phối chuẩn hay không. Đây là giả định quan trọng cho các kiểm định F trong ANOVA và các khoảng tin cậy trong hồi quy. Nếu sai số không chuẩn, các kết quả thống kê có thể không phản ánh đúng thực tế.
+    \item \textbf{\textit{Levene và tính đồng nhất phương sai:}} Kiểm định Levene kiểm tra xem phương sai của Pixel\_Rate giữa các nhóm (ví dụ: các nhà sản xuất khác nhau) có tương đương nhau hay không. Nếu phương sai khác biệt quá lớn, kết quả từ ANOVA có thể không đáng tin cậy. Việc sử dụng Levene đảm bảo rằng sự khác biệt về hiệu suất giữa các nhóm là do yếu tố được nghiên cứu (như Manufacturer), chứ không phải do sự không đồng đều về phương sai.
+\end{itemize}
+
+
+
+\subsection{Cross-Validation (Kiểm Chứng Chéo)}
+
+\textbf{Đề xuất:} Kỹ thuật kiểm chứng chéo k-fold với $k = 5$ được sử dụng để đánh giá khả năng tổng quát hóa của mô hình hồi quy tuyến tính đa biến.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Hỗ trợ ứng dụng thực tiễn:}} Mục tiêu yêu cầu mô hình không chỉ hoạt động tốt trên dữ liệu hiện tại mà còn phải dự đoán chính xác trên dữ liệu mới. Cross-validation giải quyết vấn đề này bằng cách chia dữ liệu thành 5 phần, lần lượt sử dụng 4 phần để huấn luyện và 1 phần để kiểm tra, qua đó đánh giá hiệu suất thực tế của mô hình. Điều này giúp giảm thiểu nguy cơ overfitting – tình trạng mô hình "học thuộc" dữ liệu huấn luyện nhưng thất bại khi dự đoán trên dữ liệu chưa từng thấy, một vấn đề thường gặp trong phân tích hiệu suất GPU.
+    \item \textbf{\textit{Đo lường độ ổn định và chính xác:}} Kết quả từ cross-validation cung cấp các chỉ số trung bình như $\text{R}^{\text{2}}$ và RMSE qua 5 lần kiểm tra, cho phép đánh giá mức độ ổn định và chính xác của mô hình trên các tập dữ liệu khác nhau. Điều này rất phù hợp với yêu cầu "đánh giá mô hình dự đoán", khi cần một thước đo đáng tin cậy để xác định hiệu quả của mô hình trong việc dự báo Pixel\_Rate.
+\end{itemize}
+
+
+
+\subsection{Stepwise Selection (Lựa Chọn Biến Theo Bước)}
+
+\textbf{Đề xuất:} Phương pháp lựa chọn biến theo bước (stepwise selection) được áp dụng để tối ưu hóa mô hình hồi quy bằng cách chọn lọc các biến độc lập quan trọng nhất.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Tăng hiệu quả dự đoán:}} Với 11 biến độc lập trong nghiên cứu, không phải tất cả đều có ý nghĩa thống kê hoặc đóng góp đáng kể vào việc dự đoán Pixel\_Rate. Stepwise selection giúp loại bỏ các biến không quan trọng, giảm độ phức tạp của mô hình và cải thiện độ chính xác dự đoán. Điều này rất phù hợp với mục tiêu "tìm mô hình dự đoán hiệu quả", vì một mô hình quá phức tạp có thể dẫn đến overfitting và giảm khả năng ứng dụng thực tế.
+    \item \textbf{\textit{Tự động hóa và tiết kiệm thời gian:}} Phương pháp này sử dụng các tiêu chí như giá trị p (p-value) hoặc chỉ số thông tin Akaike (AIC) để tự động thêm hoặc loại bỏ biến, thay vì yêu cầu nhà nghiên cứu thử nghiệm thủ công từng tổ hợp biến. Với số lượng biến lớn như trong nghiên cứu này, cách tiếp cận tự động hóa không chỉ tiết kiệm công sức mà còn đảm bảo tính khách quan trong quá trình xây dựng mô hình.
+\end{itemize}
+
+
+
+\subsection{Diagnostic Plots (Đồ Thị Chẩn Đoán)}
+
+\textbf{Đề xuất:} Các đồ thị chẩn đoán bao gồm Residuals vs Fitted, Normal Q-Q, Scale-Location, và Residuals vs Leverage được sử dụng để kiểm tra các giả định của mô hình hồi quy.
+
+\textbf{Lý do lựa chọn:}
+
+\begin{itemize}
+    \item \textbf{\textit{Hỗ trợ hiểu biết sâu sắc:}} Các đồ thị này cung cấp cái nhìn trực quan về tính đúng đắn của mô hình, giúp phát hiện các vấn đề như mối quan hệ phi tuyến tính, sai số không chuẩn, hoặc sự hiện diện của các điểm dữ liệu bất thường (outliers/influential points). Ví dụ, đồ thị Residuals vs Fitted cho thấy liệu sai số có phân bố ngẫu nhiên hay có xu hướng nào đó, từ đó xác nhận giả định về tính tuyến tính.
+    \item \textbf{\textit{Đảm bảo kết quả đáng tin cậy:}} Việc kiểm tra các giả định thông qua đồ thị chẩn đoán giúp đảm bảo rằng mô hình được xây dựng đúng đắn và các dự đoán không bị sai lệch bởi các yếu tố không mong muốn. Điều này phù hợp với yêu cầu "trực quan hóa" và "đánh giá mô hình", khi cần cả sự chính xác và khả năng trình bày kết quả một cách rõ ràng.
+\end{itemize}
+
+\section{Tóm Tắt Cơ Sở Lý Thuyết Cho Mô Hình}
+
+Phần này tập trung vào việc trình bày chi tiết cơ sở lý thuyết của các mô hình thống kê đã được đề xuất trong phần 2.1. Mỗi phương pháp sẽ được giải thích từ nguyên lý cơ bản, các giả định cần thiết, đến cách áp dụng và diễn giải trong ngữ cảnh dự đoán hiệu suất đồ họa (Pixel\_Rate) của GPU. Mục tiêu là cung cấp một nền tảng vững chắc để người đọc hiểu rõ cách các mô hình này hoạt động và lý do chúng phù hợp với bài toán.
+
+\subsection{Phân Tích Tương Quan Pearson}
+
+\textbf{Nguyên lý cơ bản:}
+
+Tương quan Pearson đo lường mức độ và hướng của mối quan hệ tuyến tính giữa hai biến liên tục, sử dụng hệ số tương quan $r$, được tính bằng:
+$$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}$$
+Trong đó $x_i$ và $y_i$ là các giá trị của hai biến (ví dụ, Core\_Speed và Pixel\_Rate), $\bar{x}$ và $\bar{y}$ là trung bình của chúng.
+
+\begin{itemize}
+    \item $r > 0$: Tương quan thuận (tăng $x$, tăng $y$).
+    \item $r < 0$: Tương quan nghịch (tăng $x$, giảm $y$).
+    \item $|r|$ gần 1: Mối quan hệ tuyến tính mạnh; gần 0: Mối quan hệ yếu.
+\end{itemize}
+
+Kiểm định giả thiết đi kèm (thường bằng t-test) đánh giá xem $r$ có ý nghĩa thống kê (p < 0.05) hay không.
+
+\textbf{Các giả định:}
+
+\begin{itemize}
+    \item \textbf{\textit{Tính tuyến tính:}} Mối quan hệ giữa hai biến là tuyến tính.
+    \item \textbf{\textit{Phân phối chuẩn:}} Cả hai biến cần gần với phân phối chuẩn để kiểm định ý nghĩa thống kê đáng tin cậy.
+    \item \textbf{\textit{Đồng nhất phương sai:}} Phương sai của $y$ không thay đổi nhiều theo $x$.
+\end{itemize}
+
+
+\textbf{Ứng dụng trong nghiên cứu:}
+
+Tương quan Pearson được sử dụng để xác định các biến độc lập (như Core\_Speed, Memory\_Speed) có mối quan hệ tuyến tính mạnh với Pixel\_Rate. Ví dụ, nếu $r = 0.85$ giữa Core\_Speed và Pixel\_Rate với p < 0.05, điều này cho thấy tốc độ lõi là một yếu tố quan trọng để đưa vào mô hình hồi quy. Phương pháp này là bước khám phá dữ liệu ban đầu, giúp định hướng lựa chọn biến và phát hiện các mối quan hệ tiềm năng.
+
+\subsection{Mô Hình Hồi Quy Tuyến Tính Đa Biến}
+
+
+\textbf{Nguyên lý cơ bản:}
+
+Hồi quy tuyến tính đa biến là một công cụ thống kê mạnh mẽ để mô hình hóa mối quan hệ tuyến tính giữa một biến phụ thuộc $Y$ (trong trường hợp này là Pixel\_Rate) và nhiều biến độc lập $X_1, X_2, \dots, X_p$ (như CoreSpeed, MemorySpeed, v.v.). Mô hình được biểu diễn bằng phương trình:
+$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon$$
+Trong đó:
+
+$\beta_0$: Hằng số chặn (intercept), giá trị dự đoán của $Y$ khi tất cả $X_i = 0$.
+$\beta_1, \beta_2, \dots, \beta_p$: Hệ số hồi quy, đo lường mức độ ảnh hưởng của từng $X_i$ lên $Y$.
+$\epsilon$: Sai số ngẫu nhiên, phần biến thiên của $Y$ không được giải thích bởi các biến độc lập.
+
+Để ước lượng $\beta$, phương pháp bình phương tối thiểu (OLS) được sử dụng, tối ưu hóa bằng cách giảm thiểu tổng bình phương sai số $\sum \epsilon^2$.
+
+
+\textbf{Các giả định chính:}
+
+\begin{enumerate}
+    \item \textbf{\textit{Tính tuyến tính:}} Mối quan hệ giữa $Y$ và các $X_i$ phải là tuyến tính. Nếu không, cần biến đổi dữ liệu hoặc dùng mô hình phi tuyến.
+    \item \textbf{\textit{Độc lập của sai số:}} Sai số $\epsilon$ giữa các quan sát không được tương quan với nhau.
+    \item \textbf{\textit{Phương sai đồng nhất:}} Phương sai của $\epsilon$ phải không đổi trên mọi giá trị của $X_i$. Nếu vi phạm, cần áp dụng các phương pháp khắc phục như hồi quy trọng số.
+    \item \textbf{\textit{Phân phối chuẩn của sai số:}} $\epsilon$ cần tuân theo phân phối chuẩn với trung bình 0 để các kiểm định thống kê (như t-test cho $\beta$) có giá trị.
+\end{enumerate}
+
+
+
+\textbf{Diễn giải hệ số:}
+
+Hệ số $\beta_i$ thể hiện mức thay đổi trung bình của $Y$ khi $X_i$ tăng 1 đơn vị, giữ các biến khác không đổi. Ví dụ, nếu $\beta_1 = 0.05$ cho CoreSpeed, thì khi CoreSpeed tăng 1 MHz, PixelRate tăng trung bình 0.05 GPixel/s. Điều này giúp đánh giá mức độ quan trọng của từng thông số kỹ thuật.
+
+
+\subsection{Phân Tích Phương Sai Một Yếu Tố (One-Way ANOVA)}
+
+
+\textbf{Nguyên lý cơ bản:}
+
+ANOVA được dùng để so sánh trung bình PixelRate giữa các nhóm (ví dụ: các nhà sản xuất GPU khác nhau). Phương pháp này chia tổng biến thiên của dữ liệu thành:
+
+\begin{itemize}
+    \item \textbf{Biến thiên giữa các nhóm:} Sự khác biệt giữa trung bình của các nhóm.
+    \item \textbf{Biến thiên trong nhóm:} Sự biến động ngẫu nhiên trong mỗi nhóm.
+\end{itemize}
+
+\textbf{Thống kê F được tính bằng:}
+$$F = \frac{\text{MSB}}{\text{MSW}}$$
+
+\begin{itemize}
+    \item $\text{\textbf{\textit{MSB}}}$: Trung bình bình phương giữa các nhóm, dựa trên tổng bình phương giữa các nhóm ($\text{SSB}$) chia cho bậc tự do $\text{df}_B = k - 1$ (với $k$ là số nhóm).
+    \item $\text{\textbf{\textit{MSW}}}$: Trung bình bình phương trong nhóm, dựa trên tổng bình phương trong nhóm ($\text{SSW}$) chia cho bậc tự do $\text{df}_W = N - k$ (với $N$ là tổng số quan sát).
+\end{itemize}
+
+Nếu $F$ lớn và p-value < 0.05, ta kết luận có sự khác biệt đáng kể giữa các nhóm.
+
+
+\textbf{Các giả định:}
+
+\begin{itemize}
+    \item \textbf{\textit{Độc lập: }}Các quan sát trong mỗi nhóm không ảnh hưởng lẫn nhau.
+    \item \textbf{\textit{Phân phối chuẩn:}} PixelRate trong mỗi nhóm cần gần với phân phối chuẩn.
+    \item \textbf{\textit{Phương sai đồng nhất:}} Phương sai của PixelRate giữa các nhóm phải tương đương.
+\end{itemize}
+
+
+
+\textbf{Ý nghĩa:}
+
+ANOVA giúp xác định liệu các yếu tố như nhà sản xuất có ảnh hưởng đáng kể đến hiệu suất GPU hay không, cung cấp cơ sở để phân tích sâu hơn.
+
+
+\subsection{Kiểm Định Giả Thiết (Hypothesis Testing)}
+
+\textbf{Shapiro-Wilk Test:}
+
+\begin{itemize}
+    \item \textbf{\textit{Cách hoạt động:}} Đánh giá tính chuẩn của dữ liệu bằng cách so sánh dữ liệu thực tế với phân phối chuẩn lý thuyết. Thống kê $W$ gần 1 cho thấy dữ liệu chuẩn.
+    \item \textbf{\textit{Vai trò:}} Xác nhận giả định phân phối chuẩn của sai số trong hồi quy và ANOVA.
+\end{itemize}
+
+
+\textbf{Levene’s Test:}
+
+\begin{itemize}
+    \item \textbf{\textit{Cách hoạt động:}} Kiểm tra tính đồng nhất của phương sai bằng cách phân tích độ lệch của các giá trị so với trung bình nhóm. P-value > 0.05 cho thấy phương sai đồng nhất.
+    \item \textbf{\textit{Vai trò:}} Đảm bảo giả định homoscedasticity, ảnh hưởng đến độ tin cậy của ANOVA.
+\end{itemize}
+
+
+
+\subsection{Cross-Validation (Kiểm Chứng Chéo)}
+
+\textbf{Nguyên lý:}
+
+Cross-validation chia dữ liệu thành $k$ phần (thường $k = 5$ hoặc $10$). Mỗi lần, mô hình được huấn luyện trên $k-1$ phần và kiểm tra trên phần còn lại, lặp lại $k$ lần. Hiệu suất (như $\text{R}^{\text{2}}$, RMSE) được tính trung bình.
+
+\textbf{Lợi ích:}
+
+Đánh giá khả năng tổng quát hóa của mô hình trên dữ liệu mới.
+Giảm nguy cơ overfitting bằng cách kiểm tra trên nhiều tập dữ liệu khác nhau.
+
+
+
+\subsection{Stepwise Selection (Lựa Chọn Biến Theo Bước)}
+
+
+\textbf{Nguyên lý:}
+
+Phương pháp này tự động chọn biến bằng cách:
+
+\begin{itemize}
+    \item \textbf{\textit{Forward:}} Thêm biến có ý nghĩa nhất.
+    \item \textbf{\textit{Backward:}} Loại biến không quan trọng.
+    \item \textbf{\textit{Both:}} Kết hợp cả hai.
+\end{itemize}
+
+Tiêu chí như p-value hoặc AIC được dùng để tối ưu mô hình.
+
+
+\textbf{Mục tiêu:} Tìm tập hợp biến tốt nhất để dự đoán PixelRate, cân bằng giữa độ chính xác và đơn giản.
+
+
+\subsection{Diagnostic Plots (Đồ Thị Chẩn Đoán)}
+
+\textbf{Các loại đồ thị:}
+
+\begin{itemize}
+    \item \textbf{\textit{Residuals vs Fitted: }}Kiểm tra tính tuyến tính và phương sai đồng nhất.
+    \item \textbf{\textit{Normal Q-Q:}} Đánh giá tính chuẩn của sai số.
+    \item \textbf{\textit{Scale-Location:}} Kiểm tra homoscedasticity.
+    \item \textbf{\textit{Residuals vs Leverage:}} Phát hiện outliers hoặc điểm ảnh hưởng mạnh.
+\end{itemize}
+
+
+\textbf{Vai trò:} Đảm bảo các giả định của mô hình được thỏa mãn, tăng độ tin cậy của kết quả.

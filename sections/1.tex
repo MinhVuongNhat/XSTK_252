@@ -1,0 +1,54 @@
+\section{Tổng quan bộ dữ liệu}
+% \subsection{Mô tả tập tin}
+\begin{itemize}
+    \item \textbf{Tên tập tin:} \colorbox{black!10}{All\_GPUs.csv}
+    \item \textbf{Nguồn:} \href{https://www.kaggle.com/datasets/iliassekkaf/computerparts/}{https://www.kaggle.com/datasets/iliassekkaf/computerparts/}
+    \item \textbf{Số lượng quan trắc:} 3406 quan trắc tương ứng với 3406 hàng trong tệp dữ liệu.
+    \item \textbf{Số lượng biến:} 34 biến tương ứng với 34 cột trong tệp dữ liệu.
+    \item \textbf{Mô tả chung:} Bộ tập tin All\_GPUs.csv là một nguồn dữ liệu phong phú chứa thông số kỹ thuật của GPU, phục vụ cho việc phân tích và dự đoán hiệu suất. Nó cung cấp cả thông tin định lượng như \colorbox{black!10}{Max\_Power}, \colorbox{black!10}{Memory},\colorbox{black!10}{ROPs} và định tính như \colorbox{black!10}{Manufacturer} và \colorbox{black!10}{Dedicated}, đòi hỏi các bước tiền xử lý như làm sạch, chuẩn hóa, và biến đổi để phù hợp với phân tích thống kê và mô hình hóa. Kết quả từ phân tích dữ liệu này có thể hỗ trợ các nhà nghiên cứu, kỹ sư, hoặc nhà sản xuất trong việc đánh giá và thiết kế GPU.
+\end{itemize}
+% \subsection{Mô tả biến}
+
+\section{Đối tượng nghiên cứu}
+
+Mục tiêu chính là dự đoán thông số \colorbox{red!10}{Pixel\_Rate} (tốc độ xử lý pixel, đơn vị GPixel/s), một chỉ số hiệu suất quan trọng của GPU, dựa trên các đặc trưng khác như \colorbox{blue!10}{Boost\_Clock},\newline \colorbox{blue!10}{Core\_Speed}, \colorbox{blue!10}{Memory\_Type}, v.v.
+
+{\relsize{0.6}\textbf{Tại sao lại chọn Pixel\_Rate ?}}
+\begin{enumerate}
+    \item \textbf{Pixel\_Rate là chỉ số trực tiếp phản ánh hiệu năng đồ họa}:
+    
+    Pixel\_Rate phản ánh trực tiếp hiệu suất của GPU trong việc xử lý các tác vụ đồ họa liên quan đến pixel, một khía cạnh cốt lõi của hiệu năng GPU. Trong các ứng dụng thực tế, Pixel\_Rate ảnh hưởng đến chất lượng hình ảnh, độ mượt mà của chuyển động, và khả năng hiển thị ở độ phân giải cao, khiến nó trở thành một chỉ số phù hợp để đo lường hiệu năng tổng thể. So với các chỉ số khác như số lượng shader hoặc dung lượng bộ nhớ, Pixel\_Rate là kết quả trực tiếp của nhiều đặc trưng kỹ thuật (như ROPs, Core\_Speed), giúp nó trở thành biến mục tiêu lý tưởng để phân tích mối quan hệ với các đặc trưng khác.
+    
+    \item \textbf{Pixel\_Rate là biến định lượng, phù hợp với mô hình hồi quy:}
+
+    Biến định lượng liên tục như Pixel\_Rate cho phép áp dụng các kỹ thuật phân tích như tương quan Pearson, hồi quy tuyến tính đa biến, và đánh giá hiệu suất mô hình bằng các chỉ số như MAE, MSE, RMSE, R². Các biến định lượng khác (như Boost\_Clock, Core\_Speed) có thể đóng vai trò là biến độc lập để dự đoán Pixel\_Rate, tạo ra một mô hình dự đoán rõ ràng và dễ diễn giải.
+
+    \item \textbf{Pixel\_Rate tổng hợp ảnh hưởng của nhiều đặc trưng GPU:}
+
+    Pixel\_Rate là một chỉ số tổng hợp, phản ánh hiệu quả của nhiều thành phần phần cứng trong GPU. Do đó, nó là một biến mục tiêu lý tưởng để nghiên cứu cách các đặc trưng khác nhau (như ROPs, Core\_Speed) kết hợp để tạo ra hiệu năng tổng thể. So với các chỉ số khác, các chỉ số khác như Shader (số lượng đơn vị shader) hoặc Memory (dung lượng bộ nhớ) chỉ phản ánh một khía cạnh cụ thể của GPU, trong khi Pixel\_Rate là kết quả tổng hợp của nhiều yếu tố phần cứng, do đó đại diện tốt hơn cho hiệu năng tổng thể.
+\end{enumerate}
+
+\section{Phương pháp nghiên cứu}
+
+\begin{itemize}
+    \item \textbf{Khám phá dữ liệu (EDA):} Sử dụng histogram, barplot, boxplot, scatter plot để hiểu phân phối và mối quan hệ giữa các biến.
+    \item \textbf{Tiền xử lý:} Chuẩn hóa dữ liệu, xử lý NA, biến đổi log, loại bỏ trùng lặp.
+    \item \textbf{Thống kê mô tả:} Tính mean, sd, min, max, median để mô tả đặc điểm dữ liệu.
+    \item \textbf{Thống kê suy diễn:} Tương quan Pearson, ANOVA, kiểm định giả thuyết (Shapiro, Levene), và Tukey HSD để đánh giá mối quan hệ và sự khác biệt.
+    \item \textbf{Mô hình hóa:} Hồi quy tuyến tính đa biến với lựa chọn biến (stepwise), cross-validation, và đánh giá đa cộng tuyến (VIF).
+    \item \textbf{Dự báo:} Sử dụng mô hình để dự đoán Pixel\_Rate và đánh giá hiệu suất trên tập kiểm tra.
+\end{itemize}
+
+\section{Kết quả hướng tới}
+
+\subsection{Mô hình dự đoán}
+Xây dựng một mô hình hồi quy tuyến tính để dự đoán Pixel\_Rate dựa trên các đặc trưng quan trọng như Core\_Speed, ROPs, và Memory\_Speed. Mô hình sẽ được kiểm tra để đảm bảo độ chính xác cao và có thể áp dụng cho các tập dữ liệu mới, hỗ trợ việc dự đoán hiệu suất GPU một cách hiệu quả.
+
+\subsection{Hiểu biết sâu sắc}
+Xác định các yếu tố ảnh hưởng chính đến Pixel\_Rate, bao gồm Core\_Speed, ROP\_Speed, Memory\_Speed, và các đặc trưng khác như Manufacturer. Phân tích sẽ làm rõ cách các yếu tố này tác động đến hiệu suất, giúp hiểu rõ hơn về mối quan hệ giữa các thông số kỹ thuật của GPU.
+
+\subsection{Trực quan hóa}
+Tạo các biểu đồ như histogram để xem phân phối Pixel\_Rate, boxplot để so sánh hiệu suất giữa các nhóm (như Manufacturer), và scatter plot để xem mối quan hệ với Core\_Speed. Các bảng thống kê, như kết quả ANOVA, sẽ được thêm vào để cung cấp dữ liệu số rõ ràng, hỗ trợ việc đánh giá mô hình.
+
+\subsection{Ứng dụng thực tiễn}
+Sử dụng kết quả để so sánh hiệu suất giữa các GPU từ các nhà sản xuất khác nhau, dự đoán hiệu suất của GPU mới dựa trên thông số kỹ thuật, và đánh giá tác động của các cải tiến như tăng Core\_Speed hoặc nâng cấp Memory\_Type. Điều này giúp tối ưu hóa thiết kế và lựa chọn GPU phù hợp với nhu cầu cụ thể.

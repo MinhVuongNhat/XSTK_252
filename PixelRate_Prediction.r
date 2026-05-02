@@ -435,9 +435,11 @@ wilcox_pixel <- wilcox.test(train$Pixel_Rate,
 print(wilcox_pixel)
 
 # Effect size (Cohen's d) cho one-sample t-test
-library(effectsize)
-cohens_d_one <- cohens_d(train$Pixel_Rate, mu = mu_pixel)
-print(cohens_d_one)
+t_value <- t_test_pixel$statistic
+n <- length(train$Pixel_Rate)
+
+d <- as.numeric(t_value / sqrt(n))
+d
 
 # 5.4. KIỂM ĐỊNH HAI MẪU (Two-sample test)
 cat("KIỂM ĐỊNH HAI MẪU: Pixel_Rate ~ Manufacturer (Nvidia vs AMD)\n")

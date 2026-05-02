@@ -181,9 +181,6 @@ INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\md-frame-0.mdf
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\md-frame-0.mdf
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\md-frame-0.mdf
-INPUT .\BTL.aux
-INPUT .\BTL.aux
-INPUT BTL.aux
 OUTPUT BTL.aux
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -193,14 +190,8 @@ INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopd
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\BTL.out
-INPUT .\BTL.out
-INPUT BTL.out
-INPUT BTL.out
-OUTPUT BTL.pdf
-INPUT .\BTL.out
-INPUT .\BTL.out
 OUTPUT BTL.out
+OUTPUT BTL.pdf
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
@@ -236,9 +227,6 @@ INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr10.tfm
 INPUT C:\Users\Minh\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr17.tfm
-INPUT .\BTL.toc
-INPUT .\BTL.toc
-INPUT BTL.toc
 OUTPUT BTL.toc
 INPUT .\sections\DSTV.tex
 INPUT .\sections\DSTV.tex
@@ -253,37 +241,395 @@ INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt12.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr8.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt8.tfm
-INPUT .\sections\phan5_suy_dien.tex
-INPUT .\sections\phan5_suy_dien.tex
-INPUT sections\phan5_suy_dien.tex
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang2.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang2.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang2.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt10.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr6.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
+INPUT .\Sections\1.tex
+INPUT .\Sections\1.tex
+INPUT .\Sections\1.tex
+INPUT .\Sections\1.tex
+INPUT Sections\1.tex
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx12.tfm
+INPUT .\Sections\2.tex
+INPUT .\Sections\2.tex
+INPUT .\Sections\2.tex
+INPUT .\Sections\2.tex
+INPUT Sections\2.tex
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbxti10.tfm
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr6.tfm
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx8.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbxti10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx6.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbxti10.tfm
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\Sections\3.tex
+INPUT .\Sections\3.tex
+INPUT .\Sections\3.tex
+INPUT .\Sections\3.tex
+INPUT Sections\3.tex
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\Screenshot 2025-07-29 105142.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\Rplot01.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\Screenshot 2025-08-06 231813.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\Screenshot 2025-08-06 232835.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153233.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-05 153442.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233507.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233245.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\images\Screenshot 2025-08-06 233357.png
+INPUT .\Sections\4.tex
+INPUT .\Sections\4.tex
+INPUT .\Sections\4.tex
+INPUT .\Sections\4.tex
+INPUT Sections\4.tex
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155550.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\Screenshot 2025-08-05 155536.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 160712.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\Screenshot 2025-08-05 161203.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\Screenshot 2025-08-05 163146.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163159.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\Screenshot 2025-08-05 163216.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 163257.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\images\Screenshot 2025-08-05 164224.png
+INPUT .\Sections\5.tex
+INPUT .\Sections\5.tex
+INPUT .\Sections\5.tex
+INPUT .\Sections\5.tex
+INPUT Sections\5.tex
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215207.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\Screenshot 2025-08-05 215544.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\Screenshot 2025-08-06 002901.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002942.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\Screenshot 2025-08-06 002957.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT .\images\Screenshot 2025-08-06 003238.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcbx1200.tfm
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003246.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\Screenshot 2025-08-06 003404.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti8.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti7.tfm
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003257.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003304.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\Screenshot 2025-08-06 003419.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\Screenshot 2025-08-06 003315.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003323.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
+INPUT .\images\Screenshot 2025-08-06 003429.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
@@ -292,7 +638,31 @@ INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vntt8.tfm
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010408.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\Screenshot 2025-08-06 010632.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
+INPUT .\images\Screenshot 2025-08-06 010852.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
@@ -301,10 +671,104 @@ INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
+INPUT .\images\Screenshot 2025-08-06 012450.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT .\images\Screenshot 2025-08-06 012927.png
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT .\Sections\6.tex
+INPUT .\Sections\6.tex
+INPUT .\Sections\6.tex
+INPUT .\Sections\6.tex
+INPUT Sections\6.tex
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\Screenshot 2025-08-06 013419.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013747.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\Screenshot 2025-08-06 013950.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\images\Screenshot 2025-08-06 014223.png
+INPUT .\Sections\7.tex
+INPUT .\Sections\7.tex
+INPUT .\Sections\7.tex
+INPUT .\Sections\7.tex
+INPUT Sections\7.tex
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\images\LOGO_HCMUT.png
+INPUT .\Sections\8.tex
+INPUT .\Sections\8.tex
+INPUT .\Sections\8.tex
+INPUT .\Sections\8.tex
+INPUT Sections\8.tex
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
 INPUT .\images\LOGO_HCMUT.png
@@ -312,44 +776,40 @@ INPUT .\images\LOGO_HCMUT.png
 INPUT BTL.aux
 INPUT .\BTL.out
 INPUT .\BTL.out
+INPUT C:\Users\Minh\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
+INPUT C:\Users\Minh\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcbx1200.pk
 INPUT C:\Users\Minh\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Minh\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbxti10.pfb
+INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbxti10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr6.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr6.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr8.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr8.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti10.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt10.pfb
-INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt10.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb
 INPUT C:\Users\Minh\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt8.pfb
