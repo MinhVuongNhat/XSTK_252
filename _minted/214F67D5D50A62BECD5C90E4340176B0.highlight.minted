@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{GPU}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{read.csv}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}All\PYGZus{}GPUs.csv\PYGZdq{}}\PYG{p}{,}\PYG{n}{header}\PYG{o}{=}\PYG{k+kc}{TRUE}\PYG{p}{,}\PYG{n}{na.strings}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZhy{}\PYGZdq{}}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{,}\PYG{l+s}{\PYGZdq{}\PYGZbs{}nUnknown Release Date\PYGZdq{}}\PYG{p}{))}
+\PYG{n+nf}{head}\PYG{p}{(}\PYG{n}{GPU}\PYG{p}{,}\PYG{l+m}{5}\PYG{p}{),}\PYG{+w}{ }\PYG{n+nf}{dim}\PYG{p}{(}\PYG{n}{GPU}\PYG{p}{)}
+\end{MintedVerbatim}

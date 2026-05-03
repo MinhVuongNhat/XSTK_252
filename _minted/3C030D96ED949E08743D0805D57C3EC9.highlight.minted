@@ -1,0 +1,8 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{mean}\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[,}\PYG{n}{numerical}\PYG{p}{],}\PYG{l+m}{2}\PYG{p}{,}\PYG{n}{mean}\PYG{p}{)}
+\PYG{n}{sd}\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[,}\PYG{n}{numerical}\PYG{p}{],}\PYG{l+m}{2}\PYG{p}{,}\PYG{n}{sd}\PYG{p}{)}
+\PYG{n}{min}\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[,}\PYG{n}{numerical}\PYG{p}{],}\PYG{l+m}{2}\PYG{p}{,}\PYG{n}{min}\PYG{p}{)}
+\PYG{n}{max}\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[,}\PYG{n}{numerical}\PYG{p}{],}\PYG{l+m}{2}\PYG{p}{,}\PYG{n}{max}\PYG{p}{)}
+\PYG{n}{median}\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{n+nf}{apply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[,}\PYG{n}{numerical}\PYG{p}{],}\PYG{l+m}{2}\PYG{p}{,}\PYG{n}{median}\PYG{p}{)}
+\PYG{n+nf}{data.frame}\PYG{p}{(}\PYG{n}{mean}\PYG{p}{,}\PYG{n}{sd}\PYG{p}{,}\PYG{n}{min}\PYG{p}{,}\PYG{n}{max}\PYG{p}{,}\PYG{n}{median}\PYG{p}{)}
+\end{MintedVerbatim}

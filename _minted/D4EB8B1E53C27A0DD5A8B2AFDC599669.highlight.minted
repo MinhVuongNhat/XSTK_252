@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{helper}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{k+kr}{function}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kr}{if}\PYG{p}{(}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{x}\PYG{p}{))}\PYG{+w}{ }\PYG{k+kr}{return}\PYG{p}{(}\PYG{k+kc}{NA}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n+nf}{as.double}\PYG{p}{(}\PYG{n+nf}{strsplit}\PYG{p}{(}\PYG{n+nf}{as.character}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{} \PYGZdq{}}\PYG{p}{)[[}\PYG{l+m}{1}\PYG{p}{]][}\PYG{l+m}{1}\PYG{p}{])}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

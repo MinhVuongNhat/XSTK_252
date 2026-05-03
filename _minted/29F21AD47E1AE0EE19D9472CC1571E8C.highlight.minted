@@ -1,0 +1,43 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Chia layout thành 3 hàng và 2 cột}
+\PYG{n+nf}{par}\PYG{p}{(}\PYG{n}{mfrow}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{2}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{mar}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} Vẽ scatter plot}
+\PYG{c+c1}{\PYGZsh{} Core\PYGZus{}Speed vs Pixel\PYGZus{}Rate}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Core\PYGZus{}Speed\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate and Core\PYGZus{}Speed\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit1}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} log(Core\PYGZus{}Speed) vs log(Pixel\PYGZus{}Rate)}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Core\PYGZus{}Speed)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate)\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate) and log(Core\PYGZus{}Speed)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit2}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ROPs vs Pixel\PYGZus{}Rate}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}ROPs\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate and ROPs\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit3}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{ROPs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} log(ROPs) vs log(Pixel\PYGZus{}Rate)}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(ROPs)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate)\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate) and log(ROPs)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit4}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{ROPs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit4}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Shader vs Pixel\PYGZus{}Rate}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Shader\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate and Shader\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit5}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{Shader}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} log(Core\PYGZus{}Speed) vs log(Pixel\PYGZus{}Rate)}
+\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{xlab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Shader)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ylab}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate)\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{     }\PYG{n}{main}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}log(Pixel\PYGZus{}Rate) and log(Shader)\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{20}\PYG{p}{)}
+\PYG{n}{fit6}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{lm}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZti{}}\PYG{+w}{ }\PYG{n}{Shader}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{p}{)}
+\PYG{n+nf}{abline}\PYG{p}{(}\PYG{n}{fit6}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Reset layout}
+\PYG{n+nf}{par}\PYG{p}{(}\PYG{n}{mfrow}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{))}
+\end{MintedVerbatim}

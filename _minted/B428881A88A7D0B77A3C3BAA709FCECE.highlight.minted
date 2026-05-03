@@ -1,0 +1,17 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Loại outlier cho từng biến numerical}
+\PYG{k+kr}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{var}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{numerical}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{var}\PYG{+w}{ }\PYG{o}{\PYGZpc{}in\PYGZpc{}}\PYG{+w}{ }\PYG{n+nf}{names}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Q1}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{quantile}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[[}\PYG{n}{var}\PYG{p}{]],}\PYG{+w}{ }\PYG{l+m}{0.25}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n}{Q3}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{quantile}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[[}\PYG{n}{var}\PYG{p}{]],}\PYG{+w}{ }\PYG{l+m}{0.75}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n}{IQR\PYGZus{}val}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{Q3}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{Q1}
+
+\PYG{+w}{    }\PYG{n}{lower\PYGZus{}bound}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{Q1}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m}{1.5}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{IQR\PYGZus{}val}
+\PYG{+w}{    }\PYG{n}{upper\PYGZus{}bound}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{Q3}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m}{1.5}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{IQR\PYGZus{}val}
+
+\PYG{+w}{    }\PYG{n}{GPU\PYGZus{}new}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[}
+\PYG{+w}{      }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[[}\PYG{n}{var}\PYG{p}{]]}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{n}{lower\PYGZus{}bound}\PYG{+w}{ }\PYG{o}{\PYGZam{}}
+\PYG{+w}{      }\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[[}\PYG{n}{var}\PYG{p}{]]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{upper\PYGZus{}bound}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

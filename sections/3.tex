@@ -1,8 +1,8 @@
 \section{Đọc dữ liệu}
-$\indent$ Đầu tiên, ta đọc dữ liệu thu từ file "All\_GPUs.csv" và sau đó in ra 3 dòng đầu tiên tương ứng với dữ liệu của mỗi biến. Việc này giúp chúng ta có cái nhìn tổng quan về cấu trúc và đặc tính của dữ liệu từ đó đưa ra được định hướng sơ lược trước khi đi sâu vào phân tích. Đồng thời, các giá trị như chuỗi rỗng,\verb|\n|- ", "\verb|\n|", hoặc "\verb|\n|Unknown Release Date" trong file CSV được chuyển thành NA trong data.frame, qua đó giúp chuẩn hóa dữ liệu, tránh các giá trị không hợp lệ và hỗ trợ việc phân tích dữ liệu khuyết sau này.
+$\indent$ Ta đọc dữ liệu thu từ file "All\_GPUs.csv" và in ra 5 dòng đầu tiên tương ứng với dữ liệu của mỗi biến. Việc này giúp chúng ta có cái nhìn tổng quan về cấu trúc và đặc tính của dữ liệu từ đó đưa ra được định hướng sơ lược trước khi đi sâu vào phân tích. Đồng thời, các giá trị như chuỗi rỗng,\verb|\n|- ", "\verb|\n|", hoặc "\verb|\n|Unknown Release Date" trong file CSV được chuyển thành NA trong data.frame, qua đó giúp chuẩn hóa dữ liệu, tránh các giá trị không hợp lệ và hỗ trợ việc phân tích dữ liệu khuyết sau này.
 \begin{minted}{r}
-GPU = read.csv("D:/DHBK/HK243/XSTK/BTL/Code_R/All_GPUs.csv",header=TRUE,na.strings = c("","\n-","\n","\nUnknown Release Date"))
-head(GPU,3), dim(GPU)
+GPU = read.csv("All_GPUs.csv",header=TRUE,na.strings = c("","\n-","\n","\nUnknown Release Date"))
+head(GPU,5), dim(GPU)
 \end{minted}
 
 \textbf{Kết quả:}
@@ -14,7 +14,7 @@ head(GPU,3), dim(GPU)
 \end{figure}
 
 \textbf{Nhận xét:}
-Từ thống kê phía trên, ta thấy bộ dữ liệu bao gồm 3406 quan sát và 34 biến, tuy nhiên lại có rất nhiều biến chứa dữ liệu khuyết dù chỉ mới xuất ra màn hình 3 dòng đầu. Chính vì thế, việc phân tích dữ liệu khuyết và chọn lọc các biến liên tục và biến phân loại phải được thực hiện một cách hợp lý, tạo tiền đề cho các phân tích chuyên sâu.
+Từ thống kê phía trên, ta thấy bộ dữ liệu bao gồm 3406 quan sát và 34 biến, tuy nhiên lại có rất nhiều biến chứa dữ liệu khuyết dù chỉ mới xuất ra màn hình 5 dòng đầu. Chính vì thế, việc phân tích dữ liệu khuyết và chọn lọc các biến liên tục và biến phân loại phải được thực hiện một cách hợp lý, tạo tiền đề cho các phân tích chuyên sâu.
 
 \section{Chọn biến và xử lí dữ liệu}
 \textbf{a) Cơ sở lựa chọn biến}
@@ -83,96 +83,89 @@ Qua các cơ sở trên, nhằm tối ưu hóa kết quả khi phân tích hiệ
 
 \vspace{0.5em}
 
-% \textbf{1. Resolution\_WxH (Độ phân giải)}
+ \textbf{1. Resolution\_WxH (Độ phân giải)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Độ phân giải tối đa mà GPU hỗ trợ (ví dụ: 1920x1080, 4K, 8K) ảnh hưởng trực tiếp đến khả năng xử lý hình ảnh và đồ họa. GPU có khả năng hỗ trợ độ phân giải cao thường có hiệu năng tốt hơn, đặc biệt trong các ứng dụng như chơi game, chỉnh sửa video, hoặc mô phỏng 3D.
-%     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá khả năng hiển thị hình ảnh sắc nét và mượt mà trên các màn hình độ phân giải cao.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Độ phân giải tối đa mà GPU hỗ trợ (ví dụ: 1920x1080, 4K, 8K) ảnh hưởng trực tiếp đến khả năng xử lý hình ảnh và đồ họa. GPU có khả năng hỗ trợ độ phân giải cao thường có hiệu năng tốt hơn, đặc biệt trong các ứng dụng như chơi game, chỉnh sửa video, hoặc mô phỏng 3D.
+     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá khả năng hiển thị hình ảnh sắc nét và mượt mà trên các màn hình độ phân giải cao.
+ \end{itemize}
 
-% \textbf{2. Manufacturer (Nhà sản xuất)}
+ \textbf{2. Manufacturer (Nhà sản xuất)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Nhà sản xuất (ví dụ: NVIDIA, AMD, Intel) ảnh hưởng đến chất lượng, độ tin cậy, công nghệ độc quyền (như CUDA của NVIDIA hoặc RDNA của AMD), và hiệu năng tối ưu hóa của GPU. Mỗi nhà sản xuất có các dòng sản phẩm với đặc điểm riêng, phù hợp với các mục đích sử dụng khác nhau (gaming, AI, thiết kế).
-%     \item \textbf{Ý nghĩa:} Biến này giúp phân loại GPU theo thương hiệu và so sánh hiệu năng giữa các nhà sản xuất.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Nhà sản xuất (ví dụ: NVIDIA, AMD, Intel) ảnh hưởng đến chất lượng, độ tin cậy, công nghệ độc quyền (như CUDA của NVIDIA hoặc RDNA của AMD), và hiệu năng tối ưu hóa của GPU. Mỗi nhà sản xuất có các dòng sản phẩm với đặc điểm riêng, phù hợp với các mục đích sử dụng khác nhau (gaming, AI, thiết kế).
+     \item \textbf{Ý nghĩa:} Biến này giúp phân loại GPU theo thương hiệu và so sánh hiệu năng giữa các nhà sản xuất.
+ \end{itemize}
 
-% \textbf{3. Boost\_Clock (Tần số tăng tốc)}
+ \textbf{3. Core\_Speed (Tốc độ lõi cơ bản)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Tần số tăng tốc (Boost Clock, tính bằng MHz hoặc GHz) là tốc độ xung nhịp tối đa mà GPU có thể đạt được khi hoạt động ở chế độ tối ưu. Tần số cao hơn thường tương ứng với hiệu năng xử lý tốt hơn, đặc biệt trong các tác vụ yêu cầu tính toán nhanh.
-%     \item \textbf{Ý nghĩa:} Biến này phản ánh sức mạnh xử lý của GPU khi hoạt động ở điều kiện lý tưởng.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Tốc độ lõi cơ bản (Base Clock) là tốc độ xung nhịp mặc định của GPU. Đây là chỉ số cơ bản để đánh giá hiệu năng ban đầu, trước khi GPU tăng tốc (boost). Sự khác biệt giữa Core Speed và Boost Clock cũng cho thấy khả năng ép xung của GPU.
+     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá hiệu năng cơ bản và tiềm năng tối ưu hóa của GPU.
+ \end{itemize}
 
-% \textbf{4. Core\_Speed (Tốc độ lõi cơ bản)}
+ \textbf{4. Memory\_Speed (Tốc độ bộ nhớ)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Tốc độ lõi cơ bản (Base Clock) là tốc độ xung nhịp mặc định của GPU. Đây là chỉ số cơ bản để đánh giá hiệu năng ban đầu, trước khi GPU tăng tốc (boost). Sự khác biệt giữa Core Speed và Boost Clock cũng cho thấy khả năng ép xung của GPU.
-%     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá hiệu năng cơ bản và tiềm năng tối ưu hóa của GPU.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Tốc độ bộ nhớ (thường tính bằng MHz hoặc Gbps) quyết định tốc độ truy xuất dữ liệu từ bộ nhớ GPU (VRAM). Tốc độ bộ nhớ cao giúp GPU xử lý nhanh các tác vụ đồ họa phức tạp, như kết xuất hình ảnh hoặc xử lý texture.
+     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá khả năng xử lý dữ liệu đồ họa lớn.
+ \end{itemize}
 
-% \textbf{5. Memory\_Speed (Tốc độ bộ nhớ)}
+ \textbf{5. Memory\_Type (Loại bộ nhớ)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Tốc độ bộ nhớ (thường tính bằng MHz hoặc Gbps) quyết định tốc độ truy xuất dữ liệu từ bộ nhớ GPU (VRAM). Tốc độ bộ nhớ cao giúp GPU xử lý nhanh các tác vụ đồ họa phức tạp, như kết xuất hình ảnh hoặc xử lý texture.
-%     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá khả năng xử lý dữ liệu đồ họa lớn.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Loại bộ nhớ (ví dụ: GDDR5, GDDR6, HBM2) ảnh hưởng đến băng thông và hiệu suất truyền dữ liệu của GPU. Các loại bộ nhớ mới hơn (như GDDR6X hoặc HBM3) thường cung cấp băng thông cao hơn, cải thiện hiệu năng trong các ứng dụng đồ họa nặng.
+     \item \textbf{Ý nghĩa:} Biến này giúp so sánh hiệu quả của các công nghệ bộ nhớ khác nhau.
+ \end{itemize}
 
-% \textbf{6. Memory\_Type (Loại bộ nhớ)}
+ \textbf{6. ROPs (Raster Operation Pipelines)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Loại bộ nhớ (ví dụ: GDDR5, GDDR6, HBM2) ảnh hưởng đến băng thông và hiệu suất truyền dữ liệu của GPU. Các loại bộ nhớ mới hơn (như GDDR6X hoặc HBM3) thường cung cấp băng thông cao hơn, cải thiện hiệu năng trong các ứng dụng đồ họa nặng.
-%     \item \textbf{Ý nghĩa:} Biến này giúp so sánh hiệu quả của các công nghệ bộ nhớ khác nhau.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} ROPs là các đơn vị xử lý raster hóa, chịu trách nhiệm cho việc kết xuất pixel cuối cùng lên màn hình. Số lượng ROPs cao hơn thường cho phép GPU xử lý nhanh hơn các tác vụ liên quan đến pixel, như chống răng cưa (anti-aliasing) hoặc đổ bóng.
+     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá hiệu năng kết xuất đồ họa.
+ \end{itemize}
 
-% \textbf{7. ROPs (Raster Operation Pipelines)}
+ \textbf{7. TMUs (Texture Mapping Units)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} ROPs là các đơn vị xử lý raster hóa, chịu trách nhiệm cho việc kết xuất pixel cuối cùng lên màn hình. Số lượng ROPs cao hơn thường cho phép GPU xử lý nhanh hơn các tác vụ liên quan đến pixel, như chống răng cưa (anti-aliasing) hoặc đổ bóng.
-%     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá hiệu năng kết xuất đồ họa.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} TMUs chịu trách nhiệm ánh xạ texture lên các đối tượng 3D. Số lượng TMUs cao hơn giúp GPU xử lý texture nhanh hơn, cải thiện chất lượng và tốc độ hiển thị trong game hoặc ứng dụng 3D.
+     \item \textbf{Ý nghĩa:} Biến này ảnh hưởng đến hiệu năng trong các tác vụ liên quan đến texture.
+ \end{itemize}
 
-% \textbf{8. TMUs (Texture Mapping Units)}
+ \textbf{8. Memory\_Bus (Độ rộng bus bộ nhớ)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} TMUs chịu trách nhiệm ánh xạ texture lên các đối tượng 3D. Số lượng TMUs cao hơn giúp GPU xử lý texture nhanh hơn, cải thiện chất lượng và tốc độ hiển thị trong game hoặc ứng dụng 3D.
-%     \item \textbf{Ý nghĩa:} Biến này ảnh hưởng đến hiệu năng trong các tác vụ liên quan đến texture.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{\textbf{Lý do chọn:}} Độ rộng bus bộ nhớ (tính bằng bit, ví dụ: 128-bit, 256-bit) quyết định lượng dữ liệu mà GPU có thể truyền từ bộ nhớ trong một chu kỳ. Bus rộng hơn giúp tăng băng thông, cải thiện hiệu năng khi xử lý dữ liệu lớn.
+     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá khả năng truyền dữ liệu của GPU.
+ \end{itemize}
 
-% \textbf{9. Memory\_Bus (Độ rộng bus bộ nhớ)}
+ \textbf{9. Memory (Dung lượng bộ nhớ)}
 
-% \begin{itemize}
-%     \item \textbf{\textbf{Lý do chọn:}} Độ rộng bus bộ nhớ (tính bằng bit, ví dụ: 128-bit, 256-bit) quyết định lượng dữ liệu mà GPU có thể truyền từ bộ nhớ trong một chu kỳ. Bus rộng hơn giúp tăng băng thông, cải thiện hiệu năng khi xử lý dữ liệu lớn.
-%     \item \textbf{Ý nghĩa:} Biến này quan trọng trong việc đánh giá khả năng truyền dữ liệu của GPU.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{Lý do chọn:} Dung lượng bộ nhớ (VRAM, tính bằng GB) xác định lượng dữ liệu đồ họa mà GPU có thể lưu trữ. Dung lượng lớn hơn cho phép GPU xử lý các texture lớn, độ phân giải cao, hoặc nhiều tác vụ cùng lúc (như chơi game 4K hoặc học sâu).
+     \item \textbf{Ý nghĩa:} Biến này ảnh hưởng đến hiệu năng trong các ứng dụng đòi hỏi bộ nhớ lớn.
+ \end{itemize}
 
-% \textbf{10. Memory (Dung lượng bộ nhớ)}
+ \textbf{10. Process (Quy trình sản xuất)}
 
-% \begin{itemize}
-%     \item \textbf{Lý do chọn:} Dung lượng bộ nhớ (VRAM, tính bằng GB) xác định lượng dữ liệu đồ họa mà GPU có thể lưu trữ. Dung lượng lớn hơn cho phép GPU xử lý các texture lớn, độ phân giải cao, hoặc nhiều tác vụ cùng lúc (như chơi game 4K hoặc học sâu).
-%     \item \textbf{Ý nghĩa:} Biến này ảnh hưởng đến hiệu năng trong các ứng dụng đòi hỏi bộ nhớ lớn.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{Lý do chọn:} Quy trình sản xuất (tính bằng nm, ví dụ: 7nm, 5nm) cho biết kích thước bóng bán dẫn trong chip GPU. Quy trình nhỏ hơn thường mang lại hiệu năng cao hơn, tiêu thụ ít điện hơn, và tỏa nhiệt thấp hơn.
+     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá hiệu quả năng lượng và tiềm năng hiệu năng của GPU.
+ \end{itemize}
 
-% \textbf{11. Process (Quy trình sản xuất)}
+ \textbf{11. Shader (Số lượng đơn vị Shader)}
 
-% \begin{itemize}
-%     \item \textbf{Lý do chọn:} Quy trình sản xuất (tính bằng nm, ví dụ: 7nm, 5nm) cho biết kích thước bóng bán dẫn trong chip GPU. Quy trình nhỏ hơn thường mang lại hiệu năng cao hơn, tiêu thụ ít điện hơn, và tỏa nhiệt thấp hơn.
-%     \item \textbf{Ý nghĩa:} Biến này giúp đánh giá hiệu quả năng lượng và tiềm năng hiệu năng của GPU.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{Lý do chọn:} Số lượng đơn vị shader (CUDA Cores của NVIDIA hoặc Stream Processors của AMD) quyết định khả năng xử lý song song của GPU. Số lượng shader cao hơn cho phép GPU thực hiện nhiều phép tính đồng thời, cải thiện hiệu năng trong các tác vụ như render 3D hoặc tính toán AI.
+     \item \textbf{Ý nghĩa:} Biến này là chỉ số quan trọng để đánh giá sức mạnh tính toán của GPU.
+ \end{itemize}
 
-% \textbf{12. Shader (Số lượng đơn vị Shader)}
+ \textbf{12. Pixel\_Rate (Tốc độ điền pixel)}
 
-% \begin{itemize}
-%     \item \textbf{Lý do chọn:} Số lượng đơn vị shader (CUDA Cores của NVIDIA hoặc Stream Processors của AMD) quyết định khả năng xử lý song song của GPU. Số lượng shader cao hơn cho phép GPU thực hiện nhiều phép tính đồng thời, cải thiện hiệu năng trong các tác vụ như render 3D hoặc tính toán AI.
-%     \item \textbf{Ý nghĩa:} Biến này là chỉ số quan trọng để đánh giá sức mạnh tính toán của GPU.
-% \end{itemize}
-
-% \textbf{13. Pixel\_Rate (Tốc độ điền pixel)}
-
-% \begin{itemize}
-%     \item \textbf{Lý do chọn:} Tốc độ điền pixel (Pixel Rate, tính bằng GPixel/s) đo lường khả năng GPU vẽ pixel lên màn hình mỗi giây. Pixel Rate cao hơn cho thấy GPU có khả năng xử lý nhanh các tác vụ đồ họa, đặc biệt ở độ phân giải cao.
-%     \item \textbf{Ý nghĩa:} Biến này phản ánh hiệu năng kết xuất hình ảnh của GPU.
-% \end{itemize}
+ \begin{itemize}
+     \item \textbf{Lý do chọn:} Tốc độ điền pixel (Pixel Rate, tính bằng GPixel/s) đo lường khả năng GPU vẽ pixel lên màn hình mỗi giây. Pixel Rate cao hơn cho thấy GPU có khả năng xử lý nhanh các tác vụ đồ họa, đặc biệt ở độ phân giải cao.
+     \item \textbf{Ý nghĩa:} Biến này phản ánh hiệu năng kết xuất hình ảnh của GPU.
+ \end{itemize}
 
 Câu lệnh thực hiện: 
 \begin{minted}{r}
@@ -314,7 +307,7 @@ Ta sẽ so sánh bộ dữ liệu trước và sau khi đã loại bỏ trùng l
 \textbf{Kết quả:}
 \begin{figure}[h!]
     \centering
-    \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2025-08-06 232835.png}}
+    \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2026-05-03 033602.png}}
     \caption{Hình ảnh đối chiếu trước và sau khi loại bỏ trùng lặp}
     \label{fig:enter-label}
 \end{figure}
@@ -347,7 +340,115 @@ Ta sẽ so sánh bộ dữ liệu trước và sau khi đã loại bỏ trùng l
 
 
 % Đến thời điểm này, quá trình tiền xử lý dữ liệu đã hoàn tất thành công, khi các giá trị khuyết thiếu trong bộ dữ liệu đã được xử lý hiệu quả, đồng thời dữ liệu đã được chuẩn bị sơ bộ để sẵn sàng cho các bước thống kê tiếp theo.
+\section{Loại bỏ Outlier và định nghĩa biến}
 
+$\indent$
+Sau khi đã loại bỏ các bản ghi trùng lặp, bước tiếp theo trong quá trình tiền xử lý là phát hiện và loại bỏ các giá trị ngoại lai (outlier). Outlier là những quan sát có giá trị quá lớn hoặc quá nhỏ so với phần lớn dữ liệu, có thể gây ảnh hưởng tiêu cực đến kết quả phân tích và mô hình hóa.
+
+\vspace{0.8em}
+
+\textbf{1. Phương pháp sử dụng: IQR (Interquartile Range)}
+
+\vspace{0.5em}
+
+Phương pháp IQR dựa trên khoảng tứ phân vị, trong đó:
+\begin{itemize}
+    \item $Q1$: Phân vị thứ 25
+    \item $Q3$: Phân vị thứ 75
+    \item $IQR = Q3 - Q1$
+\end{itemize}
+
+Một giá trị được xem là outlier nếu:
+\[
+x < Q1 - 1.5 \times IQR \quad \text{hoặc} \quad x > Q3 + 1.5 \times IQR
+\]
+
+Các giá trị nằm ngoài khoảng này sẽ bị loại bỏ.
+
+\vspace{0.8em}
+
+\textbf{2. Định nghĩa các biến}
+
+\vspace{0.5em}
+
+\textbf{Biến số (numerical):}
+\begin{itemize}
+    \item Core\_Speed, Memory\_Speed
+    \item ROPs, TMUs
+    \item Memory\_Bus, Memory
+    \item Process, Shader
+\end{itemize}
+
+\textbf{Biến phân loại (categorical):}
+\begin{itemize}
+    \item Manufacturer, Memory\_Type, Resolution\_WxH
+\end{itemize}
+
+\vspace{0.8em}
+
+\textbf{3. Thực hiện trong R:}
+
+\begin{minted}{r}
+# Loại outlier cho từng biến numerical
+for (var in numerical) {
+  if (var %in% names(GPU_new)) {
+    Q1 <- quantile(GPU_new[[var]], 0.25, na.rm = TRUE)
+    Q3 <- quantile(GPU_new[[var]], 0.75, na.rm = TRUE)
+    IQR_val <- Q3 - Q1
+    
+    lower_bound <- Q1 - 1.5 * IQR_val
+    upper_bound <- Q3 + 1.5 * IQR_val
+    
+    GPU_new <- GPU_new[
+      GPU_new[[var]] >= lower_bound & 
+      GPU_new[[var]] <= upper_bound, ]
+  }
+}
+\end{minted}
+
+\vspace{0.8em}
+
+\textbf{4. Kết quả:}
+
+\begin{itemize}
+    \item Số lượng dòng trước khi loại outlier: 2204
+    \item Core\_Speed: [531.25 ; 1313.25] $\rightarrow$ còn 2036 dòng
+    \item Memory\_Speed: [-212.5 ; 2487.5] $\rightarrow$ còn 2036 dòng
+    \item ROPs: [-8 ; 56] $\rightarrow$ còn 1905 dòng
+    \item TMUs: [-16 ; 112] $\rightarrow$ còn 1728 dòng
+    \item Memory\_Bus: [-64 ; 448] $\rightarrow$ còn 1709 dòng
+    \item Memory: [-512 ; 3584] $\rightarrow$ còn 1482 dòng
+    \item Process: [10 ; 58] $\rightarrow$ còn 1382 dòng
+    \item Shader: [3.31 ; 6.01] $\rightarrow$ còn 1231 dòng
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Tổng số dòng sau khi loại outlier: 1231}
+
+\vspace{0.8em}
+
+\textbf{Kết quả:}
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2026-05-03 033555.png}}
+    \caption{Hình ảnh đối chiếu trước và sau khi loại ngoại lai}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\textbf{5. Nhận xét:}
+
+Sau khi áp dụng phương pháp IQR để loại bỏ outlier trên từng biến số, số lượng quan sát đã giảm đáng kể từ 2204 xuống còn 1231. Điều này cho thấy tập dữ liệu ban đầu chứa nhiều giá trị ngoại lai có thể ảnh hưởng đến kết quả phân tích.
+
+Việc loại bỏ outlier giúp:
+\begin{itemize}
+    \item Làm giảm nhiễu trong dữ liệu
+    \item Cải thiện độ chính xác của các mô hình thống kê
+    \item Tăng tính ổn định và khả năng tổng quát hóa của mô hình
+\end{itemize}
+
+Tuy nhiên, việc loại bỏ quá nhiều dữ liệu cũng cần được cân nhắc, vì có thể làm mất đi một số thông tin quan trọng trong các trường hợp đặc biệt.
 
 \section{Chuyển đổi logarit}
 
@@ -402,7 +503,7 @@ for (var in numerical) {
 \section{Tổng kết}
 
 $\indent$
-Cuối cùng, ta tạo bảng tóm tắt các cột dữ liệu và tính tổng số giá trị thiếu (NA) trong mỗi cột của dataframe GPU\_new\_log sau khi xử lý missing value.
+Cuối cùng, ta kiểm tra lại bằng cách tạo bảng tóm tắt các cột dữ liệu và tính tổng số giá trị thiếu (NA) trong mỗi cột của dataframe GPU\_new\_log sau khi xử lý missing value.
 
 \begin{minted}{r}
 # Thống kê nhanh trên GPU_new_log
@@ -412,16 +513,10 @@ print(colSums(is.na(GPU_new_log)))
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-06 233507.png}}
+    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2026-05-03 034350.png}}
 \end{figure}
 
-
-\begin{figure}[!h]
-    \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-06 233245.png}}
-\end{figure}
-
-Đến đây xem như đã hoàn thành việc tiền xử lý số liệu bởi bộ dữ liệu đã được loại bỏ những chỗ bị khuyết cũng như đã được xử lý sơ bộ trước khi tiến hành thống kê. Sau đây, ta sẽ in ra 10 dòng đầu tiên của dataframe GPU\_new\_log. Điều này giúp ta có cái nhìn tổng quan về dữ liệu bằng cách hiển thị một phần của dataframe.
+Việc tiền xử lý đến đây cũng đã đầy đủ, dữ liệu đã loại bỏ những chỗ bị khuyết cũng như đã được xử lý trùng lặp, ngoại lai và gom cụm trước khi tiến hành thống kê. Sau đây, ta sẽ in ra 10 dòng đầu tiên của dataframe GPU\_new\_log. Điều này giúp ta có cái nhìn tổng quan về dữ liệu bằng cách hiển thị một phần của dataframe.
 
 %\begin{minted}{r}
 %# Xem 10 dòng đầu của GPU_new_log

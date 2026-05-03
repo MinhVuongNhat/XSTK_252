@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{GPU\PYGZus{}new}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{GPU}\PYG{p}{[,}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Resolution\PYGZus{}WxH\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Manufacturer\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Core\PYGZus{}Speed\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                 }\PYG{l+s}{\PYGZdq{}Memory\PYGZus{}Speed\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Memory\PYGZus{}Type\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                 }\PYG{l+s}{\PYGZdq{}ROPs\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}TMUs\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Memory\PYGZus{}Bus\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Memory\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{                 }\PYG{l+s}{\PYGZdq{}Process\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Shader\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate\PYGZdq{}}\PYG{p}{)]}
+\end{MintedVerbatim}

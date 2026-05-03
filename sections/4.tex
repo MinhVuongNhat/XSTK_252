@@ -14,32 +14,32 @@ data.frame(mean,sd,min,max,median)
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 155550.png}}
+    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2026-05-03 043742.png}}
 \end{figure}
 
 Tương tự, ta cũng lập bảng tính các giá trị thống kê mô tả cho các biến định lượng trong GPU\_new\_log
-% \begin{minted}{r}
-% mean<-apply(GPU_new_log[,numerical],2,mean)
-% sd<-apply(GPU_new_log[,numerical],2,sd)
-% min<-apply(GPU_new_log[,numerical],2,min)
-% max<-apply(GPU_new_log[,numerical],2,max)
-% median<-apply(GPU_new_log[,numerical],2,median)
-% data.frame(mean,sd,min,max,median)
-% \end{minted}
+\begin{minted}{r}
+mean<-apply(GPU_new_log[,numerical],2,mean)
+sd<-apply(GPU_new_log[,numerical],2,sd)
+min<-apply(GPU_new_log[,numerical],2,min)
+max<-apply(GPU_new_log[,numerical],2,max)
+median<-apply(GPU_new_log[,numerical],2,median)
+data.frame(mean,sd,min,max,median)
+\end{minted}
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 155536.png}}
+    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2026-05-03 043747.png}}
 \end{figure}
-Ta thấy nếu biểu diễn dưới dạng bảng như này thì khó có thể hình dung dữ liệu như thế nào hay có liên hệ với nhau ra sao. Do đó ta sẽ biểu diễn các dữ liệu này dưới dạng các biểu đồ để dễ quan sát hơn.
+Để giúp chúng ta hình dung ra bản chất dữ liệu cũng như mối quan hệ giữa chúng dễ dàng hơn khi nhìn vào những con số, ta sẽ biểu diễn lại các dữ liệu này dưới dạng các biểu đồ để dễ quan sát hơn.
 
 \section{Biểu đồ - đồ thị}
 $\indent$
 Biểu đồ tần suất (histogram) thường dùng để thể hiện phân phối của biến định lượng. Ta vẽ biểu đồ tần suất cho các dữ liệu GPU\_new và GPU\_new\_log. Ta tiến hành vẽ biểu đồ tần suất cho dữ liệu GPU\_new.
 
 \begin{minted}{r}
-# Chia layout thành 3 hàng và 3 cột
-par(mfrow = c(3, 3), mar = c(4, 4, 2, 1))
+# Chia layout thành 2 hàng và 4 cột
+par(mfrow = c(2, 4), mar = c(4, 4, 2, 1))
 
 # Vẽ histogram cho từng biến numerical trong GPU_new
 for (i in 1:length(numerical)) {
@@ -54,7 +54,7 @@ for (i in 1:length(numerical)) {
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2025-08-05 160712.png}}
+    \fbox{\includegraphics[width=0.8\linewidth]{images/Screenshot 2026-05-03 044605.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy các biến Process, Memory, TMUs và ROPs có phân phối lệch phải. Biến Core\_Speed có phân phối gần giống phân phối chuẩn. Trong khi đó biến Memory\_Speed có hầu hết các cột cao gần bằng nhau ngoại trừ các cột ở biên, còn biến Memory\_Bus và Shader thì gần như chỉ có một cột, các cột còn lại không đáng kể.
@@ -64,8 +64,8 @@ for (i in 1:length(numerical)) {
 Ta tiếp tục tiến hành vẽ biểu đồ tần suất cho dữ liệu của GPU\_new\_log.
 
 \begin{minted}{r}
-    # Chia layout thành 3 hàng và 3 cột
-par(mfrow = c(3, 3), mar = c(4, 4, 2, 1))
+# Chia layout thành 2 hàng và 4 cột
+par(mfrow = c(2, 4), mar = c(4, 4, 2, 1))
 
 # Vẽ histogram cho từng biến numerical trong GPU_new_log
 for (i in 1:length(numerical)) {
@@ -80,7 +80,7 @@ for (i in 1:length(numerical)) {
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 161203.png}}
+    \fbox{\includegraphics[width=0.8\linewidth]{images/Screenshot 2026-05-03 044612.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy sau khi chuyển đổi các biến x sang dạng log(x) thì phân phối các biến trở nên gần giống với phân phối chuẩn hơn, ví dụ như biến Memory\_Bus hay Memory\_Speed. Các biến Core\_Speed, Memory, TMUs và ROPs cũng không còn phân phối lệch như trước.
@@ -101,7 +101,7 @@ barplot(table(GPU_new$Resolution_WxH), xlab="Resolution_WxH", ylab="Frequency", 
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 163146.png}}
+    \fbox{\includegraphics[width=0.8\linewidth]{images/Screenshot 2026-05-03 044739.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy hầu hết GPU đều được sản xuất bởi AMD và Nvidia, 2 nhà sản xuất còn lại (ATI và Intel) không đáng kể. Chỉ có 2 kiểu bộ nhớ là DDR và GDDR, và đa số thuộc về GDDR. Về chỉ số Resolution\_WxH thì ta thấy không có sự chênh lệch đáng kể giữa 3 cột như 2 biến kia.
@@ -118,7 +118,7 @@ boxplot(Pixel_Rate~Manufacturer, data=GPU_new_log, main="boxplot of log(Pixel_Ra
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 163159.png}}
+    \fbox{\includegraphics[width=0.6\linewidth]{images/Screenshot 2026-05-03 045147.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy với nhà sản xuất là AMD và Nvidia thì dung lượng bộ nhớ có phân phối hơi lệch phải, còn với ATI thì lệch trái. Nhưng sau khi lấy log(Pixel\_Rate) thì cả 4 phân phối đều trở thành phân phối chuẩn.
@@ -131,7 +131,7 @@ boxplot(Pixel_Rate~Memory_Type, data=GPU_new_log, main="boxplot of log(Pixel_Rat
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=0.9\linewidth]{images/Screenshot 2025-08-05 163216.png}}
+    \fbox{\includegraphics[width=0.6\linewidth]{images/Screenshot 2026-05-03 045152.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Với kiểu bộ nhớ GDDR thì dữ liệu hơi lệch phải, còn eDRAM thì hoàn toàn lệch phải. Sau khi lấy log thì phân phối của GDDR đã trở nên phân phối chuẩn, nhưng với eDRAM thì vẫn còn bị lệch.
@@ -144,7 +144,7 @@ boxplot(Pixel_Rate~Resolution_WxH, data=GPU_new_log, main="boxplot of log(Pixel_
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 163257.png}}
+    \fbox{\includegraphics[width=0.6\linewidth]{images/Screenshot 2026-05-03 045158.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Các phân phối ở 2 hình trên đều gần với phân phối chuẩn kể cả trước và sau khi dùng hàm log(x).
@@ -200,7 +200,7 @@ par(mfrow = c(1, 1))
 
 \begin{figure}[!h]
     \centering
-    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2025-08-05 164224.png}}
+    \fbox{\includegraphics[width=1\linewidth]{images/Screenshot 2026-05-03 050037.png}}
 \end{figure}
 
 \textbf{Nhận xét:} Ta thấy biến Pixel\_Rate có quan hệ tuyến tính tăng với biến Core\_Speed. Điều này còn thể hiện rõ hơn giữa biến Pixel\_Rate với ROPs. Và gần như không có mối liên hệ nào giữa Pixel\_Rate và Shader.

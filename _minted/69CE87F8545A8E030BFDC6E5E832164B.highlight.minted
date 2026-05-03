@@ -1,0 +1,40 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Core\PYGZus{}Speed}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{helper}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Core\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Memory\PYGZus{}Speed}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Speed}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{helper}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Speed}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Speed}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Speed}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} ROPs}
+\PYG{c+c1}{\PYGZsh{} Giả sử GPU\PYGZus{}new\PYGZdl{}ROPs đang là character, chứa các giá trị như \PYGZdq{}24 (x4)\PYGZdq{}, \PYGZdq{}48 (x2)\PYGZdq{}, v.v. Ta chỉ lấy phần trước dấu ngoặc}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{as.numeric}\PYG{p}{(}\PYG{n+nf}{sub}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZca{}([0\PYGZhy{}9]+).*\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZbs{}\PYGZbs{}1\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{))}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{ROPs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} TMUs}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{TMUs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{as.double}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{TMUs}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{TMUs}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{TMUs}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{TMUs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}
+\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Memory\PYGZus{}Bus}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Bus}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Bus}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{helper}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Bus}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Bus}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory\PYGZus{}Bus}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Memory}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{helper}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Memory}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+
+\PYG{c+c1}{\PYGZsh{} Process}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Process}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{as.double}\PYG{p}{(}\PYG{n+nf}{gsub}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}[\PYGZca{}0\PYGZhy{}9\PYGZbs{}\PYGZbs{}.]\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{as.character}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Process}\PYG{p}{)))}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Process}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Process}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Process}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Shader}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{as.double}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Shader}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Pixel\PYGZus{}Rate}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{sapply}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{helper}\PYG{p}{)}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{median}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+\end{MintedVerbatim}

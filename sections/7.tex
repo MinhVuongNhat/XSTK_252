@@ -5,10 +5,10 @@ Bài báo cáo đã tiến hành phân tích toàn diện các yếu tố ảnh 
 Dưới đây là các kết quả mà nhóm đã thu được:
 
 \begin{itemize}
-    \item \textbf{Thống kê mô tả và trực quan hóa:} Các đồ thị density plot và scatter plot (phần 6.2) cho thấy sự tương đồng giữa giá trị thực tế và dự đoán trên tập kiểm tra, với R² = 0.9377371, khẳng định mô hình giải thích tốt sự biến thiên của Pixel\_Rate.
-    \item \textbf{Kiểm định giả thuyết:} Phân tích ANOVA (phần 5.3.3) cho thấy tất cả các biến độc lập (như Core\_Speed, ROPs, Memory) đều có ý nghĩa thống kê (p-value < 0.05), hỗ trợ câu hỏi nghiên cứu về tác động của các thông số đến hiệu suất GPU.
-    \item \textbf{Hồi quy tuyến tính đa biến:} Mô hình đạt Adjusted R² = 0.9445508 (phần 5.3.3) và R² = 0.9426636 (phần 5.3.5 từ cross-validation), chứng tỏ mô hình giải thích được hơn 94\% sự biến thiên của Pixel\_Rate. Tuy nhiên, RMSE = 0.2767408 (phần 6.1) và các khoảng dự đoán rộng (phần 6.3) cho thấy vẫn tồn tại sai số cần cải thiện.
-    \item \textbf{Dự báo và kịch bản:} Phần 6.3 và 6.4 cung cấp các khoảng dự đoán và phân tích kịch bản (tăng 10\% Core\_Speed làm tăng trung bình Pixel\_Rate lên 3.1737), hỗ trợ ứng dụng thực tế.
+    \item \textbf{Thống kê mô tả và trực quan hóa:} Các đồ thị density plot và scatter plot (phần 6.2) cho thấy sự tương đồng giữa giá trị thực tế và dự đoán trên tập kiểm tra, với R² = 0.9568332, khẳng định mô hình giải thích tốt sự biến thiên của Pixel\_Rate.
+    \item \textbf{Kiểm định giả thuyết:} Phân tích ANOVA (phần 5.4.4) cho thấy tất cả các biến độc lập (như Core\_Speed, ROPs, Memory) đều có ý nghĩa thống kê (p-value < 0.05), hỗ trợ câu hỏi nghiên cứu về tác động của các thông số đến hiệu suất GPU.
+    \item \textbf{Hồi quy tuyến tính đa biến:} Mô hình đạt Adjusted R² = 0.9506 (phần 5.5.2) và R² = 0.9461773 (phần 5.5.4 từ cross-validation), chứng tỏ mô hình giải thích được hơn 95\% sự biến thiên của Pixel\_Rate. Tuy nhiên, RMSE = 0.2013804  (phần 6.1) và các khoảng dự đoán rộng (phần 6.3) cho thấy vẫn tồn tại sai số cần cải thiện.
+    \item \textbf{Dự báo và kịch bản:} Phần 6.3 và 6.4 cung cấp các khoảng dự đoán và phân tích kịch bản (tăng 10\% Core\_Speed làm tăng trung bình Pixel\_Rate lên 2.871), hỗ trợ ứng dụng thực tế.
 \end{itemize}
 
 
@@ -19,7 +19,7 @@ Mặc dù mô hình đạt hiệu suất cao, bài báo cáo vẫn tồn tại m
 \begin{itemize}
     \item \textbf{Dữ liệu chuẩn hóa:} Kết quả âm từ khoảng dự đoán với dữ liệu mẫu chưa chuẩn hóa (phần 6.3) cho thấy mô hình nhạy cảm với việc tiền xử lý dữ liệu. Nếu dữ liệu mới không được chuẩn hóa giống như tập huấn luyện, dự đoán có thể không chính xác.
     \item \textbf{Biến chưa khai thác:} Một số yếu tố tiềm năng như nhiệt độ hoạt động, công suất tiêu thụ, hoặc hiệu suất thực tế trong các ứng dụng cụ thể (ví dụ: game, AI) chưa được đưa vào mô hình, có thể ảnh hưởng đến Pixel\_Rate.
-    \item \textbf{Ngoại lệ và ngoại suy:} Các giá trị ngoại lai trong tập dữ liệu (phát hiện từ đồ thị Residuals vs Leverage, phần 5.3.3) và kết quả âm từ ngoại suy (phần 6.3 với new\_data ban đầu) cho thấy mô hình có thể không ổn định khi áp dụng cho dữ liệu ngoài miền huấn luyện.
+    \item \textbf{Ngoại lệ và ngoại suy:} Các giá trị ngoại lai trong tập dữ liệu (phát hiện từ đồ thị Residuals vs Leverage, phần 5.4.3) và kết quả âm từ ngoại suy (phần 6.3 với new\_data ban đầu) cho thấy mô hình có thể không ổn định khi áp dụng cho dữ liệu ngoài miền huấn luyện.
     \item \textbf{Giới hạn tuyến tính:} Mô hình hồi quy tuyến tính có thể không bắt được các mối quan hệ phi tuyến giữa các biến, đặc biệt với các giá trị cực đại hoặc cực tiểu.
 \end{itemize}
 

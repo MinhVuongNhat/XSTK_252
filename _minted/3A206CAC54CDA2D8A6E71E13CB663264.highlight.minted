@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} 5.3.2 Xây dựng mô hình đa biến}
+\PYG{n}{model\PYGZus{}final}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{step\PYGZus{}mod}
+\PYG{n+nf}{print}\PYG{p}{(}\PYG{n+nf}{summary}\PYG{p}{(}\PYG{n}{model\PYGZus{}final}\PYG{p}{))}
+\end{MintedVerbatim}

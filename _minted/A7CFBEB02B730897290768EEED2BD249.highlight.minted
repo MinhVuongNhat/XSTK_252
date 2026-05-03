@@ -1,0 +1,16 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} 6.1 Dự báo trên tập test: MAE, MSE, R², RMSE}
+\PYG{n}{pred}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{predict}\PYG{p}{(}\PYG{n}{model\PYGZus{}final}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{newdata}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{test}\PYG{p}{)}
+\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{predicted\PYGZus{}value}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{pred}
+
+\PYG{c+c1}{\PYGZsh{} Tính toán các chỉ số}
+\PYG{n}{mae\PYGZus{}value}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{mae}\PYG{p}{(}\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{predicted\PYGZus{}value}\PYG{p}{)}
+\PYG{n}{mse\PYGZus{}value}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{mse}\PYG{p}{(}\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{predicted\PYGZus{}value}\PYG{p}{)}
+\PYG{n}{rmse\PYGZus{}value}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{rmse}\PYG{p}{(}\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{predicted\PYGZus{}value}\PYG{p}{)}
+\PYG{n}{r2\PYGZus{}value}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{cor}\PYG{p}{(}\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{test}\PYG{o}{\PYGZdl{}}\PYG{n}{predicted\PYGZus{}value}\PYG{p}{)}\PYG{o}{\PYGZca{}}\PYG{l+m}{2}
+
+\PYG{n+nf}{cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}MAE trên tập kiểm tra:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mae\PYGZus{}value}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}MSE trên tập kiểm tra:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mse\PYGZus{}value}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}RMSE trên tập kiểm tra:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rmse\PYGZus{}value}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}R² trên tập kiểm tra:\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r2\PYGZus{}value}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZbs{}n\PYGZdq{}}\PYG{p}{)}
+\end{MintedVerbatim}

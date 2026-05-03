@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Lựa chọn biến bằng stepwise selection}
+\PYG{n}{step\PYGZus{}mod}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{step}\PYG{p}{(}\PYG{n}{full\PYGZus{}mod}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{direction}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}both\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{trace}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{)}
+\PYG{n+nf}{print}\PYG{p}{(}\PYG{n+nf}{summary}\PYG{p}{(}\PYG{n}{step\PYGZus{}mod}\PYG{p}{))}
+\end{MintedVerbatim}

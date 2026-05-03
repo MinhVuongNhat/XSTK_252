@@ -40,7 +40,38 @@ library(PMwR)       # welch_anova, nếu dùng oneway.test
 library(FSA)        # dunnTest cho Kruskal post-hoc
 
 # Đọc dữ liệu
-GPU = read.csv("C:/Users/Minh/Downloads/sxtk/BTL/All_GPUs.csv",header=TRUE,na.strings=c("","\n- ","\n","\nUnknown Release Date "))
+GPU = read.csv("C:/Users/Minh/Documents/GitHub/XSTK_252/All_GPUs.csv",header=TRUE,na.strings=c("","\n- ","\n","\nUnknown Release Date "))
+head(GPU,5), dim(GPU)
+# Tổng N/A
+na_summary_df <- data.frame(
+  Variable = names(GPU),
+  Missing = colSums(is.na(GPU)),
+  Percentage = round(colMeans(is.na(GPU)) * 100, 1)
+)
+
+plot1 <- ggplot(data = na_summary_df, aes(x = reorder(Variable, -Missing), y = Missing)) +
+  geom_bar(stat = "identity", fill = "sienna3") +
+  geom_text(aes(label = Missing), vjust = -0.5, size = 3) +
+  labs(
+    title = "So luong du lieu khuyet theo bien",
+    x = "Bien",
+    y = "Số luong du lieu NA"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+plot2 <- ggplot(data = na_summary_df, aes(x = reorder(Variable, -Percentage), y = Percentage)) +
+  geom_bar(stat = "identity", fill = "turquoise3") +
+  geom_text(aes(label = Percentage), vjust = -0.5, size = 2.5) +
+  labs(
+    title = "Ty le du lieu khuyet theo bien",
+    x = "Bien",
+    y = "Ty le du lieu NA(%)"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+plot1 | plot2
+ggsave("na_combined_filtered_plot.png", width = 5, height = 12)
 
 # Tính N/A và lấy top 10
 na_summary <- GPU %>%
@@ -150,8 +181,10 @@ GPU_new$Pixel_Rate[is.na(GPU_new$Pixel_Rate)] <- median(GPU_new$Pixel_Rate, na.r
 
 # Loại bỏ dòng trùng lặp
 cat("Số lượng dòng trước khi loại duplicape:", nrow(GPU_new), "\n")
+str(GPU_new)
 GPU_new <- dplyr::distinct(GPU_new)
 cat("Số lượng dòng trước khi loại duplicape:", nrow(GPU_new), "\n")
+str(GPU_new)
 
 # Định nghĩa lại danh sách biến số
 numerical <- c(
@@ -164,6 +197,7 @@ categorical <- c("Manufacturer","Memory_Type","Resolution_WxH")
 
 # Loại outlier cho từng biến numerical
 cat("Số lượng dòng trước khi loại outlier:", nrow(GPU_new), "\n")
+str(GPU_new)
 for (var in numerical) {
   if (var %in% names(GPU_new)) {
     Q1 <- quantile(GPU_new[[var]], 0.25, na.rm = TRUE)
@@ -181,6 +215,7 @@ for (var in numerical) {
   }
 }
 cat("\nTổng số dòng sau khi loại outlier:", nrow(GPU_new), "\n")
+str(GPU_new)
 
 # Kiểm tra lại
 str(GPU_new)
@@ -231,8 +266,8 @@ max<-apply(GPU_new_log[,numerical],2,max)
 median<-apply(GPU_new_log[,numerical],2,median)
 data.frame(mean,sd,min,max,median)
 
-# Chia layout thành 3 hàng và 3 cột
-par(mfrow = c(3, 3), mar = c(4, 4, 2, 1))
+# Chia layout thành 2 hàng và 4 cột
+par(mfrow = c(2, 4), mar = c(4, 4, 2, 1))
 
 # Vẽ histogram cho từng biến numerical trong GPU_new
 for (i in 1:length(numerical)) {
@@ -244,8 +279,8 @@ for (i in 1:length(numerical)) {
        col = "blue")
 }
 
-# Chia layout thành 3 hàng và 3 cột
-par(mfrow = c(3, 3), mar = c(4, 4, 2, 1))
+# Chia layout thành 2 hàng và 4 cột
+par(mfrow = c(2, 4), mar = c(4, 4, 2, 1))
 
 # Vẽ histogram cho từng biến numerical trong GPU_new_log
 for (i in 1:length(numerical)) {
@@ -388,6 +423,7 @@ for (v in numerical) {
 }
 
 par(mfrow = c(2, 2), mar = c(6, 6, 4, 4))
+
 # 5.2 Phân tích phương sai (ANOVA) cho 3 nhóm trở lên
 for (cat in categorical) {
   cat("\nANOVA for", cat, "on Train set\n")

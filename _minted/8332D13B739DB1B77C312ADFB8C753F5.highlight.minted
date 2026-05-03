@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Resolution\PYGZus{}WxH}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{p}{[}\PYG{n+nf}{is.na}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{p}{)]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}4096x2160\PYGZdq{}}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}4096x2160\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{ifelse}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}2560x1600\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m}{3}\PYG{p}{))}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{} Gom nhóm: 4096x2160 (39\PYGZpc{}), 2560x1600 (34\PYGZpc{}), Other (26\PYGZpc{})}
+\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{factor}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{o}{\PYGZdl{}}\PYG{n}{Resolution\PYGZus{}WxH}\PYG{p}{)}
+\end{MintedVerbatim}

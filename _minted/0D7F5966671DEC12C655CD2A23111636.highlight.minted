@@ -1,0 +1,25 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plot1}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{ggplot}\PYG{p}{(}\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{na\PYGZus{}summary\PYGZus{}df}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{aes}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{reorder}\PYG{p}{(}\PYG{n}{Variable}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{Missing}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Missing}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{geom\PYGZus{}bar}\PYG{p}{(}\PYG{n}{stat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}identity\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fill}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}sienna3\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{geom\PYGZus{}text}\PYG{p}{(}\PYG{n+nf}{aes}\PYG{p}{(}\PYG{n}{label}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Missing}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{vjust}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{\PYGZhy{}0.5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{size}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{3}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{labs}\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Số lượng dữ liệu khuyết theo biến\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Biến\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Số lượng dữ liệu NA\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{theme\PYGZus{}minimal}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{theme}\PYG{p}{(}\PYG{n}{axis.text.x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{element\PYGZus{}text}\PYG{p}{(}\PYG{n}{angle}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{90}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{hjust}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{))}
+
+\PYG{n}{plot2}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{ggplot}\PYG{p}{(}\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{na\PYGZus{}summary\PYGZus{}df}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{aes}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{reorder}\PYG{p}{(}\PYG{n}{Variable}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{Percentage}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Percentage}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{geom\PYGZus{}bar}\PYG{p}{(}\PYG{n}{stat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}identity\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{fill}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}turquoise3\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{geom\PYGZus{}text}\PYG{p}{(}\PYG{n+nf}{aes}\PYG{p}{(}\PYG{n}{label}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Percentage}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{vjust}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{\PYGZhy{}0.5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{size}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{2.5}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{labs}\PYG{p}{(}
+\PYG{+w}{    }\PYG{n}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Phần trăm dữ liệu khuyết theo biến\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Biến\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Phần trăm dữ liệu NA\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{theme\PYGZus{}minimal}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{+}
+\PYG{+w}{  }\PYG{n+nf}{theme}\PYG{p}{(}\PYG{n}{axis.text.x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{element\PYGZus{}text}\PYG{p}{(}\PYG{n}{angle}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{90}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{hjust}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{))}
+\PYG{n}{plot1}\PYG{+w}{ }\PYG{o}{|}\PYG{+w}{ }\PYG{n}{plot2}
+\PYG{n+nf}{ggsave}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}na\PYGZus{}combined\PYGZus{}filtered\PYGZus{}plot.png\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{width}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{height}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{12}\PYG{p}{)}
+\end{MintedVerbatim}

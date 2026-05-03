@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kr}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{cat}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{categorical}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nf}{cat}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZbs{}nANOVA for\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cat}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}on Train set\PYGZbs{}n\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{  }\PYG{n}{aov\PYGZus{}mod}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{aov}\PYG{p}{(}\PYG{n+nf}{as.formula}\PYG{p}{(}\PYG{n+nf}{paste}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Pixel\PYGZus{}Rate \PYGZti{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cat}\PYG{p}{)),}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{train}\PYG{p}{)}
+\PYG{+w}{  }\PYG{c+c1}{\PYGZsh{} 5.2.2 Hậu nghiệm Tukey \PYGZam{} Effect size (\PYGZdl{}\PYGZbs{}eta\PYGZca{}2\PYGZdl{})}
+\PYG{+w}{  }\PYG{n}{tukey\PYGZus{}result}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{TukeyHSD}\PYG{p}{(}\PYG{n}{aov\PYGZus{}mod}\PYG{p}{)}
+\PYG{+w}{  }\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{tukey\PYGZus{}result}\PYG{p}{)}
+\PYG{+w}{  }\PYG{n+nf}{plot}\PYG{p}{(}\PYG{n+nf}{TukeyHSD}\PYG{p}{(}\PYG{n}{aov\PYGZus{}mod}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{las}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}
+\PYG{+w}{  }\PYG{n}{tab}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{summary}\PYG{p}{(}\PYG{n}{aov\PYGZus{}mod}\PYG{p}{)[[}\PYG{l+m}{1}\PYG{p}{]]}
+\PYG{+w}{  }\PYG{n}{eta2}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n}{tab}\PYG{p}{[,}\PYG{l+s}{\PYGZdq{}Sum Sq\PYGZdq{}}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n+nf}{sum}\PYG{p}{(}\PYG{n}{tab}\PYG{p}{[,}\PYG{l+s}{\PYGZdq{}Sum Sq\PYGZdq{}}\PYG{p}{])}
+\PYG{+w}{  }\PYG{n+nf}{print}\PYG{p}{(}\PYG{n+nf}{cbind}\PYG{p}{(}\PYG{n}{tab}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Eta2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{eta2}\PYG{p}{))}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

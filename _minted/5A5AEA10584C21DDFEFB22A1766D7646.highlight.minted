@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Kiểm tra xem có giá trị \PYGZlt{} 0 trong dữ liệu gốc}
+\PYG{k+kr}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{var}\PYG{+w}{ }\PYG{k+kr}{in}\PYG{+w}{ }\PYG{n}{numerical}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{has\PYGZus{}negative}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZhy{}}\PYG{+w}{ }\PYG{n+nf}{any}\PYG{p}{(}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{[[}\PYG{n}{var}\PYG{p}{]]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{na.rm}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{TRUE}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n+nf}{message}\PYG{p}{(}\PYG{n}{var}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{} in original \PYGZlt{} 0? \PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{has\PYGZus{}negative}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

@@ -1,0 +1,5 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{par}\PYG{p}{(}\PYG{n}{mfrow}\PYG{o}{=}\PYG{n+nf}{c}\PYG{p}{(}\PYG{l+m}{1}\PYG{p}{,}\PYG{l+m}{2}\PYG{p}{))}
+\PYG{n+nf}{boxplot}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{o}{\PYGZti{}}\PYG{n}{Manufacturer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{o}{=}\PYG{n}{GPU\PYGZus{}new}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{main}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}boxplot of Pixel\PYGZus{}Rate for Manufacturer\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)}
+\PYG{n+nf}{boxplot}\PYG{p}{(}\PYG{n}{Pixel\PYGZus{}Rate}\PYG{o}{\PYGZti{}}\PYG{n}{Manufacturer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{data}\PYG{o}{=}\PYG{n}{GPU\PYGZus{}new\PYGZus{}log}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{main}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}boxplot of log(Pixel\PYGZus{}Rate) for Manufacturer\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{col}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{)}
+\end{MintedVerbatim}
